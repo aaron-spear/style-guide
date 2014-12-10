@@ -1,0 +1,126 @@
+//
+// Header
+// --------------------------------------------------
+
+.leftmenu-trigger,
+.rightmenu-trigger {
+	position: relative;
+	display: block;
+	float: left;
+	height: 40px;
+	width: 40px;	
+	border-right: 1px solid #27292d;
+	.patty{
+		position: relative;
+		top: 8px;
+		left: 12px;		
+		width:16px;
+		height:1px;
+		margin:10px 0;
+		background:#fff;
+		-webkit-transition:all 0.3s;
+		-moz-transition:all 0.3s;
+		-o-transition:all 0.3s;
+		transition:all 0.3s;
+		opacity: .6;
+		&:after,
+		&:before{
+			content:'';
+			display:block;
+			width:10px;
+			height:1px;
+			background:#fff;
+			position:absolute;
+			z-index:-1;
+			-webkit-transition:all 0.3s;
+			-moz-transition:all 0.3s;
+			-o-transition:all 0.3s;
+			transition:all 0.3s
+		}		
+		&:before{top:-4px}
+		&:after{top:4px; width: 13px}
+	}		
+	&.active {
+		&:hover {
+			.patty {
+				opacity: 1;
+			}
+		}
+		.patty{
+			background: none;
+			opacity: .8;
+			&:after{
+				width: 16px;
+				top:0 !important;
+				-webkit-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				transform:rotate(45deg)				
+			}
+			&:before{
+				width: 16px;
+				top:0 !important;
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				transform:rotate(-45deg)				
+			}
+		}		
+	}
+	&:hover {
+		.patty {
+			opacity: .8;
+		}
+	}
+}
+
+.rightmenu-trigger {
+	float: right;
+	border-left: 1px solid #27292d;
+	.patty{
+		left: 11px;
+		&:after,
+		&:before{
+			right: 0;
+		}		
+	}		
+}
+
+.btn-search {
+	display: block;
+	float: right;
+	height: 40px;
+	width: 40px;	
+	border-left: 1px solid #27292d;
+	span {
+		display: block;
+		height: 40px;
+		width: 40px;	
+		opacity: .6;
+		background: url(../img/search-icon.png) no-repeat center;
+		background-size: 20px;
+		-webkit-transition: all ease-out .2s;
+	  transition: all ease-out .2s; 				
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.logo {
+	display: block;
+	float: left;
+	height: 40px;
+	width: 116px;		
+	background: url(../img/spotxchange_logo.png) no-repeat center center;
+}
+
+.navbar-inverse {
+	background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+	background-image: linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background-repeat: repeat-x;	
+}
