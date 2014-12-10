@@ -1,0 +1,213 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 40px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-group {
+	margin: 0;
+	float: right;
+	position: relative;
+	right: -200px;
+	width: 240px;
+	height: 40px;	
+	-webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;  		
+}
+
+.form-group.open {
+	right: 0;	
+}
+
+.search .form-control {
+	float: right;
+	width: 200px;
+	height: 40px;
+	padding: 7px 12px 5px;
+	color: #ccc;
+	font-weight: 300;	
+	border-radius: 0;	
+	border: none;
+	background: #444444;
+	background: -moz-linear-gradient(top,  #444444 0%, #595959 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444444), color-stop(100%,#595959));
+	background: -webkit-linear-gradient(top,  #444444 0%,#595959 100%);
+	background: -o-linear-gradient(top,  #444444 0%,#595959 100%);
+	background: -ms-linear-gradient(top,  #444444 0%,#595959 100%);
+	background: linear-gradient(to bottom,  #444444 0%,#595959 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#595959',GradientType=0 );
+}
+
+.search .form-control:focus {
+	border: none;
+	box-shadow: none;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar-left,
+.sidebar-right {
+  display: none;
+	-webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;  
+}
+.left-nav-open .sidebar-left {
+	left: 0 !important;
+}
+.right-nav-open .sidebar-right {
+	right: 0 !important;
+}
+@media (min-width: 768px) {
+  .sidebar-left,
+  .sidebar-right {
+    position: fixed;
+    top: 40px;
+    bottom: 0;
+    z-index: 1000;
+    display: block;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background: #e6e7e8;
+  }
+  .sidebar-left {
+    left: -25%;
+   }  
+  .sidebar-right {
+    right: -25%;
+  }  
+	.col-sm-offset-3 {
+		margin-left: 0;
+	}  
+	.col-sm-9 {
+		width: 100%;
+	}	
+	.left-nav-open .col-sm-offset-3 {
+		margin-left: 25%;
+	}  
+	.left-nav-open .col-sm-9 {
+		width: 75%;
+	}	
+	.right-nav-open .col-sm-offset-3 {
+		margin-right: 25%;
+	}  
+	.right-nav-open .col-sm-9 {
+		width: 75%;
+	}		
+}
+
+@media (min-width: 992px) {
+	.sidebar-left {
+		left: -16.66666667%;
+	}
+	.sidebar-right {
+		right: -16.66666667%;
+	}	
+	.col-sm-offset-3 {
+		margin-left: 0;
+	}  
+	.col-sm-9 {
+		width: 100%;
+	}	
+	.left-nav-open .col-sm-offset-3 {
+		margin-left: 16.66666667%;
+	}  
+	.left-nav-open .col-sm-9 {
+		width: 83.33333333%;
+	}	
+	.right-nav-open .col-sm-offset-3 {
+		margin-right: 16.66666667%;
+	}  
+	.right-nav-open .col-sm-9 {
+		width: 83.33333333%;
+	}		
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-bottom: 20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 15px
+	-webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;  		  
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #9ac83c;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+  background: #f7f8fa;
+	-webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;  
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+
+
+
