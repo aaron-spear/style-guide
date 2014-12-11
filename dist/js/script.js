@@ -1,42 +1,92 @@
 // script.js
 
-    // create the module and name it scotchApp
-        // also include ngRoute for all our routing needs
-    var scotchApp = angular.module('styleApp', ['ngRoute']);
+    var styleApp = angular.module('styleApp', ['ngRoute']);
 
     // configure our routes
-    scotchApp.config(function($routeProvider) {
+    styleApp.config(function($routeProvider) {
         $routeProvider
 
-            // route for the home page
             .when('/overview', {
                 templateUrl : 'pages/overview.html',
                 controller  : 'mainController'
             })
 
-            // route for the about page
             .when('/logo', {
                 templateUrl : 'pages/logo.html',
-                controller  : 'aboutController'
+                controller  : 'logoController'
             })
 
-            // route for the contact page
             .when('/colors', {
                 templateUrl : 'pages/colors.html',
-                controller  : 'contactController'
+                controller  : 'colorsController'
+            })
+            
+            .when('/typefaces', {
+                templateUrl : 'pages/typefaces.html',
+                controller  : 'typefacesController'
+            })
+
+            .when('/elements', {
+                templateUrl : 'pages/elements.html',
+                controller  : 'elementsController'
+            })
+
+            .when('/headings', {
+                templateUrl : 'pages/headings.html',
+                controller  : 'headingsController'
+            })
+            
+            .when('/forms', {
+                templateUrl : 'pages/forms.html',
+                controller  : 'formsController'
+            })
+
+            .when('/buttons', {
+                templateUrl : 'pages/buttons.html',
+                controller  : 'buttonsController'
+            })
+
+            .when('/links', {
+                templateUrl : 'pages/links.html',
+                controller  : 'linksController'
+            })
+            
+            .when('/list', {
+                templateUrl : 'pages/list.html',
+                controller  : 'listController'
+            })
+
+            .when('/tables', {
+                templateUrl : 'pages/tables.html',
+                controller  : 'tablesController'
+            })
+
+            .when('/spacing', {
+                templateUrl : 'pages/spacing.html',
+                controller  : 'spacingController'
+            })
+            
+            .when('/icons', {
+                templateUrl : 'pages/icons.html',
+                controller  : 'iconsController'
+            })
+
+            .when('/usage', {
+                templateUrl : 'pages/usage.html',
+                controller  : 'usageontroller'
             });
+                                                          
     });
 
     // create the controller and inject Angular's $scope
-    scotchApp.controller('mainController', function($scope) {
-        // create a message to display in our view
+    styleApp.controller('mainController', function($scope) {
         $scope.message = 'Everyone come and see how good I look!';
     });
 
-    scotchApp.controller('aboutController', function($scope) {
+    styleApp.controller('aboutController', function($scope) {
         $scope.message = 'Look! I am an about page.';
     });
 
-    scotchApp.controller('contactController', function($scope) {
+    styleApp.controller('contactController', function($scope) {
         $scope.message = 'Contact us! JK. This is just a demo.';
     });
