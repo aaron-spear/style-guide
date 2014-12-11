@@ -172,15 +172,14 @@ body {
  */
 
 .main {
-  padding: 20px;
+  padding: 20px 20px 40px;
   background: #f7f8fa;
 	-webkit-transition: all ease-out .3s;
   transition: all ease-out .3s;  
 }
 @media (min-width: 768px) {
   .main {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 20px 40px 80px;
   }
 }
 
