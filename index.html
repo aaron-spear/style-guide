@@ -1,44 +1,172 @@
-<!-- index.html -->
-    <!DOCTYPE html>
-    <html ng-app="scotchApp">
-    <head>
-      <!-- SCROLLS -->
-      <!-- load bootstrap and fontawesome via CDN -->
-      <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
 
-      <!-- SPELLS -->
-      <!-- load angular via CDN -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-      <script src="dist/js/script.js"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="dist/img/favicon.ico">
 
-    <!-- define angular controller -->
-    <body ng-controller="mainController">
-        <!-- HEADER AND NAVBAR -->
-        <header>
-            <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Angular Routing Example</a>
-                </div>
+    <title>spotXchange style guide</title>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
-                </ul>
-            </div>
-            </nav>
-        </header>
-        
-    <!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <div id="main">
-        <!-- angular templating -->
-        <!-- this is where content will be injected -->
-        <div ng-view></div>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Google fonts Source Sans -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="left-nav-open" ng-app="styleApp">
+	  
+    <header class="navbar navbar-inverse navbar-fixed-top">
+      <a class="leftmenu-trigger active" href="#">
+	      <div class="patty"></div>
+      </a>
+      <a class="logo" href="/">&nbsp;</a>
+<!--      
+      <a class="rightmenu-trigger" href="#">
+	      <div class="patty"></div>
+      </a>			
+      <div class="search form-group">	    
+	      <input type="search" class="form-control" placeholder="Search" />
+	      <a class="btn-search" href="#"><span></span></a>
+      </div>   
+-->       
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar-left">
+          <ul class="nav nav-sidebar">
+            <li class="level-1 active"><a href="#overview">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="level-1"><a href="#logo">Our Logo</a></li>
+            <li class="level-1"><a href="#colors">Colors</a></li>
+            <li class="level-1"><a href="#typefaces">Typefaces</a></li>
+            <li class="nav-sub"><a href="#elements">Elements</a>
+		          <ul class="nav">
+			          <li><a href="#headings">Headings</a></li>
+		            <li><a href="#forms">Forms</a></li>
+		            <li><a href="#buttons">Buttons</a></li>
+		            <li><a href="#links">Links</a></li>
+		            <li><a href="#list">List</a></li>
+		            <li><a href="#tables">Tables</a></li>
+		          </ul>
+            </li>
+            <li class="level-1"><a href="#spacing">Spacing</a></li>
+            <li class="level-1"><a href="#icons">App Icons</a></li>
+            <li class="level-1"><a href="#usage">Usage</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="mainController">
+	        <div ng-view></div>
+<!--
+	        
+	        <div id="logo">
+	          <h2 class="sub-header">Our Logo</h2>
+						<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+	        </div>
+	        
+	        <div id="colors">
+	          <h2 class="sub-header">Colors</h2>
+						<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+	        </div>
+	        
+	        <div id="typefaces">
+	          <h2 class="sub-header">Typefaces</h2>
+						<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+	        </div>	        
+	        
+	        <div id="elements">
+	          <h2 class="sub-header">Elements</h2>
+						<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+		        <div id="headings">
+		          <h3 class="sub-header">Headings</h3>
+							<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+		        </div>
+		        <div id="forms">
+		          <h3 class="sub-header">Forms</h3>
+							<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+		        </div>
+		        <div id="buttons">
+		          <h3 class="sub-header">Buttons</h3>
+							<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+		        </div>
+		        <div id="links">
+		          <h3 class="sub-header">Links</h3>
+							<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+		        </div>
+		        <div id="list">
+		          <h3 class="sub-header">List</h3>
+							<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+		        </div>
+		        <div id="tables">
+		          <h3 class="sub-header">Tables</h3>
+							<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+		        </div>		        		        		        		        		        							
+	        </div>	 
+	        
+	        <div id="spacing">
+	          <h2 class="sub-header">Spacing</h2>
+						<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+	        </div>	 	 
+	        
+	        <div id="icons">
+	          <h2 class="sub-header">App Icons</h2>
+						<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+	        </div>	 	  
+	        
+	        <div id="usage">
+	          <h2 class="sub-header">Usage</h2>
+						<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+	        </div>	
+-->	                     	        
+        </div>
+        <div class="col-sm-3 col-md-2 sidebar-right">
+          <ul class="nav nav-sidebar">
+            <li class="level-1 active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="level-1"><a href="#">Our Logo</a></li>
+            <li class="level-1"><a href="#">Colors</a></li>
+            <li class="level-1"><a href="#">Typefaces</a></li>
+            <li class="nav-sub"><a href="#">Elements</a>
+		          <ul class="nav">
+			          <li><a href="#">Headings</a></li>
+		            <li><a href="#">Forms</a></li>
+		            <li><a href="#">Buttons</a></li>
+		            <li><a href="#">Links</a></li>
+		            <li><a href="#">List</a></li>
+		            <li><a href="#">Tables</a></li>
+		          </ul>
+            </li>
+            <li class="level-1"><a href="#">Spacing</a></li>
+            <li class="level-1"><a href="#">App Icons</a></li>
+            <li class="level-1"><a href="#">Usage</a></li>
+          </ul>
+        </div>        
+      </div>
     </div>
-        
 
-    </body>
-    </html>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/main.js"></script>
+    <script src="assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

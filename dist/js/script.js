@@ -2,27 +2,27 @@
 
     // create the module and name it scotchApp
         // also include ngRoute for all our routing needs
-    var scotchApp = angular.module('scotchApp', ['ngRoute']);
+    var scotchApp = angular.module('styleApp', ['ngRoute']);
 
     // configure our routes
     scotchApp.config(function($routeProvider) {
         $routeProvider
 
             // route for the home page
-            .when('/', {
-                templateUrl : 'pages/home.html',
+            .when('/overview', {
+                templateUrl : 'pages/overview.html',
                 controller  : 'mainController'
             })
 
             // route for the about page
-            .when('/about', {
-                templateUrl : 'pages/about.html',
+            .when('/logo', {
+                templateUrl : 'pages/logo.html',
                 controller  : 'aboutController'
             })
 
             // route for the contact page
-            .when('/contact', {
-                templateUrl : 'pages/contact.html',
+            .when('/colors', {
+                templateUrl : 'pages/colors.html',
                 controller  : 'contactController'
             });
     });
