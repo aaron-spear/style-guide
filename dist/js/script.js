@@ -13,67 +13,67 @@
 
             .when('/logo', {
                 templateUrl : 'pages/logo.html',
-                controller  : 'logoController'
+                controller  : 'mainController'
             })
 
             .when('/colors', {
                 templateUrl : 'pages/colors.html',
-                controller  : 'colorsController'
+                controller  : 'mainController'
             })
             
             .when('/typefaces', {
                 templateUrl : 'pages/typefaces.html',
-                controller  : 'typefacesController'
+                controller  : 'mainController'
             })
 
             .when('/elements', {
                 templateUrl : 'pages/elements.html',
-                controller  : 'elementsController'
+                controller  : 'mainController'
             })
 
             .when('/headings', {
                 templateUrl : 'pages/headings.html',
-                controller  : 'headingsController'
+                controller  : 'mainController'
             })
             
             .when('/forms', {
                 templateUrl : 'pages/forms.html',
-                controller  : 'formsController'
+                controller  : 'mainController'
             })
 
             .when('/buttons', {
                 templateUrl : 'pages/buttons.html',
-                controller  : 'buttonsController'
+                controller  : 'mainController'
             })
 
             .when('/links', {
                 templateUrl : 'pages/links.html',
-                controller  : 'linksController'
+                controller  : 'mainController'
             })
             
             .when('/list', {
                 templateUrl : 'pages/list.html',
-                controller  : 'listController'
+                controller  : 'mainController'
             })
 
             .when('/tables', {
                 templateUrl : 'pages/tables.html',
-                controller  : 'tablesController'
+                controller  : 'mainController'
             })
 
             .when('/spacing', {
                 templateUrl : 'pages/spacing.html',
-                controller  : 'spacingController'
+                controller  : 'mainController'
             })
             
             .when('/icons', {
                 templateUrl : 'pages/icons.html',
-                controller  : 'iconsController'
+                controller  : 'mainController'
             })
 
             .when('/usage', {
                 templateUrl : 'pages/usage.html',
-                controller  : 'usageontroller'
+                controller  : 'mainController'
             });
                                                           
     });
