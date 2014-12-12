@@ -28,10 +28,10 @@
   <body class="left-nav-open" ng-controller="mainController">
 	  
     <header class="navbar navbar-inverse navbar-fixed-top">
-      <a class="leftmenu-trigger active" href="#">
+      <a class="leftmenu-trigger active">
 	      <div class="patty"></div>
       </a>
-      <a class="logo" href="/">&nbsp;</a>
+      <a class="logo">&nbsp;</a>
 <!--      
       <a class="rightmenu-trigger" href="#">
 	      <div class="patty"></div>
@@ -67,7 +67,7 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-	        <div ng-view></div>                    	        
+	        <div class="page {{ pageClass }}" ng-view></div>                    	        
         </div>
         <div class="col-sm-3 col-md-2 sidebar-right">
           <ul class="nav nav-sidebar">
@@ -99,7 +99,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <script src="dist/js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+    <script src="dist/js/app.js"></script>
+    <script src="dist/js/directives.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="dist/js/main.js"></script>
     <script src="assets/js/docs.min.js"></script>

@@ -3128,6 +3128,7 @@ input[type="button"].btn-block {
   float: left;
   height: 40px;
   width: 40px;
+  cursor: pointer;
   border-right: 1px solid #27292d;
 }
 .leftmenu-trigger .patty,
@@ -3247,6 +3248,40 @@ input[type="button"].btn-block {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   background-repeat: repeat-x;
+}
+.btn-group .btn {
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  background-color: #75a637;
+  background-image: -moz-linear-gradient(top, #9ac83c, #75a637);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9ac83c), to(#75a637));
+  background-image: -webkit-linear-gradient(top, #9ac83c, #75a637);
+  background-image: -o-linear-gradient(top, #9ac83c, #75a637);
+  background-image: linear-gradient(to bottom, #9ac83c, #75a637);
+}
+.btn-group .btn:hover {
+  background-color: #75A637;
+  background-image: none;
+}
+.logos {
+  position: relative;
+  margin-top: 40px;
+}
+.logos .light,
+.logos .dark {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+.logos .ng-hide {
+  opacity: 0;
+  display: block !important;
 }
 .fade {
   opacity: 0;
@@ -3441,6 +3476,11 @@ tbody.collapse.in {
 .btn-group > .btn.active,
 .btn-group-vertical > .btn.active {
   z-index: 2;
+}
+.btn-group > .btn.active,
+.btn-group-vertical > .btn.active {
+  background-color: #75A637;
+  background-image: none;
 }
 .btn-group .btn + .btn,
 .btn-group .btn + .btn-group,

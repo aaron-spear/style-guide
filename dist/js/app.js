@@ -1,92 +1,113 @@
 // script.js
 
-    var styleApp = angular.module('styleApp', ['ngRoute']);
+
+    var styleApp = angular.module('styleApp', ['ngRoute', 'ngAnimate']);
 
     // configure our routes
     styleApp.config(function($routeProvider) {
         $routeProvider
 
-            .when('/overview', {
+            .when('/', {
                 templateUrl : 'pages/overview.html',
                 controller  : 'mainController'
             })
+            
+            .when('/overview', {
+                templateUrl : 'pages/overview.html',
+                controller  : 'mainController'
+            })            
 
             .when('/logo', {
                 templateUrl : 'pages/logo.html',
-                controller  : 'mainController'
+                controller  : 'logoController'
             })
 
             .when('/colors', {
                 templateUrl : 'pages/colors.html',
-                controller  : 'mainController'
+                controller  : 'colorsController'
             })
             
+/*
             .when('/typefaces', {
                 templateUrl : 'pages/typefaces.html',
-                controller  : 'mainController'
+                controller  : 'typefacesController'
             })
 
             .when('/elements', {
                 templateUrl : 'pages/elements.html',
-                controller  : 'mainController'
+                controller  : 'elementsController'
             })
 
             .when('/headings', {
                 templateUrl : 'pages/headings.html',
-                controller  : 'mainController'
+                controller  : 'headingsController'
             })
             
             .when('/forms', {
                 templateUrl : 'pages/forms.html',
-                controller  : 'mainController'
+                controller  : 'formsController'
             })
 
             .when('/buttons', {
                 templateUrl : 'pages/buttons.html',
-                controller  : 'mainController'
+                controller  : 'buttonsController'
             })
 
             .when('/links', {
                 templateUrl : 'pages/links.html',
-                controller  : 'mainController'
+                controller  : 'linksController'
             })
             
             .when('/list', {
                 templateUrl : 'pages/list.html',
-                controller  : 'mainController'
+                controller  : 'listController'
             })
 
             .when('/tables', {
                 templateUrl : 'pages/tables.html',
-                controller  : 'mainController'
+                controller  : 'tablesController'
             })
 
             .when('/spacing', {
                 templateUrl : 'pages/spacing.html',
-                controller  : 'mainController'
+                controller  : 'spacingController'
             })
             
             .when('/icons', {
                 templateUrl : 'pages/icons.html',
-                controller  : 'mainController'
+                controller  : 'iconsController'
             })
 
             .when('/usage', {
                 templateUrl : 'pages/usage.html',
-                controller  : 'mainController'
+                controller  : 'usageController'
             });
+*/
+
                                                           
     });
 
     // create the controller and inject Angular's $scope
     styleApp.controller('mainController', function($scope) {
-        $scope.message = 'Everyone come and see how good I look!';
+        $scope.pageClass = 'page-overview';
     });
 
-    styleApp.controller('aboutController', function($scope) {
-        $scope.message = 'Look! I am an about page.';
+    styleApp.controller('logoController', function($scope) {
+        $scope.pageClass = 'page-logo';
     });
 
-    styleApp.controller('contactController', function($scope) {
-        $scope.message = 'Contact us! JK. This is just a demo.';
+    styleApp.controller('colorsController', function($scope) {
+        $scope.pageClass = 'page-colors';
     });
+    
+    styleApp.controller('TabController', function () {
+        this.tab = 1;
+
+        this.setTab = function (tabId) {
+            this.tab = tabId;
+        };
+
+        this.isSet = function (tabId) {
+            return this.tab === tabId;
+        };
+    });    
