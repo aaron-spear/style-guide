@@ -8,10 +8,16 @@ use the logo in a sentence.</p>
 
 <section ng-controller="TabController as tab">
 	<div class="logos">
-	  <div class="btn-group btn-group-sm">
+	  <div class="btn-group btn-group-sm left">
 	  	<a href ng-class="{active:tab.isSet(1)}" ng-click="tab.setTab(1)" class="btn btn-default">Light</a>
 	  	<a href ng-class="{active:tab.isSet(2)}" ng-click="tab.setTab(2)" class="btn btn-default">Dark</a>
 	  </div>	
+	  <div class="btn-group btn-group-sm right">
+	  	<a href ng-class="{'active':selectedTab === 'one'}"  ng-click="selectedTab = 'one'" class="btn btn-default">EPS</a>
+	  	<a href ng-class="{'active':selectedTab === 'two'}"  ng-click="selectedTab = 'two'" class="btn btn-default">JPG</a>
+	  	<a href ng-class="{'active':selectedTab === 'three'}"  ng-click="selectedTab = 'three'" class="btn btn-default">PNG</a>
+	  </div>		   
+	  
 		<div class="light" ng-show="tab.isSet(1)">
 			<?xml version="1.0" encoding="utf-8"?>
 			<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->

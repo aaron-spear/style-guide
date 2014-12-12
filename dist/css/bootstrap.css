@@ -3456,6 +3456,10 @@ tbody.collapse.in {
     right: auto;
   }
 }
+.btn {
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
 .btn-group,
 .btn-group-vertical {
   position: relative;
@@ -3481,6 +3485,9 @@ tbody.collapse.in {
 .btn-group-vertical > .btn.active {
   background-color: #75A637;
   background-image: none;
+}
+.btn-group.right {
+  float: right;
 }
 .btn-group .btn + .btn,
 .btn-group .btn + .btn-group,
