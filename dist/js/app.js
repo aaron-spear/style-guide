@@ -27,7 +27,6 @@
                 controller  : 'colorsController'
             })
             
-/*
             .when('/typefaces', {
                 templateUrl : 'pages/typefaces.html',
                 controller  : 'typefacesController'
@@ -82,7 +81,6 @@
                 templateUrl : 'pages/usage.html',
                 controller  : 'usageController'
             });
-*/
 
                                                           
     });
@@ -99,6 +97,50 @@
     styleApp.controller('colorsController', function($scope) {
         $scope.pageClass = 'page-colors';
     });
+    
+    styleApp.controller('typefacesController', function($scope) {
+        $scope.pageClass = 'page-type';
+    });
+
+    styleApp.controller('elementsController', function($scope) {
+        $scope.pageClass = 'page-elements';
+    });
+
+    styleApp.controller('headingsController', function($scope) {
+        $scope.pageClass = 'page-headings';
+    });
+    
+    styleApp.controller('formsController', function($scope) {
+        $scope.pageClass = 'page-forms';
+    });
+
+    styleApp.controller('buttonsController', function($scope) {
+        $scope.pageClass = 'page-buttons';
+    });
+
+    styleApp.controller('linksController', function($scope) {
+        $scope.pageClass = 'page-links';
+    });
+
+    styleApp.controller('listController', function($scope) {
+        $scope.pageClass = 'page-list';
+    });    
+    
+    styleApp.controller('tablesController', function($scope) {
+        $scope.pageClass = 'page-tables';
+    });
+
+    styleApp.controller('spacingController', function($scope) {
+        $scope.pageClass = 'page-spacing';
+    });
+
+    styleApp.controller('iconsController', function($scope) {
+        $scope.pageClass = 'page-icons';
+    }); 
+    
+    styleApp.controller('usageController', function($scope) {
+        $scope.pageClass = 'page-usage';
+    });                
     
     styleApp.controller('TabController', function () {
         this.tab = 1;
