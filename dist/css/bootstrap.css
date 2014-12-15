@@ -3288,7 +3288,7 @@ input[type="button"].btn-block {
 .logos .dark .color-white,
 .logos .light .black-white,
 .logos .dark .black-white {
-  padding-right: 10px;
+  margin-bottom: 15px;
 }
 .logos .light .color-white svg,
 .logos .dark .color-white svg,
@@ -3300,7 +3300,7 @@ input[type="button"].btn-block {
 .logos .dark .white-black,
 .logos .light .color-black,
 .logos .dark .color-black {
-  padding-left: 10px;
+  margin-bottom: 15px;
 }
 .logos .light .white-black svg,
 .logos .dark .white-black svg,
@@ -3308,9 +3308,26 @@ input[type="button"].btn-block {
 .logos .dark .color-black svg {
   background: #000;
 }
+.logos .light {
+  opacity: 1 !important;
+}
 .logos .ng-hide {
   opacity: 0;
   display: block !important;
+}
+@media (min-width: 992px) {
+  .logos .light .color-white,
+  .logos .dark .color-white,
+  .logos .light .black-white,
+  .logos .dark .black-white {
+    padding-right: 10px;
+  }
+  .logos .light .white-black,
+  .logos .dark .white-black,
+  .logos .light .color-black,
+  .logos .dark .color-black {
+    padding-left: 10px;
+  }
 }
 .colors .col-md-4 {
   padding: 0;
@@ -3370,6 +3387,9 @@ input[type="button"].btn-block {
   background: -ms-linear-gradient(left, #bcbec0 0%, #808285 100%);
   background: linear-gradient(to right, #bcbec0 0%, #808285 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bcbec0', endColorstr='#808285', GradientType=1);
+}
+.colors pre.prettyprint {
+  margin: 0 auto 30px;
 }
 .colors .info {
   padding: 0;

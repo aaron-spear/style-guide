@@ -7,6 +7,13 @@ body {
   padding-top: 40px;
 }
 
+::selection {
+  background: rgba(141,198,65,.5); 
+}
+::-moz-selection {
+  background: rgba(141,198,65,.5); 
+}
+
 
 /*
  * Global add-ons
