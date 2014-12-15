@@ -226,8 +226,7 @@ body {
 	padding: 0 40px 80px 0;
 }
 
-.page.ng-enter,
-.page.ng-leave {
+.page.ng-enter {
   -webkit-transition:0.5s linear all;
   transition:0.5s linear all;
 }
@@ -241,47 +240,6 @@ body {
   opacity:1;
 }
 
-	/* page specific animations ------------------------ */
-
-	/* home -------------------------- */
-/*
-	.page-overview.ng-enter {
-		animation: scaleUp 0.5s both ease-in;
-		-webkit-animation: scaleUp 0.5s both ease-in;
-	}
-	.page-overview.ng-leave { 
-		transform-origin: 0% 0%; 
-		animation: rotateFall 1s both ease-in; 
-		-webkit-transform-origin: 0% 0%; 
-		-webkit-animation: rotateFall 1s both ease-in;
-	}
-*/
-
-	/* about ------------------------ */
-/*
-	.page-logo.ng-enter {
-		animation:slideInRight 0.5s both ease-in;
-		-webkit-animation:slideInRight 0.5s both ease-in;
-	}
-	.page-logo.ng-leave {
-		animation:slideOutLeft 0.5s both ease-in;		
-		-webkit-animation:slideOutLeft 0.5s both ease-in;
-	}
-*/
-
-	/* contact ---------------------- */
-/*
-	.page-colors.ng-leave { 
-		transform-origin: 50% 50%; 
-		animation: rotateOutNewspaper .5s both ease-in; 
-		-webkit-transform-origin: 50% 50%; 
-		-webkit-animation: rotateOutNewspaper .5s both ease-in; 		
-	}
-	.page-colors.ng-enter { 
-		animation:slideInUp 0.5s both ease-in; 
-		-webkit-animation:slideInUp 0.5s both ease-in; 
-	}
-*/
 
 
 
