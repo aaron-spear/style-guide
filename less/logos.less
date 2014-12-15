@@ -8,12 +8,26 @@
 	.light,
 	.dark {
 		position: absolute;
-		top: 40px;
+		top: 50px;
 		left: 0;
 		width: 100%;
 		opacity: 1;
 		-webkit-transition: all ease-out .3s;
 	  transition: all ease-out .3s; 		
+	  .col-md-6 {
+		  padding: 0;
+	  }
+	  .color-white,
+	  .black-white {
+		  padding-right: 10px;
+		  svg {
+			  border: #ddd 1px solid;
+		  }
+	  }
+	  .white-black,
+	  .color-black {
+		  padding-left: 10px;
+	  }	  
 	}
 	.ng-hide {
 		opacity: 0;

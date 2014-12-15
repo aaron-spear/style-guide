@@ -3272,12 +3272,34 @@ input[type="button"].btn-block {
 .logos .light,
 .logos .dark {
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 0;
   width: 100%;
   opacity: 1;
   -webkit-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
+}
+.logos .light .col-md-6,
+.logos .dark .col-md-6 {
+  padding: 0;
+}
+.logos .light .color-white,
+.logos .dark .color-white,
+.logos .light .black-white,
+.logos .dark .black-white {
+  padding-right: 10px;
+}
+.logos .light .color-white svg,
+.logos .dark .color-white svg,
+.logos .light .black-white svg,
+.logos .dark .black-white svg {
+  border: #ddd 1px solid;
+}
+.logos .light .white-black,
+.logos .dark .white-black,
+.logos .light .color-black,
+.logos .dark .color-black {
+  padding-left: 10px;
 }
 .logos .ng-hide {
   opacity: 0;
