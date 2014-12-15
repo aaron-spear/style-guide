@@ -3268,6 +3268,7 @@ input[type="button"].btn-block {
 .logos {
   position: relative;
   margin-top: 40px;
+  height: 200px;
 }
 .logos .light,
 .logos .dark {
@@ -3300,6 +3301,12 @@ input[type="button"].btn-block {
 .logos .light .color-black,
 .logos .dark .color-black {
   padding-left: 10px;
+}
+.logos .light .white-black svg,
+.logos .dark .white-black svg,
+.logos .light .color-black svg,
+.logos .dark .color-black svg {
+  background: #000;
 }
 .logos .ng-hide {
   opacity: 0;
