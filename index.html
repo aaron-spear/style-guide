@@ -23,7 +23,7 @@
     <![endif]-->
     
     <!-- Google fonts Source Sans -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body class="left-nav-open" ng-controller="mainController">
@@ -48,28 +48,29 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar-left">
           <ul class="nav nav-sidebar">
-            <li class="level-1 active"><a href="#overview">Overview <span class="sr-only">(current)</span></a></li>
-            <li class="level-1"><a href="#logo">Our Logo</a></li>
-            <li class="level-1"><a href="#colors">Colors</a></li>
-            <li class="level-1"><a href="#typefaces">Typefaces</a></li>
-            <li class="nav-sub"><a href="#elements">Elements</a>
+            <li class="level-1 overview"><a href="#overview">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="level-1 logos"><a href="#logo">Our Logo</a></li>
+            <li class="level-1 colors"><a href="#colors">Colors</a></li>
+            <li class="level-1 typefaces"><a href="#typefaces">Typefaces</a></li>
+            <li class="nav-sub elements"><a href="#elements">Elements</a>
 		          <ul class="nav">
-			          <li><a href="#headings">Headings</a></li>
-		            <li><a href="#forms">Forms</a></li>
-		            <li><a href="#buttons">Buttons</a></li>
-		            <li><a href="#links">Links</a></li>
-		            <li><a href="#list">List</a></li>
-		            <li><a href="#tables">Tables</a></li>
+			          <li class="headings"><a href="#headings">Headings</a></li>
+		            <li class="forms"><a href="#forms">Forms</a></li>
+		            <li class="buttons"><a href="#buttons">Buttons</a></li>
+		            <li class="links"><a href="#links">Links</a></li>
+		            <li class="list"><a href="#list">List</a></li>
+		            <li class="tables"><a href="#tables">Tables</a></li>
 		          </ul>
             </li>
-            <li class="level-1"><a href="#spacing">Spacing</a></li>
-            <li class="level-1"><a href="#icons">App Icons</a></li>
-            <li class="level-1"><a href="#usage">Usage</a></li>
+            <li class="level-1 spacing"><a href="#spacing">Spacing</a></li>
+            <li class="level-1 icons"><a href="#icons">App Icons</a></li>
+            <li class="level-1 usage"><a href="#usage">Usage</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 	        <div class="page {{ pageClass }}" ng-view></div>                    	        
         </div>
+<!--
         <div class="col-sm-3 col-md-2 sidebar-right">
           <ul class="nav nav-sidebar">
             <li class="level-1 active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
@@ -90,7 +91,8 @@
             <li class="level-1"><a href="#">App Icons</a></li>
             <li class="level-1"><a href="#">Usage</a></li>
           </ul>
-        </div>        
+        </div>
+-->        
       </div>
     </div>
 

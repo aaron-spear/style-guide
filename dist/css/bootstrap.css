@@ -886,7 +886,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -3335,6 +3335,8 @@ input[type="button"].btn-block {
 .colors .color {
   width: 100%;
   height: 150px;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
 }
 .colors .primary,
 .colors .secondary {
@@ -3413,6 +3415,27 @@ input[type="button"].btn-block {
   .colors .col-md-4:last-child {
     padding-left: 8px;
   }
+}
+@media (min-width: 1200px) {
+  .colors .color {
+    width: 100%;
+    height: 200px;
+  }
+}
+.gotham-bold {
+  font-family: 'Gotham-Bold', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.gotham-book {
+  font-family: 'Gotham-Book', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.gotham-book-italic {
+  font-family: 'Gotham-BookItalic', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.gotham-light {
+  font-family: 'Gotham-Light', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.gotham-medium {
+  font-family: 'Gotham-Medium', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .fade {
   opacity: 0;
@@ -3929,6 +3952,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li {
   position: relative;
   display: block;
+  margin: 0;
+  height: auto;
 }
 .nav > li > a {
   position: relative;
@@ -5888,7 +5913,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5995,7 +6020,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;

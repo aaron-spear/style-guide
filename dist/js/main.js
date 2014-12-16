@@ -33,6 +33,52 @@ $('.nav-sidebar > li.level-1 a').click(function(){
 	$(this).parent().addClass('active');
 });
 
+var subnav = function() {
+  $('.nav-sub').addClass('active');
+  $('.nav-sub > a').next('.nav').slideToggle('normal');	
+}
+
+$(function() {
+  var loc = window.location.href;
+  if(/overview/.test(loc)) {
+    $('.nav .overview').addClass('active');
+  } else if(/logo/.test(loc)) {
+	  $('.nav .logos').addClass('active');
+  } else if(/colors/.test(loc)) {
+	  $('.nav .colors').addClass('active');
+  } else if(/typefaces/.test(loc)) {
+	  $('.nav .typefaces').addClass('active');
+	} else if(/elements/.test(loc)) {
+	  $('.nav .elements').addClass('active');
+	  $('.nav-sub > a').next('.nav').slideToggle('normal');
+	} else if(/headings/.test(loc)) {
+	  $('.nav .headings').addClass('active');
+		subnav();
+	} else if(/forms/.test(loc)) {
+	  $('.nav .forms').addClass('active');
+	  subnav();
+	} else if(/buttons/.test(loc)) {
+	  $('.nav .buttons').addClass('active');
+	  subnav();
+	} else if(/links/.test(loc)) {
+	  $('.nav .links').addClass('active');
+	  subnav();
+	} else if(/list/.test(loc)) {
+	  $('.nav .list').addClass('active');
+	  subnav();
+	} else if(/tables/.test(loc)) {
+	  $('.nav .tables').addClass('active');
+	  subnav();
+	} else if(/spacing/.test(loc)) {
+	  $('.nav .spacing').addClass('active');
+	} else if(/icons/.test(loc)) {
+	  $('.nav .icons').addClass('active');
+	} else if(/usage/.test(loc)) {
+	  $('.nav .usage').addClass('active');
+	}
+});
+
+
 // PAGE SCROLL
 // ========================
 $('a[href*=#]:not([href=#])').click(function() {
