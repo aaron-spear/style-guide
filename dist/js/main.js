@@ -69,8 +69,8 @@ $(function() {
 	} else if(/tables/.test(loc)) {
 	  $('.nav .tables').addClass('active');
 	  subnav();
-	} else if(/spacing/.test(loc)) {
-	  $('.nav .spacing').addClass('active');
+	} else if(/css/.test(loc)) {
+	  $('.nav .css').addClass('active');
 	} else if(/icons/.test(loc)) {
 	  $('.nav .icons').addClass('active');
 	} else if(/usage/.test(loc)) {
@@ -94,4 +94,20 @@ $('a[href*=#]:not([href=#])').click(function() {
     }
   }
 });
+
+
+// COPY TO CLIPBOARD
+// ========================
+function copyToClipboard (text) {
+	window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
+}
+
+$('.prettyprint').click(function(text) {
+	window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
+});
+
+
+
+
+
 

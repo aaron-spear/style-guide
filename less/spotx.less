@@ -127,7 +127,22 @@
 }
 
 
-
+.btn {
+	font-weight: 300;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	background-color: #75a637;
+	background-image: -moz-linear-gradient(top, #9ac83c, #75a637);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9ac83c), to(#75a637));
+	background-image: -webkit-linear-gradient(top, #9ac83c, #75a637);
+	background-image: -o-linear-gradient(top, #9ac83c, #75a637);
+	background-image: linear-gradient(to bottom, #9ac83c, #75a637);		
+	&:hover {
+		background-color: #75A637;
+		background-image: none;
+	}
+}
 
 .btn-group {
 	.btn {
@@ -147,6 +162,16 @@
 		}
 	}
 }
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open > .dropdown-toggle.btn-primary {
+	border-color: #496721;
+}
+
 
 
 

@@ -16,6 +16,9 @@
 	.secondary {
 		margin-bottom: 20px;
 	}
+	.gradients {
+		margin-bottom: 15px;
+	}
 	.blue {
 		background: #1b9dd0;
 	}
@@ -34,7 +37,7 @@
 	.grey-light {
 		background: #bcbec0;
 	}	
-	.blue-grad {
+	.blue-gradient {
 		background: #27aae1;
 		background: -moz-linear-gradient(left,  #27aae1 0%, #0973ba 100%);
 		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#27aae1), color-stop(100%,#0973ba));
@@ -44,7 +47,7 @@
 		background: linear-gradient(to right,  #27aae1 0%,#0973ba 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27aae1', endColorstr='#0973ba',GradientType=1 );	
 	}
-	.green-grad {
+	.green-gradient {
 		background: #d9e127;
 		background: -moz-linear-gradient(left,  #d9e127 0%, #8eb63e 100%);
 		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d9e127), color-stop(100%,#8eb63e));
@@ -54,7 +57,7 @@
 		background: linear-gradient(to right,  #d9e127 0%,#8eb63e 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e127', endColorstr='#8eb63e',GradientType=1 );		
 	}
-	.grey-grad {
+	.grey-gradient {
 		background: #bcbec0;
 		background: -moz-linear-gradient(left,  #bcbec0 0%, #808285 100%);
 		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#bcbec0), color-stop(100%,#808285));
@@ -68,13 +71,13 @@
 		margin: 0 auto 30px;
 	}
 	.info {
-		padding: 0;
+		padding: 8px 0 0 12px;
 		li {
 			list-style: none;
-			padding: 5px 0 5px 10px;
-			border-bottom: #eee 1px solid;
+			padding: 5px 0;
 			p {
-				color: #888;
+				color: #efefef;
+				font-weight: 300;
 				margin: 0;
 			}
 		}
@@ -84,10 +87,10 @@
 @media (min-width: 992px) {
 	.colors {
 		.col-md-4 {
-			&:nth-child(2) {
+			&:first-child {
 				padding-right: 8px;
 			}
-			&:nth-child(3) {
+			&:nth-child(2) {
 				padding: 0 4px;
 			}
 			&:last-child {
@@ -106,7 +109,39 @@
 	}
 }
 
+.x-colors {
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.x-colors li {
 
+}
+.x-colors li a {
+	display: block;
+	position: relative;
+}
+.x-colors li a {
+	overflow: hidden;
+}
+.x-colors li a div {
+	position: absolute;
+	top: -100%;
+	width: 100%;
+	height: 100%;
+}
+.x-colors li a div span {
+	display: block;
+	padding: 10px 0;
+	margin: 40px 20px 20px 20px;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: rgba(255,255,255,0.9);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
+}
 
 
 

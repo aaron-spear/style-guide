@@ -32,11 +32,6 @@
                 controller  : 'typefacesController'
             })
 
-            .when('/elements', {
-                templateUrl : 'pages/elements.html',
-                controller  : 'elementsController'
-            })
-
             .when('/headings', {
                 templateUrl : 'pages/headings.html',
                 controller  : 'headingsController'
@@ -67,8 +62,8 @@
                 controller  : 'tablesController'
             })
 
-            .when('/spacing', {
-                templateUrl : 'pages/spacing.html',
+            .when('/css', {
+                templateUrl : 'pages/css.html',
                 controller  : 'spacingController'
             })
             
@@ -131,7 +126,7 @@
     });
 
     styleApp.controller('spacingController', function($scope) {
-        $scope.pageClass = 'page-spacing';
+        $scope.pageClass = 'page-css';
     });
 
     styleApp.controller('iconsController', function($scope) {
