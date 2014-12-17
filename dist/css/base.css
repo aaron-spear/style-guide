@@ -144,7 +144,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background: #e6e7e8;
+    background: #e6e7e8 url(../img/divider.png) no-repeat right top;
   }
   .sidebar-left {
     left: -25%;
@@ -227,7 +227,6 @@ body {
 
 .main {
   padding: 20px 20px 40px;
-  background: #f7f8fa;
 	-webkit-transition: all ease-out .3s;
   transition: all ease-out .3s;  
 }
@@ -265,8 +264,6 @@ body {
 /* PAGES (specific colors for each page)
 ============================================================================= */
 
-.page {
-	position: absolute;
 	padding: 0 40px 80px 0;
 }
 
