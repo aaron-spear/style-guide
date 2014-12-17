@@ -186,11 +186,9 @@
 				</a>
 			</li>
 		</ul>			 
-  </div> 
-<!--
-<div class="code">
-<div class="col-md-4">
-<pre class="prettyprint lang-css">
+  </div>
+<div class="zero-clipboard">
+<pre class="prettyprint lang-css" id="clipboard_text_1">
 .blue-gradient {
   background: #27aae1;
   background: -moz-linear-gradient(left, #27aae1 0%, #0973ba 100%);
@@ -201,10 +199,12 @@
   background: linear-gradient(to right, #27aae1 0%, #0973ba 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#27aae1', endColorstr='#0973ba', GradientType=1);	
 }
-</pre>						
+</pre>
+<span class="btn-clipboard" data-clipboard-target="clipboard_text_1">Copy</span>
 </div>
-<div class="col-md-4">
-<pre class="prettyprint lang-css">
+
+<div class="zero-clipboard">
+<pre class="prettyprint lang-css" id="clipboard_text_2">
 .green-gradient {
   background: #d9e127;
   background: -moz-linear-gradient(left, #d9e127 0%, #8eb63e 100%);
@@ -215,10 +215,12 @@
   background: linear-gradient(to right, #d9e127 0%, #8eb63e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9e127', endColorstr='#8eb63e', GradientType=1);
 }
-</pre>				
+</pre>
+<span class="btn-clipboard" data-clipboard-target="clipboard_text_2">Copy</span>
 </div>
-<div class="col-md-4">
-<pre class="prettyprint lang-css" id="clipboard_text">
+
+<div class="zero-clipboard">
+<pre class="prettyprint lang-css" id="clipboard_text_3">
 .grey-gradient {
   background: #bcbec0;
   background: -moz-linear-gradient(left, #bcbec0 0%, #808285 100%);
@@ -229,22 +231,19 @@
   background: linear-gradient(to right, #bcbec0 0%, #808285 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bcbec0', endColorstr='#808285', GradientType=1);
 }
-</pre>		
-</div>		
-</div> 
--->    
+</pre>
+<span class="btn-clipboard" data-clipboard-target="clipboard_text_3">Copy</span>
+</div>      
 </div>
-			  
-		  		  
-<!-- <button id="my-button_text" class="copycss" data-clipboard-target="clipboard_text">Copy to Clipboard</button>	 -->
 
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=desert"></script>
-<script src="./dist/js/ZeroClipboard.js"></script>
-<script src="./dist/js/jquery.hoverdir.js"></script>
-<script src="./dist/js/modernizr.js"></script>
+<script src="dist/js/run_prettify.js"></script>
+<script src="dist/js/lang-css.js"></script>
+<script src="dist/js/ZeroClipboard.js"></script>
+<script src="dist/js/jquery.hoverdir.js"></script>
+<script src="dist/js/modernizr.js"></script>
 
 <script>
-	var client = new ZeroClipboard($(".copycss"));
+	var client = new ZeroClipboard($(".btn-clipboard"));
 	
 	$(function() {	
 		$('.x-colors > li').each( function() { $(this).hoverdir(); } );

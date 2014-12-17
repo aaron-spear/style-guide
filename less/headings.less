@@ -1,8 +1,8 @@
 .element-example {
-	margin: 20px 0 40px;
-	border: #eee 1px solid;
+	margin: 20px 0 0;
+	border: #e1e1e8 1px solid;
 	border-radius: 4px;
-	padding: 0 15px;
+	padding: 10px 15px;
 	h1,h2,h3,h4,h5,h6 {
 		display: inline;
 		margin: 0;
@@ -13,7 +13,7 @@
 		tr {
 			td {
 				padding: 15px 0;
-				border-top: #eee 1px solid;
+				border-top: #e1e1e8 1px solid;
 			}					
 			&:first-child {
 				td {
@@ -53,6 +53,48 @@
 		}			
 	}
 }
+
+.zero-clipboard {
+	display: block;
+	position: relative;
+	.btn-clipboard {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 10;
+		display: block;
+		padding: 5px 8px;
+		font-size: 12px;
+		color: #999;
+		font-weight: 300;	
+		cursor: pointer;
+		background-color: #fff;
+		border: 1px solid #e1e1e8;
+		border-radius: 4px 0 4px 0;
+		-webkit-transition: all ease-out .2s;
+	  transition: all ease-out .2s;  		
+	}
+	.zeroclipboard-is-hover {
+		color: #fff;
+		background-color: #75A637;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);							
+	}	
+	.zeroclipboard-is-active {
+		color: #fff;
+		-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);							
+	}		
+}
+
+
+
+
+
+
+
+
+
 
 
 
