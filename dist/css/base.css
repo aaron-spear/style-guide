@@ -144,8 +144,18 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background: #e6e7e8 url(../img/divider.png) no-repeat right top;
+    background: #e6e7e8;
+    overflow: hidden;
   }
+	.divider {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 5000;
+		width: 13px;
+		height: 940px;
+		background: url(../img/divider.png) no-repeat right top;
+	}  
   .sidebar-left {
     left: -25%;
    }  

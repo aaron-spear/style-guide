@@ -1,0 +1,58 @@
+.element-example {
+	margin: 20px 0 40px;
+	border: #eee 1px solid;
+	border-radius: 4px;
+	padding: 0 15px;
+	h1,h2,h3,h4,h5,h6 {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+	.table {
+		margin: 0;
+		tr {
+			td {
+				padding: 15px 0;
+				border-top: #eee 1px solid;
+			}					
+			&:first-child {
+				td {
+					border: none;
+				}
+			}
+			.type-info {
+				vertical-align: middle;
+				text-align: right;
+				padding-right: 10px;
+				color: #999;
+				font-weight: 300;				
+			}
+		}
+	}
+	&.green-bg {
+		background: #9ac83c;
+		h1,h2,h3,h4,h5,h6 {
+			color: #fff;
+			font-weight: 400;
+			letter-spacing: .5;
+		}	
+		.table {
+			tr {
+				td {
+					border-top: rgba(255,255,255,.1) 1px solid;
+				}					
+				&:first-child {
+					td {
+						border: none;
+					}
+				}
+				.type-info {
+					color: rgba(255,255,255,.9);			
+				}
+			}
+		}			
+	}
+}
+
+
+

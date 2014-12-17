@@ -3121,6 +3121,31 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+h2,
+.h2 {
+  font-size: 34px;
+}
+h3,
+.h3 {
+  font-size: 28px;
+}
+h4,
+.h4 {
+  font-size: 24px;
+}
+h5,
+.h5 {
+  font-size: 20px;
+}
+h6,
+.h6 {
+  font-size: 16px;
+}
+code {
+  color: #0286ba;
+  background-color: #f6fcff;
+  border-radius: 2px;
+}
 .leftmenu-trigger,
 .rightmenu-trigger {
   position: relative;
@@ -3133,7 +3158,7 @@ input[type="button"].btn-block {
 }
 .leftmenu-trigger .patty,
 .rightmenu-trigger .patty {
-  position: relative;
+  position: relative ;
   top: 8px;
   left: 12px;
   width: 16px;
@@ -3288,6 +3313,9 @@ input[type="button"].btn-block {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   border-color: #496721;
+}
+.page-header {
+  border-bottom: 1px solid #eee;
 }
 .logos {
   position: relative;
@@ -3480,6 +3508,16 @@ input[type="button"].btn-block {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -10px 0 rgba(255, 255, 255, 0.3);
 }
+.font-top {
+  padding-top: 15px;
+}
+.font-top h2 {
+  float: left;
+}
+.font-top .btn {
+  float: right;
+  margin-top: 20px;
+}
 .gotham-bold {
   font-family: 'Gotham-Bold', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -3511,15 +3549,60 @@ input[type="button"].btn-block {
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
-.font-top {
-  padding-top: 15px;
+.element-example {
+  margin: 20px 0 40px;
+  border: #eee 1px solid;
+  border-radius: 4px;
+  padding: 0 15px;
 }
-.font-top h2 {
-  float: left;
+.element-example h1,
+.element-example h2,
+.element-example h3,
+.element-example h4,
+.element-example h5,
+.element-example h6 {
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
-.font-top .btn {
-  float: right;
-  margin-top: 20px;
+.element-example .table {
+  margin: 0;
+}
+.element-example .table tr td {
+  padding: 15px 0;
+  border-top: #eee 1px solid;
+}
+.element-example .table tr:first-child td {
+  border: none;
+}
+.element-example .table tr .type-info {
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 10px;
+  color: #999;
+  font-weight: 300;
+}
+.element-example.green-bg {
+  background: #9ac83c;
+}
+.element-example.green-bg h1,
+.element-example.green-bg h2,
+.element-example.green-bg h3,
+.element-example.green-bg h4,
+.element-example.green-bg h5,
+.element-example.green-bg h6 {
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: .5;
+}
+.element-example.green-bg .table tr td {
+  border-top: rgba(255, 255, 255, 0.1) 1px solid;
+}
+.element-example.green-bg .table tr:first-child td {
+  border: none;
+}
+.element-example.green-bg .table tr .type-info {
+  color: rgba(255, 255, 255, 0.9);
 }
 .fade {
   opacity: 0;
