@@ -3428,7 +3428,8 @@ input[type="button"].btn-block {
   padding: 5px 0;
 }
 .colors .info li p {
-  color: #efefef;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-weight: 300;
   margin: 0;
 }
