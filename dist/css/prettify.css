@@ -10,7 +10,7 @@ pre .pun { color: #333 }    /* punctuation */
 pre .pln { color: #333 }    /* plaintext */
 pre .tag { color: #0286ba !important } /* html/xml tag    - lightyellow */
 pre .atn { color: #0eb3f3; } /* attribute name  - khaki */
-pre .atv { color: #81bd08 !important } /* attribute value - pink */
+pre .atv { color: #74a636 !important } /* attribute value - pink */
 pre .dec { color: #98fb98 } /* decimal         - lightgreen */
 
 /* Specify class=linenums on a pre to get line numbering */
@@ -39,6 +39,7 @@ pre.prettyprint {
   padding: 1.6em 1.2em;
   white-space: pre-wrap;
   font-size: 12px;
+  background: #f6f6f6;
   border: #e1e1e8 1px solid;
 	border-top-right-radius: 0;
 	border-top-left-radius: 0;  

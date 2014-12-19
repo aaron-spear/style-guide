@@ -1,2 +1,230 @@
 <h1 class="page-header">Forms</h1>
-<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+
+<h2>Inputs</h2>
+<p>Form inputs show success or errors styling by adding the classes <code>.has-success</code> and <code>.has-error</code> to the parent container. Inputs are disabled by adding the <code>disabled</code> attribute to the input or to the parent fieldset.
+<div class="element-example">
+	<form role="form">
+	  <div class="form-group">
+	    <label for="standard-input">Input</label>
+	    <input type="text" class="form-control" id="standard-input" placeholder="Placeholder">
+	  </div>
+    <div class="form-group">
+      <label for="disabled-input">Disabled</label>
+      <input type="text" disabled class="form-control" id="disabled-input" placeholder="Placeholder">
+    </div> 
+		<div class="form-group has-success">
+		  <label class="control-label" for="success-input">Success</label>
+		  <input type="text" class="form-control" id="success-input">
+		</div>
+		<div class="form-group has-error">
+		  <label class="control-label" for="error-input">Error</label>
+		  <input type="text" class="form-control" id="error-input">
+		</div>			
+	</form>
+</div>
+<div class="zero-clipboard">
+<pre class="prettyprint lang-html" id="clipboard_text">
+&lt;form role="form"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="standard-input"&gt;Input&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="standard-input" placeholder="Placeholder"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="disabled-input"&gt;Disabled&lt;/label&gt;
+    &lt;input type="text" disabled class="form-control" id="disabled-input" placeholder="Placeholder"&gt;
+  &lt;/div&gt;	  
+  &lt;div class="form-group has-success"&gt;
+    &lt;label class="control-label" for="success-input"&gt;Success&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="success-input"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group has-error"&gt;
+    &lt;label class="control-label" for="error-input"&gt;Error&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="error-input"&gt;
+  &lt;/div&gt;			
+&lt;/form&gt;
+</pre>	
+<span class="btn-clipboard" data-clipboard-target="clipboard_text">Copy</span>
+</div>
+
+<h2>Checkboxes and radios</h2>
+<div class="element-example">
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="" checked>
+	    Option one is an all terrain armored transport (AT-AT)
+	  </label>
+	</div>
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="">
+	    Option two is a clone Z-95 starfighter
+	  </label>
+	</div>	
+	<div class="checkbox disabled">
+	  <label>
+	    <input type="checkbox" value="" disabled>
+	    Option three is disable (it was a podracer)
+	  </label>
+	</div>
+	<br>
+	<div class="radio">
+	  <label>
+	    <input type="radio" name="options-radios" id="options-radios1" value="option1" checked>
+	    Option one is an all terrain armored transport (AT-AT)
+	  </label>
+	</div>
+	<div class="radio">
+	  <label>
+	    <input type="radio" name="options-radios" id="options-radios2" value="option2">
+	    Option two is a clone Z-95 starfighter
+	  </label>
+	</div>
+	<div class="radio disabled">
+	  <label>
+	    <input type="radio" name="options-radios" id="options-radios3" value="option3" disabled>
+	    Option three is disable (it was a podracer)
+	  </label>
+	</div>	
+</div>
+<div class="zero-clipboard">
+<pre class="prettyprint lang-html" id="clipboard_text">
+&lt;div class="element-example"&gt;
+  &lt;div class="checkbox"&gt;
+    &lt;label&gt;
+      &lt;input type="checkbox" value=""&gt;
+      Option one is an all terrain armored transport (AT-AT)
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="checkbox"&gt;
+    &lt;label&gt;
+      &lt;input type="checkbox" value=""&gt;
+      Option two is a clone Z-95 starfighter
+    &lt;/label&gt;
+  &lt;/div&gt;	
+  &lt;div class="checkbox disabled"&gt;
+    &lt;label&gt;
+      &lt;input type="checkbox" value="" disabled&gt;
+      Option three is disable (it was a podracer)
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;div class="radio"&gt;
+    &lt;label&gt;
+      &lt;input type="radio" name="options-radios" id="options-radios1" value="option1" checked&gt;
+      Option one is an all terrain armored transport (AT-AT)
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="radio"&gt;
+    &lt;label&gt;
+      &lt;input type="radio" name="options-radios" id="options-radios2" value="option2"&gt;
+      Option two is a clone Z-95 starfighter
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="radio disabled"&gt;
+    &lt;label&gt;
+      &lt;input type="radio" name="options-radios" id="options-radios3" value="option3" disabled&gt;
+      Option three is disable (it was a podracer)
+    &lt;/label&gt;
+  &lt;/div&gt;	
+&lt;/div&gt;
+</pre>	
+<span class="btn-clipboard" data-clipboard-target="clipboard_text">Copy</span>
+</div>
+
+<h2>Selects</h2>
+<p>Add the <code>multiple</code> attribute and the <code>.multiple</code> class to show multiple options at once.</p>
+<div class="element-example">
+	<select class="form-control">
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	</select>
+	<br>
+	<select multiple class="form-control multiple">
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	</select>	
+</div>
+<div class="zero-clipboard">
+<pre class="prettyprint lang-html" id="clipboard_text">
+&lt;select class="form-control"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+&lt;br&gt;
+&lt;select multiple class="form-control multiple"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;	
+</pre>	
+<span class="btn-clipboard" data-clipboard-target="clipboard_text">Copy</span>
+</div>
+
+<h2>Time and date selectors</h2>
+<div class="element-example">
+	<div class="input-group" id="timepicker1">
+		<input type="text" class="form-control">
+		<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+	</div>
+</div>
+
+<!--
+	  <div class="form-group">
+	    <label for="exampleInputFile">File input</label>
+	    <div class="custom-upload">
+				<label for="file-upload" class="custom-file-upload btn btn-default">Choose File</label>
+				<input id="file-upload" type="file"/>
+				<span id="file-upload-value"></span>		    
+	    </div>
+	    <p class="help-block">Example block-level help text here.</p>
+	  </div>
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox"> Check me out
+	    </label>
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+-->
+
+<script src="dist/js/run_prettify.js"></script>
+<script src="dist/js/lang-css.js"></script>
+<script src="dist/js/ZeroClipboard.js"></script>
+
+<script src="dist/js/bootstrap-timepicker.min.js"></script>
+
+<script>
+	var client = new ZeroClipboard($(".btn-clipboard"));
+	
+	$(function() {				
+    $("input:file[id=file-upload]").change(function() {
+	    var file = $(this).val().replace(/C:\\fakepath\\/i, '');;  
+      $("#file-upload-value").html(file);
+    });
+	});
+	
+	$('#timepicker1').timepicker();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+

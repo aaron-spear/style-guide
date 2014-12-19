@@ -69,21 +69,6 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-.form-group {
-	margin: 0;
-	float: right;
-	position: relative;
-	right: -200px;
-	width: 240px;
-	height: 40px;	
-	-webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;  		
-}
-
-.form-group.open {
-	right: 0;	
-}
-
 .search .form-control {
 	float: right;
 	width: 200px;
@@ -271,7 +256,7 @@ body {
 }
 
 
-/* PAGES (specific colors for each page)
+/* PAGES
 ============================================================================= */
 
 	padding: 0 40px 80px 0;
@@ -290,7 +275,5 @@ body {
 .page.ng-enter.ng-enter-active {
   opacity:1;
 }
-
-
 
 
