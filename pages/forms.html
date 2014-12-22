@@ -23,7 +23,7 @@
 	</form>
 </div>
 <div class="zero-clipboard">
-<pre class="prettyprint lang-html" id="clipboard_text">
+<pre class="prettyprint lang-html" id="clipboard_text_2">
 &lt;form role="form"&gt;
   &lt;div class="form-group"&gt;
     &lt;label for="standard-input"&gt;Input&lt;/label&gt;
@@ -43,7 +43,7 @@
   &lt;/div&gt;			
 &lt;/form&gt;
 </pre>	
-<span class="btn-clipboard" data-clipboard-target="clipboard_text">Copy</span>
+<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_2">Copy</span>
 </div>
 
 <h2>Checkboxes and radios</h2>
@@ -87,7 +87,7 @@
 	</div>	
 </div>
 <div class="zero-clipboard">
-<pre class="prettyprint lang-html" id="clipboard_text">
+<pre class="prettyprint lang-html" id="clipboard_text_3">
 &lt;div class="element-example"&gt;
   &lt;div class="checkbox"&gt;
     &lt;label&gt;
@@ -128,7 +128,7 @@
   &lt;/div&gt;	
 &lt;/div&gt;
 </pre>	
-<span class="btn-clipboard" data-clipboard-target="clipboard_text">Copy</span>
+<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_3">Copy</span>
 </div>
 
 <h2>Selects</h2>
@@ -151,7 +151,7 @@
 	</select>	
 </div>
 <div class="zero-clipboard">
-<pre class="prettyprint lang-html" id="clipboard_text">
+<pre class="prettyprint lang-html" id="clipboard_text_4">
 &lt;select class="form-control"&gt;
   &lt;option&gt;1&lt;/option&gt;
   &lt;option&gt;2&lt;/option&gt;
@@ -168,52 +168,103 @@
   &lt;option&gt;5&lt;/option&gt;
 &lt;/select&gt;	
 </pre>	
-<span class="btn-clipboard" data-clipboard-target="clipboard_text">Copy</span>
+<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_4">Copy</span>
 </div>
 
-<h2>Time and date selectors</h2>
+<h2>Column sizing</h2>
+<p>Wrap inputs in bootcamp grid columns to apply desired widths.</p>
 <div class="element-example">
-	<div class="input-group" id="timepicker1">
-		<input type="text" class="form-control">
-		<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+	<div class="row">
+	  <div class="col-xs-2">
+	    <input type="text" class="form-control" placeholder=".col-xs-2">
+	  </div>
+	  <div class="col-xs-3">
+	    <input type="text" class="form-control" placeholder=".col-xs-3">
+	  </div>
+	  <div class="col-xs-4">
+	    <input type="text" class="form-control" placeholder=".col-xs-4">
+	  </div>
 	</div>
+</div>
+<div class="zero-clipboard">
+<pre class="prettyprint lang-html" id="clipboard_text_5">
+&lt;div class="row"&gt;
+  &lt;div class="col-xs-2"&gt;
+    &lt;input type="text" class="form-control" placeholder=".col-xs-2"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-3"&gt;
+    &lt;input type="text" class="form-control" placeholder=".col-xs-3"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-4"&gt;
+    &lt;input type="text" class="form-control" placeholder=".col-xs-4"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>	
+<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_5">Copy</span>
 </div>
 
 <!--
-	  <div class="form-group">
-	    <label for="exampleInputFile">File input</label>
-	    <div class="custom-upload">
-				<label for="file-upload" class="custom-file-upload btn btn-default">Choose File</label>
-				<input id="file-upload" type="file"/>
-				<span id="file-upload-value"></span>		    
-	    </div>
-	    <p class="help-block">Example block-level help text here.</p>
-	  </div>
-	  <div class="checkbox">
-	    <label>
-	      <input type="checkbox"> Check me out
-	    </label>
-	  </div>
-	  <button type="submit" class="btn btn-default">Submit</button>
+<div class="container" ng-controller="dateTimeController">
+    <div class="row">
+        <div class='col-sm-6'>
+            <h1> {{vm.message}}</h1>
+
+            <div class="form-group">
+
+            </div>
+            <label class="label label-info">DateTimePicker</label>
+            <br/>
+
+            <div class='input-group date' id='datetimepicker1'>
+                <input type='text' class="form-control"/>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+            </div>
+
+            <br/>
+            <label class="label label-info">DateTimePicker (Angular Directive)</label>
+
+            <br/>
+            <input type="text"
+                   class="form-control"
+                   ng-model="vm.dateTime"
+                   data-date-time-picker
+                   data-language="{{ru}}"
+                   data-pick12HourFormat="false"
+                   data-use-current="{{false}}"
+                   data-location="{{testProject}}"
+                    />
+            <br/>
+            <pre>{{vm|json}}</pre>
+
+        </div>
+    </div>
+</div>
 -->
 
 <script src="dist/js/run_prettify.js"></script>
 <script src="dist/js/lang-css.js"></script>
 <script src="dist/js/ZeroClipboard.js"></script>
-
-<script src="dist/js/bootstrap-timepicker.min.js"></script>
-
 <script>
-	var client = new ZeroClipboard($(".btn-clipboard"));
+	var client = new ZeroClipboard($(".btn-clipboard-forms"));
 	
+/*
 	$(function() {				
     $("input:file[id=file-upload]").change(function() {
 	    var file = $(this).val().replace(/C:\\fakepath\\/i, '');;  
       $("#file-upload-value").html(file);
     });
 	});
+*/
 	
-	$('#timepicker1').timepicker();
+/*
+  $(function () {
+    $('#datetimepicker1').datetimepicker({
+      language: 'ru',
+      useCurrent: false
+    });
+  });	
+*/
 </script>
 
 

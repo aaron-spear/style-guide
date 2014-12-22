@@ -116,6 +116,11 @@ code {
 	}		
 }
 
+.btn {
+	-webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s; 	
+}
+
 .btn-search {
 	display: block;
 	float: right;
@@ -153,10 +158,24 @@ code {
 	background-repeat: repeat-x;	
 }
 
+.page .btn-default {
+	font-weight: 400;
+	color: #555;
+	background-color: #e0e0e0;
+	background-image: -moz-linear-gradient(top,  #ffffff, #e0e0e0);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
+	background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
+	background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);	
+	&:hover {
+		background-color: #e0e0e0;
+		background-image: none;
+	}
+}
 
-.btn {
+.page .btn-primary {
 	font-weight: 300;
-	color: #ffffff;
+	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	background-color: #75a637;
@@ -164,39 +183,48 @@ code {
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9ac83c), to(#75a637));
 	background-image: -webkit-linear-gradient(top, #9ac83c, #75a637);
 	background-image: -o-linear-gradient(top, #9ac83c, #75a637);
-	background-image: linear-gradient(to bottom, #9ac83c, #75a637);		
+	background-image: linear-gradient(to bottom, #9ac83c, #75a637);	
 	&:hover {
 		background-color: #75A637;
 		background-image: none;
-		color: #fff;
 	}
 }
 
-.btn-group {
-	.btn {
-		font-weight: 300;
-		color: #ffffff;
-		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-		background-color: #75a637;
-		background-image: -moz-linear-gradient(top, #9ac83c, #75a637);
-		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9ac83c), to(#75a637));
-		background-image: -webkit-linear-gradient(top, #9ac83c, #75a637);
-		background-image: -o-linear-gradient(top, #9ac83c, #75a637);
-		background-image: linear-gradient(to bottom, #9ac83c, #75a637);		
-		&:hover {
-			background-color: #75A637;
-			background-image: none;
-		}
+.btn-secondary {
+	background-repeat: repeat-x;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);	
+}
+
+.btn-secondary:hover, 
+.btn-secondary:focus {
+	background-position: 0 -15px;
+}
+	
+.page .btn-secondary {
+	font-weight: 300;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	background-color: #1483ae;
+	background-image: -moz-linear-gradient(top, #1b9dd0, #1483ae);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1b9dd0), to(#1483ae));
+	background-image: -webkit-linear-gradient(top, #1b9dd0, #1483ae);
+	background-image: -o-linear-gradient(top, #1b9dd0, #1483ae);
+	background-image: linear-gradient(to bottom, #1b9dd0, #1483ae);	
+	&:hover {
+		background-color: #1483ae;
+		background-image: none;
 	}
 }
 
-.btn-primary:hover, 
-.btn-primary:focus, 
-.btn-primary.focus, 
-.btn-primary:active, 
-.btn-primary.active, 
-.open > .dropdown-toggle.btn-primary {
+.btn-secondary:hover, 
+.btn-secondary:focus, 
+.btn-secondary.focus, 
+.btn-secondary:active, 
+.btn-secondary.active, 
+.open > .dropdown-toggle.btn-secondary {
 	border-color: #496721;
 }
 
@@ -252,7 +280,38 @@ select.form-control.multiple {
 	}
 }
 
-
+.zero-clipboard {
+	display: block;
+	position: relative;
+	.btn-copy {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 10;
+		display: block;
+		padding: 5px 8px;
+		font-size: 12px;
+		color: #999;
+		font-weight: 300;	
+		cursor: pointer;
+		background-color: #fff;
+		border: 1px solid #e1e1e8;
+		border-radius: 4px 0 4px 0;
+		-webkit-transition: all ease-out .2s;
+	  transition: all ease-out .2s;  		
+	}
+	.zeroclipboard-is-hover {
+		color: #fff;
+		background-color: #75A637;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);							
+	}	
+	.zeroclipboard-is-active {
+		color: #fff;
+		-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);							
+	}		
+}
 
 
 

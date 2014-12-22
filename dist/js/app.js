@@ -147,4 +147,6 @@
         this.isSet = function (tabId) {
             return this.tab === tabId;
         };
-    });    
+    });   
+    
+     

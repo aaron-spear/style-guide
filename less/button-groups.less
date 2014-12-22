@@ -2,20 +2,15 @@
 // Button groups
 // --------------------------------------------------
 
-.btn {
-	-webkit-transition: all ease-out .3s;
-  transition: all ease-out .3s;	
-}
-
 // Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
   position: relative;
   display: inline-block;
-  vertical-align: middle; // match .btn alignment given font-size hack above	  
+  vertical-align: middle; // match .btn alignment given font-size hack above
   > .btn {
     position: relative;
-    float: left;     
+    float: left;
     // Bring the "active" button to the front
     &:hover,
     &:focus,
@@ -23,15 +18,7 @@
     &.active {
       z-index: 2;
     }
-    &.active {
-			background-color: #75A637;
-			background-image: none;	    
-    }
   }
-}
-
-.btn-group.right {
-	float: right;
 }
 
 // Prevent double borders when buttons are next to each other
