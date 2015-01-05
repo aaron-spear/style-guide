@@ -3286,7 +3286,7 @@ code {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   background-repeat: repeat-x;
 }
-.page .btn-default {
+.spotx .btn-default {
   font-weight: 400;
   color: #555;
   background-color: #e0e0e0;
@@ -3296,11 +3296,15 @@ code {
   background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
   background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
 }
-.page .btn-default:hover {
+.spotx .btn-default:hover {
   background-color: #e0e0e0;
   background-image: none;
 }
-.page .btn-primary {
+.spotx .btn-default:active,
+.spotx .btn-default.active {
+  border-color: #adadad;
+}
+.spotx .btn-primary {
   font-weight: 300;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3313,9 +3317,14 @@ code {
   background-image: linear-gradient(to bottom, #9ac83c, #75a637);
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
-.page .btn-primary:hover {
+.spotx .btn-primary:hover {
   background-color: #75A637;
   background-image: none;
+}
+.spotx .btn-primary:hover,
+.spotx .btn-primary:focus {
+  background-color: #75a637;
+  background-position: 0 -15px;
 }
 .btn-secondary {
   background-repeat: repeat-x;
@@ -3323,8 +3332,8 @@ code {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.page .btn-primary:active,
-.page .btn-primary.active {
+.spotx .btn-primary:active,
+.spotx .btn-primary.active {
   background-color: #75A637;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
@@ -3332,7 +3341,7 @@ code {
 .btn-secondary:focus {
   background-position: 0 -15px;
 }
-.page .btn-secondary {
+.spotx .btn-secondary {
   font-weight: 300;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3344,7 +3353,7 @@ code {
   background-image: -o-linear-gradient(top, #1b9dd0, #1483ae);
   background-image: linear-gradient(to bottom, #1b9dd0, #1483ae);
 }
-.page .btn-secondary:hover {
+.spotx .btn-secondary:hover {
   background-color: #1483ae;
   background-image: none;
 }
@@ -3354,7 +3363,22 @@ code {
 .btn-secondary:active,
 .btn-secondary.active,
 .open > .dropdown-toggle.btn-secondary {
-  border-color: #496721;
+  border-color: #0c4f69;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  border-color: #bbb;
+}
+.spotx .btn-link {
+  color: #0088cc;
+}
+.spotx .btn-link:hover,
+.spotx .btn-link:focus {
+  color: #005580;
 }
 .page-header {
   border-bottom: 1px solid #eee;
@@ -3449,15 +3473,16 @@ select.form-control.multiple option {
   border-bottom-left-radius: 4px !important;
   border-top-left-radius: 4px !important;
 }
-.page .bootstrap-datepicker .btn-default {
+.spotx .bootstrap-datepicker .btn-default {
   background: none;
   border: none;
+  box-shadow: none;
 }
-.page .bootstrap-datepicker .btn-default:hover,
-.page .bootstrap-datepicker .btn-default.active {
+.spotx .bootstrap-datepicker .btn-default:hover,
+.spotx .bootstrap-datepicker .btn-default.active {
   background: #ececec;
 }
-.page .bootstrap-datepicker .btn-default.active {
+.spotx .bootstrap-datepicker .btn-default.active {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   background-color: #1483ae;
   background-image: -moz-linear-gradient(top, #1b9dd0, #1483ae);
@@ -3468,7 +3493,7 @@ select.form-control.multiple option {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.page .bootstrap-datepicker .btn-default.active span {
+.spotx .bootstrap-datepicker .btn-default.active span {
   font-weight: 300;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3533,7 +3558,6 @@ input[type="color"]:focus,
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
   outline: thin dotted \9;
-  /* IE6-9 */
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);

@@ -46,11 +46,6 @@
                 templateUrl : 'pages/buttons.html',
                 controller  : 'buttonsController'
             })
-
-            .when('/links', {
-                templateUrl : 'pages/links.html',
-                controller  : 'linksController'
-            })
             
             .when('/list', {
                 templateUrl : 'pages/list.html',
