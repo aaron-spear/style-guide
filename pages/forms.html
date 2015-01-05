@@ -172,43 +172,61 @@
 </div>
 
 <h2>Date & Time Picker</h2>
-<p>UI Bootstrap</p>
+<p>Datepicker is using UI Bootstrap, Timepicker is using AngularStrap for now.</p>
 <div class="element-example">
 
-<div ng-controller="DatepickerCtrl">
-  <div class="row">
-	  <div class="form-group col-md-6">
-	    <label for="standard-input">Date Picker</label>
-      <p class="input-group">
-        <input type="text" class="form-control" show-button-bar="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-				<span class="input-group-addon btn" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
-      </p>	    
-	  </div>	    
-  </div>
-</div>
-
-<!-- <div ng-controller="TimepickerCtrl"> -->
-  <div class="row">
+	<div ng-controller="DatepickerCtrl">
+	  <div class="row">
+		  <div class="form-group col-md-6">
+		    <label for="standard-input">Date Picker</label>
+	      <p class="input-group bootstrap-datepicker">
+	        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
+					<span class="input-group-addon btn" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+	      </p>	    
+		  </div>	    
+	  </div>
+	</div>
+	
+	<div class="row">
 	  <div class="form-group col-md-6">
 	    <label for="standard-input">Time Picker</label>
-      <p class="input-group">
-        <input type="text" class="form-control" ng-model="timepicker.time" bs-timepicker />
-				<span class="input-group-addon btn" data-toggle="timepicker"><span class="fa fa-clock-o"></span></span>        
-      </p>	    
+	    <div class="input-group input-append bootstrap-timepicker">
+	      <input type="text" class="form-control timepicker"/>
+				<span class="input-group-addon add-on btn"><span class="fa fa-clock-o"></span></span>  
+	    </div>     	   
 	  </div>	    
-  </div>
-<!-- </div> -->
+	</div>
 	
 </div>
 <div class="zero-clipboard">
 <pre class="prettyprint lang-html" id="clipboard_text_5">
+&lt;div ng-controller="DatepickerCtrl"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="form-group col-md-6"&gt;
+      &lt;label for="standard-input"&gt;Date Picker&lt;/label&gt;
+      &lt;p class="input-group bootstrap-datepicker"&gt;
+        &lt;input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/&gt;
+        &lt;span class="input-group-addon btn" ng-click="open($event)"&gt;&lt;span class="fa fa-calendar"&gt;&lt;/span&gt;&lt;/span&gt;        
+      &lt;/p&gt;	    
+    &lt;/div&gt;	    
+  &lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="row"&gt;
+  &lt;div class="form-group col-md-6"&gt;
+    &lt;label for="standard-input"&gt;Time Picker&lt;/label&gt;
+    &lt;div class="input-group input-append bootstrap-timepicker"&gt;
+      &lt;input type="text" class="form-control timepicker"/&gt;
+      &lt;span class="input-group-addon add-on btn"&gt;&lt;span class="fa fa-clock-o"&gt;&lt;/span&gt;&lt;/span&gt;  
+    &lt;/div&gt;     	   
+  &lt;/div&gt;	    
+&lt;/div&gt;
 </pre>	
 <span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_5">Copy</span>
 </div>
 
 <h2>Column sizing</h2>
-<p>Wrap inputs in bootcamp grid columns to apply desired widths.</p>
+<p>Wrap inputs in grid columns to apply desired widths.</p>
 <div class="element-example">
 	<div class="row">
 	  <div class="col-xs-2">
@@ -246,6 +264,8 @@
 <script src="dist/js/ZeroClipboard.js"></script>
 <script>
 	var client = new ZeroClipboard($(".btn-clipboard-forms"));
+	
+	$('.timepicker').timepicker();
 	
 /*
 	$(function() {				

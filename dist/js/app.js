@@ -182,8 +182,8 @@
 		    showWeeks:'false'
 		  };
 		
-		  $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-		  $scope.format = $scope.formats[0];
+		  $scope.formats = ['dd-MMMM-yyyy', 'dd/MM/yyyy', 'dd.MM.yyyy', 'shortDate'];
+		  $scope.format = $scope.formats[1];
 		});  
 		
 		styleApp.controller('TimepickerDemoCtrl', function ($scope, $log) {
