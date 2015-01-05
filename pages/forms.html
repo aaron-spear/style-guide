@@ -171,6 +171,42 @@
 <span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_4">Copy</span>
 </div>
 
+<h2>Date & Time Picker</h2>
+<p>UI Bootstrap</p>
+<div class="element-example">
+
+<div ng-controller="DatepickerCtrl">
+  <div class="row">
+	  <div class="form-group col-md-6">
+	    <label for="standard-input">Date Picker</label>
+      <p class="input-group">
+        <input type="text" class="form-control" show-button-bar="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+				<span class="input-group-addon btn" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+      </p>	    
+	  </div>	    
+  </div>
+</div>
+
+<!-- <div ng-controller="TimepickerCtrl"> -->
+  <div class="row">
+	  <div class="form-group col-md-6">
+	    <label for="standard-input">Time Picker</label>
+      <p class="input-group">
+        <input type="text" class="form-control" ng-model="timepicker.time" bs-timepicker />
+				<span class="input-group-addon btn" data-toggle="timepicker"><span class="fa fa-clock-o"></span></span>        
+      </p>	    
+	  </div>	    
+  </div>
+<!-- </div> -->
+	
+</div>
+<div class="zero-clipboard">
+<pre class="prettyprint lang-html" id="clipboard_text_5">
+
+</pre>	
+<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_5">Copy</span>
+</div>
+
 <h2>Column sizing</h2>
 <p>Wrap inputs in bootcamp grid columns to apply desired widths.</p>
 <div class="element-example">
@@ -187,7 +223,7 @@
 	</div>
 </div>
 <div class="zero-clipboard">
-<pre class="prettyprint lang-html" id="clipboard_text_5">
+<pre class="prettyprint lang-html" id="clipboard_text_6">
 &lt;div class="row"&gt;
   &lt;div class="col-xs-2"&gt;
     &lt;input type="text" class="form-control" placeholder=".col-xs-2"&gt;
@@ -200,47 +236,10 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>	
-<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_5">Copy</span>
+<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_6">Copy</span>
 </div>
 
-<!--
-<div class="container" ng-controller="dateTimeController">
-    <div class="row">
-        <div class='col-sm-6'>
-            <h1> {{vm.message}}</h1>
 
-            <div class="form-group">
-
-            </div>
-            <label class="label label-info">DateTimePicker</label>
-            <br/>
-
-            <div class='input-group date' id='datetimepicker1'>
-                <input type='text' class="form-control"/>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-            </div>
-
-            <br/>
-            <label class="label label-info">DateTimePicker (Angular Directive)</label>
-
-            <br/>
-            <input type="text"
-                   class="form-control"
-                   ng-model="vm.dateTime"
-                   data-date-time-picker
-                   data-language="{{ru}}"
-                   data-pick12HourFormat="false"
-                   data-use-current="{{false}}"
-                   data-location="{{testProject}}"
-                    />
-            <br/>
-            <pre>{{vm|json}}</pre>
-
-        </div>
-    </div>
-</div>
--->
 
 <script src="dist/js/run_prettify.js"></script>
 <script src="dist/js/lang-css.js"></script>
@@ -256,15 +255,7 @@
     });
 	});
 */
-	
-/*
-  $(function () {
-    $('#datetimepicker1').datetimepicker({
-      language: 'ru',
-      useCurrent: false
-    });
-  });	
-*/
+
 </script>
 
 

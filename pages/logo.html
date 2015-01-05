@@ -9,13 +9,13 @@ use the logo in a sentence.</p>
 <section ng-controller="TabController as tab">
 	<div class="logos clearfix">
 	  <div class="btn-group btn-group-sm left">
-	  	<a href ng-class="{active:tab.isSet(1)}" ng-click="tab.setTab(1)" class="btn btn-default">Color</a>
-	  	<a href ng-class="{active:tab.isSet(2)}" ng-click="tab.setTab(2)" class="btn btn-default">Black & White</a>
+	  	<a href ng-class="{active:tab.isSet(1)}" ng-click="tab.setTab(1)" class="btn btn-primary">Color</a>
+	  	<a href ng-class="{active:tab.isSet(2)}" ng-click="tab.setTab(2)" class="btn btn-primary">Black & White</a>
 	  </div>	
 	  <div class="btn-group btn-group-sm right">
-	  	<a href ng-class="{'active':selectedTab === 'one'}"  ng-click="selectedTab = 'one'" class="btn btn-default">EPS</a>
-	  	<a href ng-class="{'active':selectedTab === 'two'}"  ng-click="selectedTab = 'two'" class="btn btn-default">JPG</a>
-	  	<a href ng-class="{'active':selectedTab === 'three'}"  ng-click="selectedTab = 'three'" class="btn btn-default">PNG</a>
+	  	<a href ng-class="{'active':selectedTab === 'one'}"  ng-click="selectedTab = 'one'" class="btn btn-primary">EPS</a>
+	  	<a href ng-class="{'active':selectedTab === 'two'}"  ng-click="selectedTab = 'two'" class="btn btn-primary">JPG</a>
+	  	<a href ng-class="{'active':selectedTab === 'three'}"  ng-click="selectedTab = 'three'" class="btn btn-primary">PNG</a>
 	  </div>		   
 	  
 		<div class="light" ng-show="tab.isSet(1)">

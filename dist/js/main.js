@@ -99,11 +99,11 @@ $('a[href*=#]:not([href=#])').click(function() {
 // COPY TO CLIPBOARD
 // ========================
 function copyToClipboard (text) {
-	window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
+  window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
 }
 
 $('.prettyprint').click(function(text) {
-	window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
+  window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
 });
 
 
