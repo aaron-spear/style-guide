@@ -103,7 +103,7 @@
         $scope.pageClass = 'page-forms';
 				var client = new ZeroClipboard($(".btn-clipboard-forms"));	
 				$('.timepicker').timepicker();
-				$('select.timezone').select2();
+				$('select.timezone').select2({ width: 'resolve' });
     });
 
     styleApp.controller('buttonsController', function($scope) {
@@ -284,7 +284,10 @@
 	      anchorSmoothScroll.scrollTo(eID);	      
 	    };
 	  });
-      		
+	  
+	  styleApp.controller('CollapseCtrl', function ($scope) {
+		  $scope.isCollapsed = false;
+		});      		
 		
 
 		

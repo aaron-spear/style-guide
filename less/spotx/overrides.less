@@ -490,25 +490,42 @@ p.required {
 	padding: 7px 0 0 10px;
 }
 
-.start-end {
-	.col-md-2,
-	.col-md-4 {
-		padding: 0 0px 0 10px;
-	}
-	.form-control {
-		padding: 6px 10px;
-	}
-	.checkbox-row {
-		label {
-			margin-left: 14px;
+.select2-container {
+	margin-top: 10px !important;
+}
+
+.checkbox-row {
+	padding: 0 15px;
+}
+
+@media (min-width: 992px) {
+	
+	.start-end {
+		.col-md-2,
+		.col-md-4 {
+			padding: 0 0px 0 10px;
 		}
-		.checkbox {
+		.form-control {
+			padding: 6px 10px;
+		}
+		.checkbox-row {
 			padding: 0;
+			label {
+				margin-left: 14px;
+			}
+			.checkbox {
+				padding: 0;
+			}
+		}
+		.inline-label {
+			margin: 0 4px 0 8px;
 		}
 	}
-	.inline-label {
-		margin: 0 4px 0 8px;
-	}
+	
+	.select2-container {
+		margin-top: 0 !important;
+	}	
+	
 }
 
 .form-group {

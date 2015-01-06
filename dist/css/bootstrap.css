@@ -3587,21 +3587,35 @@ p.required {
 .form-horizontal .control-label {
   padding: 7px 0 0 10px;
 }
-.start-end .col-md-2,
-.start-end .col-md-4 {
-  padding: 0 0px 0 10px;
+.select2-container {
+  margin-top: 10px !important;
 }
-.start-end .form-control {
-  padding: 6px 10px;
+.checkbox-row {
+  padding: 0 15px;
 }
-.start-end .checkbox-row label {
-  margin-left: 14px;
-}
-.start-end .checkbox-row .checkbox {
-  padding: 0;
-}
-.start-end .inline-label {
-  margin: 0 4px 0 8px;
+@media (min-width: 992px) {
+  .start-end .col-md-2,
+  .start-end .col-md-4 {
+    padding: 0 0px 0 10px;
+  }
+  .start-end .form-control {
+    padding: 6px 10px;
+  }
+  .start-end .checkbox-row {
+    padding: 0;
+  }
+  .start-end .checkbox-row label {
+    margin-left: 14px;
+  }
+  .start-end .checkbox-row .checkbox {
+    padding: 0;
+  }
+  .start-end .inline-label {
+    margin: 0 4px 0 8px;
+  }
+  .select2-container {
+    margin-top: 0 !important;
+  }
 }
 .form-group .btns-group {
   text-align: right;

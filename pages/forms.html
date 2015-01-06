@@ -59,10 +59,10 @@
 				    </div>
 				  </div>			  
 				</fieldset>		
-				<fieldset class="start-end">
+				<fieldset class="start-end" ng-controller="CollapseCtrl">
 					<legend>Flighting</legend>
 					<div class="form-group">
-						<div class="row">
+						<div class="clearfix" collapse="isCollapsed">
 							<label for="start" class="col-sm-3 control-label inline-label required">Start Date:</label>	
 							<div ng-controller="DatepickerCtrl">
 							  <div class="col-md-2">
@@ -92,18 +92,18 @@
 								</select>
 							</div>							
 						</div>
-						<div class="row checkbox-row">
+						<div class="checkbox-row">
 							<label for="immediately" class="col-sm-3 control-label">&nbsp;</label>
 							<div class="checkbox">
 							  <label>
-							    <input type="checkbox" value="">
+							    <input type="checkbox" value="" ng-click="isCollapsed = !isCollapsed">
 							    Starts Immediately
 							  </label>
 							</div>															
 						</div>
 					</div><br>
 					<div class="form-group">
-						<div class="row">
+						<div class="clearfix" collapse="isCollapsed1">
 							<label for="start" class="col-sm-3 control-label inline-label required">End Date:</label>	
 							<div ng-controller="DatepickerCtrl">
 							  <div class="col-md-2">
@@ -131,11 +131,11 @@
 								</select>
 							</div>							
 						</div>
-						<div class="row checkbox-row">
+						<div class="checkbox-row">
 							<label for="immediately" class="col-sm-3 control-label">&nbsp;</label>
 							<div class="checkbox">
 							  <label>
-							    <input type="checkbox" value="">
+							    <input type="checkbox" value="" ng-click="isCollapsed1 = !isCollapsed1">
 							    Runs Indefinitely 
 							  </label>
 							</div>															
@@ -159,57 +159,6 @@
 		<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_2">Copy</span>
 		</div>
 	</section>
-
-
-<!--
-	<section id="inputs">
-		<h2>Inputs</h2>
-		<p>Form inputs show success or errors styling by adding the classes <code>.has-success</code> and <code>.has-error</code> to the parent container. Inputs are disabled by adding the <code>disabled</code> attribute to the input or to the parent fieldset.
-		<div class="element-example">
-			<form role="form">
-			  <div class="form-group">
-			    <label for="standard-input">Input</label>
-			    <input type="text" class="form-control" id="standard-input" placeholder="Placeholder">
-			  </div>
-		    <div class="form-group">
-		      <label for="disabled-input">Disabled</label>
-		      <input type="text" disabled class="form-control" id="disabled-input" placeholder="Placeholder">
-		    </div> 
-				<div class="form-group has-success">
-				  <label class="control-label" for="success-input">Success</label>
-				  <input type="text" class="form-control" id="success-input">
-				</div>
-				<div class="form-group has-error">
-				  <label class="control-label" for="error-input">Error</label>
-				  <input type="text" class="form-control" id="error-input">
-				</div>			
-			</form>
-		</div>
-		<div class="zero-clipboard">
-		<pre class="prettyprint lang-html" id="clipboard_text_2">
-&lt;form role="form"&gt;
-  &lt;div class="form-group"&gt;
-    &lt;label for="standard-input"&gt;Input&lt;/label&gt;
-    &lt;input type="text" class="form-control" id="standard-input" placeholder="Placeholder"&gt;
-  &lt;/div&gt;
-  &lt;div class="form-group"&gt;
-    &lt;label for="disabled-input"&gt;Disabled&lt;/label&gt;
-    &lt;input type="text" disabled class="form-control" id="disabled-input" placeholder="Placeholder"&gt;
-  &lt;/div&gt;	  
-  &lt;div class="form-group has-success"&gt;
-    &lt;label class="control-label" for="success-input"&gt;Success&lt;/label&gt;
-    &lt;input type="text" class="form-control" id="success-input"&gt;
-  &lt;/div&gt;
-  &lt;div class="form-group has-error"&gt;
-    &lt;label class="control-label" for="error-input"&gt;Error&lt;/label&gt;
-    &lt;input type="text" class="form-control" id="error-input"&gt;
-  &lt;/div&gt;			
-&lt;/form&gt;
-		</pre>	
-		<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_2">Copy</span>
-		</div>
-	</section>
--->
 	
 	<section id="checkboxes">
 		<h2>Checkboxes and Radios</h2>
