@@ -3581,6 +3581,9 @@ legend {
 form fieldset:first-child legend {
   margin-bottom: 6px;
 }
+p.input-group {
+  margin: 0;
+}
 p.required {
   margin-bottom: 20px;
 }
@@ -3602,7 +3605,7 @@ p.required {
     padding: 6px 10px;
   }
   .start-end .checkbox-row {
-    padding: 0;
+    padding: 8px 0 0 238px;
   }
   .start-end .checkbox-row label {
     margin-left: 14px;
