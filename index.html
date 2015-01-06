@@ -59,15 +59,20 @@
             <li class="level-1 logos"><a href="#logo">Our Logo</a></li>
             <li class="level-1 colors"><a href="#colors">Colors</a></li>
             <li class="level-1 typefaces"><a href="#typefaces">Typefaces</a></li>
-            <li class="nav-sub elements"><a href="">Elements</a>
-		          <ul class="nav">
-			          <li class="headings"><a href="#headings">Headings</a></li>
-		            <li class="forms"><a href="#forms">Forms</a></li>
-		            <li class="buttons"><a href="#buttons">Buttons</a></li>
-		            <li class="list"><a href="#list">List</a></li>
-		            <li class="tables"><a href="#tables">Tables</a></li>
+            <li class="level-1 headings"><a href="#headings">Headings</a></li>
+            <li class="nav-sub elements"><a href="#forms">Forms</a>
+		          <ul class="nav" ng-controller="ScrollCtrl">
+			          <li class="inputs"><a href="" ng-click="gotoElement('inputs')">Inputs</a></li>
+			          <li class="checkboxes-radios"><a href="" ng-click="gotoElement('checkboxes')">Checkboxes and Radios</a></li>
+			          <li class="selects"><a href="" ng-click="gotoElement('selects')">Selects</a></li>
+			          <li class="sizes"><a href="" ng-click="gotoElement('sizes')">Sizes</a></li>
+			          <li class="date-time"><a href="" ng-click="gotoElement('date-time')">Date & Time Picker</a></li>
+			          <li class="column"><a href="" ng-click="gotoElement('columns')">Column sizing</a></li>
 		          </ul>
             </li>
+            <li class="level-1 buttons"><a href="#buttons">Buttons</a></li>
+            <li class="level-1 list"><a href="#list">List</a></li>
+            <li class="level-1 tables"><a href="#tables">Tables</a></li>            
             <li class="level-1 css"><a href="#css">CSS / LESS</a></li>
             <li class="level-1 icons"><a href="#icons">App Icons</a></li>
             <li class="level-1 usage"><a href="#usage">Usage</a></li>

@@ -5,73 +5,72 @@
 
     // configure our routes
     styleApp.config(function($routeProvider) {
-        $routeProvider
+      $routeProvider
 
-            .when('/', {
-                templateUrl : 'pages/overview.html',
-                controller  : 'mainController'
-            })
-            
-            .when('/overview', {
-                templateUrl : 'pages/overview.html',
-                controller  : 'mainController'
-            })            
+        .when('/', {
+            templateUrl : 'pages/overview.html',
+            controller  : 'mainController'
+        })
+        
+        .when('/overview', {
+            templateUrl : 'pages/overview.html',
+            controller  : 'mainController'
+        })            
 
-            .when('/logo', {
-                templateUrl : 'pages/logo.html',
-                controller  : 'logoController'
-            })
+        .when('/logo', {
+            templateUrl : 'pages/logo.html',
+            controller  : 'logoController'
+        })
 
-            .when('/colors', {
-                templateUrl : 'pages/colors.html',
-                controller  : 'colorsController'
-            })
-            
-            .when('/typefaces', {
-                templateUrl : 'pages/typefaces.html',
-                controller  : 'typefacesController'
-            })
+        .when('/colors', {
+            templateUrl : 'pages/colors.html',
+            controller  : 'colorsController'
+        })
+        
+        .when('/typefaces', {
+            templateUrl : 'pages/typefaces.html',
+            controller  : 'typefacesController'
+        })
 
-            .when('/headings', {
-                templateUrl : 'pages/headings.html',
-                controller  : 'headingsController'
-            })
-            
-            .when('/forms', {
-                templateUrl : 'pages/forms.html',
-                controller  : 'formsController'
-            })
+        .when('/headings', {
+            templateUrl : 'pages/headings.html',
+            controller  : 'headingsController'
+        })
+        
+        .when('/forms', {
+            templateUrl : 'pages/forms.html',
+            controller  : 'formsController'
+        })
 
-            .when('/buttons', {
-                templateUrl : 'pages/buttons.html',
-                controller  : 'buttonsController'
-            })
-            
-            .when('/list', {
-                templateUrl : 'pages/list.html',
-                controller  : 'listController'
-            })
+        .when('/buttons', {
+            templateUrl : 'pages/buttons.html',
+            controller  : 'buttonsController'
+        })
+        
+        .when('/list', {
+            templateUrl : 'pages/list.html',
+            controller  : 'listController'
+        })
 
-            .when('/tables', {
-                templateUrl : 'pages/tables.html',
-                controller  : 'tablesController'
-            })
+        .when('/tables', {
+            templateUrl : 'pages/tables.html',
+            controller  : 'tablesController'
+        })
 
-            .when('/css', {
-                templateUrl : 'pages/css.html',
-                controller  : 'spacingController'
-            })
-            
-            .when('/icons', {
-                templateUrl : 'pages/icons.html',
-                controller  : 'iconsController'
-            })
+        .when('/css', {
+            templateUrl : 'pages/css.html',
+            controller  : 'spacingController'
+        })
+        
+        .when('/icons', {
+            templateUrl : 'pages/icons.html',
+            controller  : 'iconsController'
+        })
 
-            .when('/usage', {
-                templateUrl : 'pages/usage.html',
-                controller  : 'usageController'
-            });
-
+        .when('/usage', {
+            templateUrl : 'pages/usage.html',
+            controller  : 'usageController'
+        });
                                                           
     });
 
@@ -102,6 +101,8 @@
     
     styleApp.controller('formsController', function($scope) {
         $scope.pageClass = 'page-forms';
+				var client = new ZeroClipboard($(".btn-clipboard-forms"));	
+				$('.timepicker').timepicker();
     });
 
     styleApp.controller('buttonsController', function($scope) {
@@ -130,7 +131,10 @@
     
     styleApp.controller('usageController', function($scope) {
         $scope.pageClass = 'page-usage';
-    });                
+    });   
+    
+    
+		// Tabs                 
     
     styleApp.controller('TabController', function () {
         this.tab = 1;
@@ -143,6 +147,9 @@
             return this.tab === tabId;
         };
     });   
+    
+    
+		// Date Picker    
     
 		styleApp.controller('DatepickerCtrl', function ($scope) {
 		  $scope.today = function() {
@@ -179,7 +186,10 @@
 		
 		  $scope.formats = ['dd-MMMM-yyyy', 'dd/MM/yyyy', 'dd.MM.yyyy', 'shortDate'];
 		  $scope.format = $scope.formats[1];
-		});  
+		}); 
+		
+		
+		// Time Picker		 
 		
 		styleApp.controller('TimepickerDemoCtrl', function ($scope, $log) {
 		  $scope.mytime = new Date();
@@ -213,6 +223,69 @@
 		  };
 		});
 		
+				
+	
+		// Smooth Scroll
+		
+		styleApp.service('anchorSmoothScroll', function(){
+		    
+	    this.scrollTo = function(eID) {
+
+        var startY = currentYPosition();
+        var stopY = elmYPosition(eID) - 60;
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        if (distance < 100) {
+            scrollTo(0, stopY); return;
+        }
+        var speed = Math.round(distance / 100);
+        if (speed >= 20) speed = 20;
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+        if (stopY > startY) {
+            for ( var i=startY; i<stopY; i+=step ) {
+                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+            } return;
+        }
+        for ( var i=startY; i>stopY; i-=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        }
+        
+        function currentYPosition() {
+            // Firefox, Chrome, Opera, Safari
+            if (self.pageYOffset) return self.pageYOffset;
+            // Internet Explorer 6 - standards mode
+            if (document.documentElement && document.documentElement.scrollTop)
+                return document.documentElement.scrollTop;
+            // Internet Explorer 6, 7 and 8
+            if (document.body.scrollTop) return document.body.scrollTop;
+            return 0;
+        }
+        
+        function elmYPosition(eID) {
+            var elm = document.getElementById(eID);
+            var y = elm.offsetTop;
+            var node = elm;
+            while (node.offsetParent && node.offsetParent != document.body) {
+                node = node.offsetParent;
+                y += node.offsetTop;
+            } return y;
+        }
+	
+	    };
+		    
+		});
+
+		styleApp.controller('ScrollCtrl', function($scope, $location, anchorSmoothScroll) {	    
+	    $scope.gotoElement = function (eID){
+	      anchorSmoothScroll.scrollTo(eID);	      
+	    };
+	  });
+      		
+		
+
 		
     
      
