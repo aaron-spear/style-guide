@@ -103,6 +103,7 @@
         $scope.pageClass = 'page-forms';
 				var client = new ZeroClipboard($(".btn-clipboard-forms"));	
 				$('.timepicker').timepicker();
+				$('select.timezone').select2();
     });
 
     styleApp.controller('buttonsController', function($scope) {
@@ -184,7 +185,7 @@
 		    showWeeks:'false'
 		  };
 		
-		  $scope.formats = ['dd-MMMM-yyyy', 'dd/MM/yyyy', 'dd.MM.yyyy', 'shortDate'];
+		  $scope.formats = ['dd-MMMM-yyyy', 'MM/dd/yyyy', 'dd.MM.yyyy', 'shortDate'];
 		  $scope.format = $scope.formats[1];
 		}); 
 		

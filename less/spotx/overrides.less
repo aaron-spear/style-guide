@@ -466,19 +466,56 @@ label {
 	}	
 }
 
+fieldset {
+	margin: 0 0 20px;
+}
+
 legend {
-	margin-bottom: 6px;
 	padding-bottom: 4px;
 }
 
+form {
+	fieldset:first-child {
+		legend {
+			margin-bottom: 6px;
+		}
+	}
+}
+
 p.required {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 .form-horizontal .control-label {
 	padding: 7px 0 0 10px;
 }
 
+.start-end {
+	.col-md-2,
+	.col-md-4 {
+		padding: 0 0px 0 10px;
+	}
+	.form-control {
+		padding: 6px 10px;
+	}
+	.checkbox-row {
+		label {
+			margin-left: 14px;
+		}
+		.checkbox {
+			padding: 0;
+		}
+	}
+	.inline-label {
+		margin: 0 4px 0 8px;
+	}
+}
+
+.form-group {
+	.btns-group {
+		text-align: right;
+	}
+}
 
 
 

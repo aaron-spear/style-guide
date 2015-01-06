@@ -3572,15 +3572,39 @@ label {
 label.required {
   font-weight: bold;
 }
+fieldset {
+  margin: 0 0 20px;
+}
 legend {
-  margin-bottom: 6px;
   padding-bottom: 4px;
 }
+form fieldset:first-child legend {
+  margin-bottom: 6px;
+}
 p.required {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .form-horizontal .control-label {
   padding: 7px 0 0 10px;
+}
+.start-end .col-md-2,
+.start-end .col-md-4 {
+  padding: 0 0px 0 10px;
+}
+.start-end .form-control {
+  padding: 6px 10px;
+}
+.start-end .checkbox-row label {
+  margin-left: 14px;
+}
+.start-end .checkbox-row .checkbox {
+  padding: 0;
+}
+.start-end .inline-label {
+  margin: 0 4px 0 8px;
+}
+.form-group .btns-group {
+  text-align: right;
 }
 .logos {
   position: relative;

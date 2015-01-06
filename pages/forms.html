@@ -12,7 +12,7 @@
 					<p class="required">Required fields shown in <strong>bold</strong> text</p>
 				  <div class="form-group">
 				    <label for="name" class="col-sm-3 control-label required">Name:</label>
-				    <div class="col-sm-6">
+				    <div class="col-sm-5">
 				      <input type="text" class="form-control" id="name">
 				    </div>
 				  </div>
@@ -23,27 +23,133 @@
 				    </div>
 				  </div>
 				  <div class="form-group">
-				    <label for="reference" class="col-sm-3 control-label">IO Reference #:</label>
-				    <div class="col-sm-4">
+				    <label for="reference" class="col-sm-3 control-label required">IO Reference #:</label>
+				    <div class="col-sm-5">
 				      <input type="text" class="form-control" id="reference">
 				    </div>
 				  </div>				  
 				</fieldset>
-
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <div class="checkbox">
-			        <label>
-			          <input type="checkbox"> Remember me
-			        </label>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-default">Sign in</button>
-			    </div>
-			  </div>
+				<fieldset>
+					<legend>Ad Server Settings</legend>
+				  <div class="form-group">
+				    <label for="priority" class="col-sm-3 control-label">Priority:</label>
+				    <div class="col-sm-2">
+							<select class="form-control">
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+							  <option>6</option>
+							</select>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="timezone" class="col-sm-3 control-label">Reporting Timezone:</label>
+				    <div class="col-sm-6">
+							<select class="form-control timezone">
+							  <option>(GMT -08:00) Pacific Time</option>
+							  <option>(GMT -07:00) Mountain Time</option>
+							  <option>(GMT -05:00) Eastern Time</option>
+							  <option>(GMT -04:00) Atlantic Time</option>
+							  <option>(GMT +00:00) Dublin, London</option>
+							  <option>(GMT +10:00) Brisbane, Guam, Melbourne, Sydney</option>
+							  <option>(GMT +11:00) Magadan, Solomon Is., New Caledonia</option>
+							</select>
+				    </div>
+				  </div>			  
+				</fieldset>		
+				<fieldset class="start-end">
+					<legend>Flighting</legend>
+					<div class="form-group">
+						<div class="row">
+							<label for="start" class="col-sm-3 control-label inline-label required">Start Date:</label>	
+							<div ng-controller="DatepickerCtrl">
+							  <div class="col-md-2">
+						      <p class="input-group bootstrap-datepicker">
+						        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
+										<span class="input-group-addon btn" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+						      </p>	    
+							  </div>	    
+						  </div>
+						  <label class="sr-only" for="start-time">Start Time:</label>
+						  <div class="col-md-2">
+						    <div class="input-group input-append bootstrap-timepicker">
+						      <input type="text" class="form-control timepicker" name="start-time"/>
+									<span class="input-group-addon add-on btn"><span class="fa fa-clock-o"></span></span>  
+						    </div>     	   
+						  </div>	    
+						  <label class="sr-only" for="timezone">Time Zone:</label>
+							<div class="col-md-4">
+								<select class="form-control timezone" name="timezone">
+								  <option>(GMT -08:00) Pacific Time</option>
+								  <option>(GMT -07:00) Mountain Time</option>
+								  <option>(GMT -05:00) Eastern Time</option>
+								  <option>(GMT -04:00) Atlantic Time</option>
+								  <option>(GMT +00:00) Dublin, London</option>
+								  <option>(GMT +10:00) Brisbane, Sydney</option>
+								  <option>(GMT +11:00) Magadan, New Caledonia</option>
+								</select>
+							</div>							
+						</div>
+						<div class="row checkbox-row">
+							<label for="immediately" class="col-sm-3 control-label">&nbsp;</label>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" value="">
+							    Starts Immediately
+							  </label>
+							</div>															
+						</div>
+					</div><br>
+					<div class="form-group">
+						<div class="row">
+							<label for="start" class="col-sm-3 control-label inline-label required">End Date:</label>	
+							<div ng-controller="DatepickerCtrl">
+							  <div class="col-md-2">
+						      <p class="input-group bootstrap-datepicker">
+						        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
+										<span class="input-group-addon btn" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+						      </p>	    
+							  </div>	    
+						  </div>
+						  <div class="col-md-2">
+						    <div class="input-group input-append bootstrap-timepicker">
+						      <input type="text" class="form-control timepicker"/>
+									<span class="input-group-addon add-on btn"><span class="fa fa-clock-o"></span></span>  
+						    </div>     	   
+						  </div>	    
+							<div class="col-md-4">
+								<select class="form-control timezone">
+								  <option>(GMT -08:00) Pacific Time</option>
+								  <option>(GMT -07:00) Mountain Time</option>
+								  <option>(GMT -05:00) Eastern Time</option>
+								  <option>(GMT -04:00) Atlantic Time</option>
+								  <option>(GMT +00:00) Dublin, London</option>
+								  <option>(GMT +10:00) Brisbane, Sydney</option>
+								  <option>(GMT +11:00) Magadan, New Caledonia</option>
+								</select>
+							</div>							
+						</div>
+						<div class="row checkbox-row">
+							<label for="immediately" class="col-sm-3 control-label">&nbsp;</label>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" value="">
+							    Runs Indefinitely 
+							  </label>
+							</div>															
+						</div>
+					</div>
+				</fieldset>					
+				<fieldset>
+				  <div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10 btns-group">
+					    <button type="submit" class="btn btn-link">Cancel</button>
+				      <button type="submit" class="btn btn-primary">Create Campaign</button>
+				    </div>
+				  </div>					
+				</fieldset>
 			</form>	
 		</div>
 		<div class="zero-clipboard">
