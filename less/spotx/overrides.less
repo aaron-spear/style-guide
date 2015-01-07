@@ -589,7 +589,31 @@ p.required {
 	display: block;
 }
 
+.spotx .alert-danger {
+	display: none;
+	opacity: 0;
+	background-color: #f2dede;
+	background-image: none;
+	-webkit-transition: opacity ease-out .5s;
+  transition: opacity ease-out .5s;  	
+}
 
+.spotx .alert-danger.show {
+	display: block;
+	opacity: 1;
+}
+
+.spotx .alert h4 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.spotx .close:hover, 
+.spotx .close:focus {
+	outline: none;
+}
 
 
 

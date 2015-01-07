@@ -107,7 +107,15 @@
 			$('select.select2').select2({minimumResultsForSearch: -1});
 			$('button.create').click(function() {
 				$('.form-group.required').addClass('has-error');
-			});			
+				$('.alert-danger').addClass('show');
+			});	
+			$('button.cancel').click(function() {
+				$('.form-group.required').removeClass('has-error');
+				$('.alert-danger').removeClass('show');
+			});				
+			$('button.close').click(function() {
+				$('.alert-danger').removeClass('show');
+			});						
     });
 
     styleApp.controller('buttonsController', function($scope) {

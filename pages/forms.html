@@ -8,6 +8,14 @@
 		<p>Submit the form below for an example of error handling.</p>
 		<div class="element-example">
 			<form class="form-horizontal">
+				<div class="alert alert-danger">
+			    <button type="button" class="close">×</button>
+			    <h4>You need to correct the following errors before your can successfully create this campaign...</h4>
+			    <ul>
+			    	<li>The <strong>Name</strong> field must be filled in</li>
+			    	<li>The <strong>End Date</strong> cannot be before the <strong>Start Date</strong></li>
+			    </ul>
+		    </div>				
 				<fieldset>
 					<legend>Campaign Settings</legend>
 					<p class="required">Required fields shown in <strong>bold</strong> text</p>
@@ -152,7 +160,7 @@
 				<fieldset>
 				  <div class="form-group">
 				    <div class="col-sm-offset-2 col-sm-10 btns-group">
-					    <button type="submit" class="btn btn-link">Cancel</button>
+					    <button type="submit" class="btn btn-link cancel">Cancel</button>
 				      <button type="submit" class="btn btn-primary create">Create Campaign</button>
 				    </div>
 				  </div>					
