@@ -177,6 +177,26 @@ code {
 	}
 }
 
+.spotx .has-error .btn-default {
+	color: #a94442;
+	border-color: #a94442;
+	background-color: #f2dede;	
+	background-image: -moz-linear-gradient(top,  #ffffff, #f2dede);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2dede));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f2dede);
+	background-image: -o-linear-gradient(top, #ffffff, #f2dede);
+	background-image: linear-gradient(to bottom, #ffffff, #f2dede);		
+	&:hover {
+		background-color: #f2dede;
+		background-image: none;
+	}
+}
+
+.spotx .has-error .bootstrap-datepicker .dropdown-menu .btn-default {
+	color: #555;
+}
+
+
 .spotx .btn-default:active, 
 .spotx .btn-default.active {
 	border-color: #adadad;
@@ -358,18 +378,18 @@ select.form-control.multiple {
 	border-top-left-radius: 4px !important;	
 }
 
-.spotx .bootstrap-datepicker .btn-default {
+.spotx .bootstrap-datepicker .dropdown-menu .btn-default {
 	background: none;
 	border: none;
 	box-shadow: none;
 }
 
-.spotx .bootstrap-datepicker .btn-default:hover,
-.spotx .bootstrap-datepicker .btn-default.active {
+.spotx .bootstrap-datepicker .dropdown-menu .btn-default:hover,
+.spotx .bootstrap-datepicker .dropdown-menu .btn-default.active {
 	background: #ececec;	
 }
 
-.spotx .bootstrap-datepicker .btn-default.active {
+.spotx .bootstrap-datepicker .dropdown-menu .btn-default.active {
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	background-color: #1483ae;
 	background-image: -moz-linear-gradient(top, #1b9dd0, #1483ae);
@@ -381,7 +401,7 @@ select.form-control.multiple {
 	box-shadow: none;	
 }
 
-.spotx .bootstrap-datepicker .btn-default.active span {
+.spotx .bootstrap-datepicker .dropdown-menu .btn-default.active span {
 	font-weight: 300;
 	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);	
@@ -461,9 +481,10 @@ input[type="color"]:focus,
 
 label {
 	font-weight: normal;
-	&.required {
-		font-weight: bold;
-	}	
+}
+
+.required label {
+	font-weight: bold;
 }
 
 fieldset {
@@ -490,10 +511,6 @@ p.required {
 	margin-bottom: 20px;
 }
 
-.form-horizontal .control-label {
-	padding: 7px 0 0 10px;
-}
-
 .select2-container {
 	margin-top: 10px !important;
 }
@@ -506,23 +523,22 @@ p.required {
 	
 	.start-end {
 		.col-md-2,
-		.col-md-4 {
-			padding: 0 0px 0 10px;
+		.col-md-3,		
+		.col-md-4,
+		.col-md-8 {
+			padding: 0 10px 0 0;
 		}
 		.form-control {
 			padding: 6px 10px;
 		}
 		.checkbox-row {
-			padding: 8px 0 0 238px;
+			padding: 8px 0 0 26%;
 			label {
 				margin-left: 14px;
 			}
 			.checkbox {
 				padding: 0;
 			}
-		}
-		.inline-label {
-			margin: 0 4px 0 8px;
 		}
 	}
 	
@@ -538,12 +554,40 @@ p.required {
 	}
 }
 
+.spotx .select2-container .select2-choice .select2-arrow b {
+	border-color: #555 transparent transparent transparent;
+	border-style: solid;
+	border-width: 5px 4px 0 4px;
+	height: 0;
+	left: 50%;
+	margin-left: -6px;
+	margin-top: -2px;
+	position: absolute;
+	top: 50%;
+	width: 0;	
+}
 
+.spotx .select2-dropdown-open .select2-choice .select2-arrow b, 
+.spotx .select2-dropdown-open .select2-choice div b {
+	border-color: transparent transparent #555 transparent;
+	border-width: 0 4px 5px 4px;
+}
 
+.spotx .select2-search input {
+	background-position: 100% center;
+}
 
+.datetime-container {
+	padding-left: calc(25% + 15px);
+}
 
+.help-block {
+	display: none;
+}
 
-
+.has-error .help-block {
+	display: block;
+}
 
 
 

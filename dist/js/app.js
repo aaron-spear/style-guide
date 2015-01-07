@@ -100,10 +100,14 @@
     });
     
     styleApp.controller('formsController', function($scope) {
-        $scope.pageClass = 'page-forms';
-				var client = new ZeroClipboard($(".btn-clipboard-forms"));	
-				$('.timepicker').timepicker();
-				$('select.timezone').select2({ width: 'resolve' });
+      $scope.pageClass = 'page-forms';
+			var client = new ZeroClipboard($(".btn-clipboard-forms"));	
+			$('.timepicker').timepicker();
+			$('select.select2-search').select2();
+			$('select.select2').select2({minimumResultsForSearch: -1});
+			$('button.create').click(function() {
+				$('.form-group.required').addClass('has-error');
+			});			
     });
 
     styleApp.controller('buttonsController', function($scope) {

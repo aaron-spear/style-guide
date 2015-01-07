@@ -4,16 +4,18 @@
 	
 	<section id="example">
 		<h2>Form Example</h2>
-		<p>Form inputs show success or errors styling by adding the classes <code>.has-success</code> and <code>.has-error</code> to the parent container. Inputs are disabled by adding the <code>disabled</code> attribute to the input or to the parent fieldset.
+		<!-- <p>Form inputs show success or errors styling by adding the classes <code>.has-success</code> and <code>.has-error</code> to the parent container. Inputs are disabled by adding the <code>disabled</code> attribute to the input or to the parent fieldset.</p> -->
+		<p>Submit the form below for an example of error handling.</p>
 		<div class="element-example">
 			<form class="form-horizontal">
 				<fieldset>
 					<legend>Campaign Settings</legend>
 					<p class="required">Required fields shown in <strong>bold</strong> text</p>
-				  <div class="form-group">
-				    <label for="name" class="col-sm-3 control-label required">Name:</label>
+				  <div class="form-group required">
+				    <label for="name" class="col-sm-3 control-label">Name:</label>
 				    <div class="col-sm-5">
 				      <input type="text" class="form-control" id="name">
+				      <span class="help-block">Name is required</span>
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -22,10 +24,11 @@
 				      <input type="text" class="form-control" id="impressions">
 				    </div>
 				  </div>
-				  <div class="form-group">
-				    <label for="reference" class="col-sm-3 control-label required">IO Reference #:</label>
+				  <div class="form-group required">
+				    <label for="reference" class="col-sm-3 control-label">IO Reference #:</label>
 				    <div class="col-sm-5">
 				      <input type="text" class="form-control" id="reference">
+				      <span class="help-block">IO Reference # is required</span>
 				    </div>
 				  </div>				  
 				</fieldset>
@@ -34,7 +37,7 @@
 				  <div class="form-group">
 				    <label for="priority" class="col-sm-3 control-label">Priority:</label>
 				    <div class="col-sm-2">
-							<select class="form-control">
+							<select class="form-control select2">
 							  <option>1</option>
 							  <option>2</option>
 							  <option>3</option>
@@ -47,7 +50,7 @@
 				  <div class="form-group">
 				    <label for="timezone" class="col-sm-3 control-label">Reporting Timezone:</label>
 				    <div class="col-sm-6">
-							<select class="form-control timezone">
+							<select class="form-control select2-search">
 							  <option>(GMT -08:00) Pacific Time</option>
 							  <option>(GMT -07:00) Mountain Time</option>
 							  <option>(GMT -05:00) Eastern Time</option>
@@ -61,90 +64,96 @@
 				</fieldset>		
 				<fieldset class="start-end" ng-controller="CollapseCtrl">
 					<legend>Flighting</legend>
-					<div class="form-group">
-						<label for="start" class="col-sm-3 control-label inline-label required">Start Date:</label>	
-						<div class="clearfix" collapse="isCollapsed">
-							<div ng-controller="DatepickerCtrl">
-							  <div class="col-md-2">
-						      <p class="input-group bootstrap-datepicker">
-						        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
-										<span class="input-group-addon btn" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
-						      </p>	    
+					<div class="form-group required">
+						<label for="start" class="col-sm-3 control-label inline-label">Start Date:</label>	
+						<div class="datetime-container">
+							<div class="clearfix" collapse="isCollapsed">
+								<div ng-controller="DatepickerCtrl">
+								  <div class="col-md-3">
+							      <p class="input-group bootstrap-datepicker">
+							        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
+											<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+							      </p>	    
+								  </div>	    
+							  </div>
+							  <label class="sr-only" for="start-time">Start Time:</label>
+							  <div class="col-md-3">
+							    <div class="input-group input-append bootstrap-timepicker">
+							      <input type="text" class="form-control timepicker" name="start-time"/>
+										<span class="input-group-addon add-on btn btn-default"><span class="fa fa-clock-o"></span></span>  
+							    </div>     	   
 							  </div>	    
-						  </div>
-						  <label class="sr-only" for="start-time">Start Time:</label>
-						  <div class="col-md-2">
-						    <div class="input-group input-append bootstrap-timepicker">
-						      <input type="text" class="form-control timepicker" name="start-time"/>
-									<span class="input-group-addon add-on btn"><span class="fa fa-clock-o"></span></span>  
-						    </div>     	   
-						  </div>	    
-						  <label class="sr-only" for="timezone">Time Zone:</label>
-							<div class="col-md-4">
-								<select class="form-control timezone" name="timezone">
-								  <option>(GMT -08:00) Pacific Time</option>
-								  <option>(GMT -07:00) Mountain Time</option>
-								  <option>(GMT -05:00) Eastern Time</option>
-								  <option>(GMT -04:00) Atlantic Time</option>
-								  <option>(GMT +00:00) Dublin, London</option>
-								  <option>(GMT +10:00) Brisbane, Sydney</option>
-								  <option>(GMT +11:00) Magadan, New Caledonia</option>
-								</select>
-							</div>							
-						</div>
-						<div class="checkbox-row">
+							  <label class="sr-only" for="timezone">Time Zone:</label>
+								<div class="col-md-4">
+									<select class="form-control select2-search" name="timezone">
+									  <option>(GMT -08:00) Pacific Time</option>
+									  <option>(GMT -07:00) Mountain Time</option>
+									  <option>(GMT -05:00) Eastern Time</option>
+									  <option>(GMT -04:00) Atlantic Time</option>
+									  <option>(GMT +00:00) Dublin, London</option>
+									  <option>(GMT +10:00) Brisbane, Sydney</option>
+									  <option>(GMT +11:00) Magadan, New Caledonia</option>
+									</select>								
+								</div>
+								<div class="col-md-8">	
+									<span class="help-block">Start Date must be before End Date</span>		
+								</div>					
+							</div>								
 							<div class="checkbox">
 							  <label>
 							    <input type="checkbox" value="" ng-click="isCollapsed = !isCollapsed">
 							    Starts Immediately
 							  </label>
-							</div>															
+							</div>														
 						</div>
 					</div><br>
-					<div class="form-group">
-						<label for="start" class="col-sm-3 control-label inline-label required">End Date:</label>	
-						<div class="clearfix" collapse="isCollapsed1">						
-							<div ng-controller="DatepickerCtrl">
-							  <div class="col-md-2">
-						      <p class="input-group bootstrap-datepicker">
-						        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
-										<span class="input-group-addon btn" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
-						      </p>	    
+					<div class="form-group required">
+						<label for="start" class="col-sm-3 control-label inline-label">End Date:</label>	
+						<div class="datetime-container">
+							<div class="clearfix" collapse="isCollapsed1">						
+								<div ng-controller="DatepickerCtrl">
+								  <div class="col-md-3">
+							      <p class="input-group bootstrap-datepicker">
+							        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
+											<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+							      </p>	    
+								  </div>	    
+							  </div>
+							  <div class="col-md-3">
+							    <div class="input-group input-append bootstrap-timepicker">
+							      <input type="text" class="form-control timepicker"/>
+										<span class="input-group-addon add-on btn btn-default"><span class="fa fa-clock-o"></span></span>  
+							    </div>     	   
 							  </div>	    
-						  </div>
-						  <div class="col-md-2">
-						    <div class="input-group input-append bootstrap-timepicker">
-						      <input type="text" class="form-control timepicker"/>
-									<span class="input-group-addon add-on btn"><span class="fa fa-clock-o"></span></span>  
-						    </div>     	   
-						  </div>	    
-							<div class="col-md-4">
-								<select class="form-control timezone">
-								  <option>(GMT -08:00) Pacific Time</option>
-								  <option>(GMT -07:00) Mountain Time</option>
-								  <option>(GMT -05:00) Eastern Time</option>
-								  <option>(GMT -04:00) Atlantic Time</option>
-								  <option>(GMT +00:00) Dublin, London</option>
-								  <option>(GMT +10:00) Brisbane, Sydney</option>
-								  <option>(GMT +11:00) Magadan, New Caledonia</option>
-								</select>
-							</div>							
-						</div>
-						<div class="checkbox-row">
+								<div class="col-md-4">
+									<select class="form-control select2-search">
+									  <option>(GMT -08:00) Pacific Time</option>
+									  <option>(GMT -07:00) Mountain Time</option>
+									  <option>(GMT -05:00) Eastern Time</option>
+									  <option>(GMT -04:00) Atlantic Time</option>
+									  <option>(GMT +00:00) Dublin, London</option>
+									  <option>(GMT +10:00) Brisbane, Sydney</option>
+									  <option>(GMT +11:00) Magadan, New Caledonia</option>
+									</select>									
+								</div>	
+								<div class="col-md-8">
+									<span class="help-block">End Date must be after Start Date</span>
+								</div>														
+							</div>
 							<div class="checkbox">
 							  <label>
 							    <input type="checkbox" value="" ng-click="isCollapsed1 = !isCollapsed1">
 							    Runs Indefinitely 
 							  </label>
-							</div>															
-						</div>
+							</div>							
+						</div>															
 					</div>
 				</fieldset>					
 				<fieldset>
 				  <div class="form-group">
 				    <div class="col-sm-offset-2 col-sm-10 btns-group">
 					    <button type="submit" class="btn btn-link">Cancel</button>
-				      <button type="submit" class="btn btn-primary">Create Campaign</button>
+				      <button type="submit" class="btn btn-primary create">Create Campaign</button>
 				    </div>
 				  </div>					
 				</fieldset>
