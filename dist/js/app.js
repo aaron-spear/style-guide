@@ -299,7 +299,13 @@
 	  
 	  styleApp.controller('CollapseCtrl', function ($scope) {
 		  $scope.isCollapsed = false;
-		});      		
+		}); 
+		
+		styleApp.controller('TooltipCtrl', function ($scope) {
+		  $scope.dynamicTooltip = 'Hello, World!';
+		  $scope.dynamicTooltipText = 'dynamic';
+		  $scope.htmlTooltip = 'I\'ve been made <b>bold</b>!';
+		});		     		
 		
 
 		

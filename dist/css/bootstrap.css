@@ -3637,6 +3637,9 @@ p.required {
 .form-group .btns-group {
   text-align: right;
 }
+.form-group .error-container {
+  position: relative;
+}
 .spotx .select2-container .select2-choice .select2-arrow b {
   border-color: #555 transparent transparent transparent;
   border-style: solid;
@@ -3664,7 +3667,18 @@ p.required {
   display: none;
 }
 .has-error .help-block {
-  display: block;
+  display: inline-block;
+  padding: 7px 0 5px;
+  margin: 0;
+  /*
+	position: relative;
+	top: -8px;
+	padding: 8px 15px;
+	background: #f2dede;
+	border-radius: 2px;
+	border: #dca7a7 1px solid;
+	margin: 5px 0 0;
+*/
 }
 .spotx .alert-danger {
   display: none;
