@@ -3579,9 +3579,10 @@ input[type="color"]:focus,
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
+.element-example-sizing .select2-container.form-control,
 .element-example-sizing select,
 .element-example-sizing input[type=text] + input[type=text] {
-  margin-top: 10px;
+  margin: 10px 0;
 }
 label {
   font-weight: normal;
@@ -3686,6 +3687,22 @@ p.required {
 .spotx .close:hover,
 .spotx .close:focus {
   outline: none;
+}
+.spotx .select2-search {
+  padding: 0 5px;
+}
+.spotx .select2-search input {
+  border-radius: 2px;
+}
+.spotx .select2-search input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.spotx .select2-results {
+  margin: 4px 0px;
+}
+.spotx .select2-results li {
+  margin-right: 4px;
 }
 .logos {
   position: relative;

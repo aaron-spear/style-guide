@@ -266,7 +266,7 @@
 		<h2>Selects</h2>
 		<p>Add the <code>multiple</code> attribute and the <code>.multiple</code> class to show multiple options at once.</p>
 		<div class="element-example">
-			<select class="form-control">
+			<select class="form-control select2">
 			  <option>1</option>
 			  <option>2</option>
 			  <option>3</option>
@@ -312,13 +312,13 @@
 			<input class="form-control" type="text" placeholder="Default input">
 			<input class="form-control input-sm" type="text" placeholder=".input-sm">
 			
-			<select class="form-control input-lg">
+			<select class="form-control input-lg select2">
 				<option>.select-lg</option>
 			</select>
-			<select class="form-control">
+			<select class="form-control select2">
 				<option>default</option>
 			</select>
-			<select class="form-control input-sm">
+			<select class="form-control input-sm select2">
 				<option>.input-sm</option>
 			</select>
 		</div>
@@ -347,7 +347,7 @@
 				    <label for="standard-input">Date Picker</label>
 			      <p class="input-group bootstrap-datepicker">
 			        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
-							<span class="input-group-addon btn" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+							<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
 			      </p>	    
 				  </div>	    
 			  </div>
@@ -358,7 +358,7 @@
 			    <label for="standard-input">Time Picker</label>
 			    <div class="input-group input-append bootstrap-timepicker">
 			      <input type="text" class="form-control timepicker"/>
-						<span class="input-group-addon add-on btn"><span class="fa fa-clock-o"></span></span>  
+						<span class="input-group-addon add-on btn btn-default"><span class="fa fa-clock-o"></span></span>  
 			    </div>     	   
 			  </div>	    
 			</div>
