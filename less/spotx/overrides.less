@@ -756,13 +756,13 @@ input[type="color"]:focus,
 // Base class
 .spotx .tooltip {
   line-height: 1.4;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,1);
+  background: #eee;
+  box-shadow: 0 0 10px rgba(0,0,0,.7);
   border-radius: 4px;
   padding: 2px !important;
   .opacity(0);
 
-  &.in     { .opacity(.75); }
+  &.in     { .opacity(1); }
   &.top    { margin-top:  -3px; padding: @tooltip-arrow-width 0; }
   &.right  { margin-left:  3px; padding: 0 @tooltip-arrow-width; }
   &.bottom { margin-top:   3px; padding: @tooltip-arrow-width 0; }
@@ -779,7 +779,7 @@ input[type="color"]:focus,
   text-decoration: none;
   font-weight: 300;
   font-size: 11px;
-  background-color: @tooltip-bg;
+  background-color: #444;
   border-radius: 3px;
 }
 

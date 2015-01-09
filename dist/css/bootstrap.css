@@ -3760,16 +3760,16 @@ input[type="color"]:focus,
 }
 .spotx .tooltip {
   line-height: 1.4;
-  background: #fff;
-  box-shadow: 0 0 10px #000000;
+  background: #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   border-radius: 4px;
   padding: 2px !important;
   opacity: 0;
   filter: alpha(opacity=0);
 }
 .spotx .tooltip.in {
-  opacity: 0.75;
-  filter: alpha(opacity=75);
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 .spotx .tooltip.top {
   margin-top: -3px;
@@ -3796,7 +3796,7 @@ input[type="color"]:focus,
   text-decoration: none;
   font-weight: 300;
   font-size: 11px;
-  background-color: #000000;
+  background-color: #444;
   border-radius: 3px;
 }
 .spotx .tooltip-arrow {
