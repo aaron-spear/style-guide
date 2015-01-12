@@ -16,47 +16,47 @@ body {
 
 @font-face {
   font-family: "Gotham-Bold";
-  src: url("..//fonts/≈.eot");
+  src: url("../fonts/≈.eot");
   src: local("☺"),
-  url("..//fonts/Gotham-Bold.woff") format("woff"),
-  url("..//fonts/Gotham-Bold.otf") format("opentype"),
-  url("..//fonts/Gotham-Bold.svg#Gotham-Bold") format("svg");
+  url("../fonts/Gotham-Bold.woff") format("woff"),
+  url("../fonts/Gotham-Bold.otf") format("opentype"),
+  url("../fonts/Gotham-Bold.svg#Gotham-Bold") format("svg");
 }
 
 @font-face {
   font-family: "Gotham-Book";
   src: url("..//fonts/≈.eot");
   src: local("☺"),
-  url("..//fonts/Gotham-Book.woff") format("woff"),
-  url("..//fonts/Gotham-Book.otf") format("opentype"),
-  url("..//fonts/Gotham-Book.svg#Gotham-Book") format("svg");
+  url("../fonts/Gotham-Book.woff") format("woff"),
+  url("../fonts/Gotham-Book.otf") format("opentype"),
+  url("../fonts/Gotham-Book.svg#Gotham-Book") format("svg");
 }
 
 @font-face {
   font-family: "Gotham-BookItalic";
-  src: url("..//fonts/≈.eot");
+  src: url("../fonts/≈.eot");
   src: local("☺"),
-  url("..//fonts/Gotham-BookItalic.woff") format("woff"),
-  url("..//fonts/Gotham-BookItalic.otf") format("opentype"),
-  url("..//fonts/Gotham-BookItalic.svg#Gotham-BookItalic") format("svg");
+  url("../fonts/Gotham-BookItalic.woff") format("woff"),
+  url("../fonts/Gotham-BookItalic.otf") format("opentype"),
+  url("../fonts/Gotham-BookItalic.svg#Gotham-BookItalic") format("svg");
 }
 
 @font-face {
   font-family: "Gotham-Light";
-  src: url("..//fonts/≈.eot");
+  src: url("../fonts/≈.eot");
   src: local("☺"),
-  url("..//fonts/Gotham-Light.woff") format("woff"),
-  url("..//fonts/Gotham-Light.otf") format("opentype"),
-  url("..//fonts/Gotham-Light.svg#Gotham-Light") format("svg");
+  url("../fonts/Gotham-Light.woff") format("woff"),
+  url("../fonts/Gotham-Light.otf") format("opentype"),
+  url("../fonts/Gotham-Light.svg#Gotham-Light") format("svg");
 }
 
 @font-face {
   font-family: "Gotham-Medium";
-  src: url("..//fonts/≈.eot");
+  src: url("../fonts/≈.eot");
   src: local("☺"),
-  url("..//fonts/Gotham-Medium.woff") format("woff"),
-  url("..//fonts/Gotham-Medium.otf") format("opentype"),
-  url("..//fonts/Gotham-Medium.svg#Gotham-Medium") format("svg");
+  url("../fonts/Gotham-Medium.woff") format("woff"),
+  url("../fonts/Gotham-Medium.otf") format("opentype"),
+  url("../fonts/Gotham-Medium.svg#Gotham-Medium") format("svg");
 }
 
 

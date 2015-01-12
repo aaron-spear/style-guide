@@ -3790,7 +3790,7 @@ pre.prettyprint {
 .spotx .tooltip {
   line-height: 1.4;
   background: #eee;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   padding: 2px !important;
   opacity: 0;
@@ -3820,7 +3820,6 @@ pre.prettyprint {
   padding: 6px 8px 8px;
   max-width: 100%;
   min-width: 130px;
-  color: #ffffff;
   text-align: left;
   text-decoration: none;
   font-weight: 300;
@@ -3839,50 +3838,12 @@ pre.prettyprint {
   height: 10px;
   background: transparent url(../img/arrow-down.png) no-repeat 0 0;
 }
-.spotx .tooltip.top-left .tooltip-arrow {
-  bottom: 0;
-  right: 15px;
-  margin-bottom: -15px;
-  border-width: 15px 15px 0;
-  border-top-color: #000000;
-}
-.spotx .tooltip.top-right .tooltip-arrow {
-  bottom: 0;
-  left: 15px;
-  margin-bottom: -15px;
-  border-width: 15px 15px 0;
-  border-top-color: #000000;
-}
 .spotx .tooltip.right .tooltip-arrow {
   display: none;
 }
-.spotx .tooltip.left .tooltip-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -15px;
-  border-width: 15px 0 15px 15px;
-  border-left-color: #000000;
-}
-.spotx .tooltip.bottom .tooltip-arrow {
-  top: 0;
-  left: 50%;
-  margin-left: -15px;
-  border-width: 0 15px 15px;
-  border-bottom-color: #000000;
-}
-.spotx .tooltip.bottom-left .tooltip-arrow {
-  top: 0;
-  right: 15px;
-  margin-top: -15px;
-  border-width: 0 15px 15px;
-  border-bottom-color: #000000;
-}
-.spotx .tooltip.bottom-right .tooltip-arrow {
-  top: 0;
-  left: 15px;
-  margin-top: -15px;
-  border-width: 0 15px 15px;
-  border-bottom-color: #000000;
+.myGrid {
+  width: 500px;
+  height: 250px;
 }
 .logos {
   position: relative;

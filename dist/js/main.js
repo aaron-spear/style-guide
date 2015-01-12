@@ -50,25 +50,19 @@ $(function() {
 	  $('.nav .typefaces').addClass('active');
 	} else if(/elements/.test(loc)) {
 	  $('.nav .elements').addClass('active');
-	  $('.nav-sub > a').next('.nav').slideToggle('normal');
 	} else if(/headings/.test(loc)) {
 	  $('.nav .headings').addClass('active');
-		subnav();
 	} else if(/forms/.test(loc)) {
 	  $('.nav .forms').addClass('active');
 	  subnav();
 	} else if(/buttons/.test(loc)) {
 	  $('.nav .buttons').addClass('active');
-	  subnav();
 	} else if(/links/.test(loc)) {
 	  $('.nav .links').addClass('active');
-	  subnav();
 	} else if(/list/.test(loc)) {
 	  $('.nav .list').addClass('active');
-	  subnav();
 	} else if(/tables/.test(loc)) {
 	  $('.nav .tables').addClass('active');
-	  subnav();
 	} else if(/css/.test(loc)) {
 	  $('.nav .css').addClass('active');
 	} else if(/icons/.test(loc)) {

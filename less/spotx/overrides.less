@@ -778,17 +778,11 @@ pre.prettyprint {
 	}
 }
 
-
-//
-// Tooltips
-// --------------------------------------------------
-
-
 // Base class
 .spotx .tooltip {
   line-height: 1.4;
   background: #eee;
-  box-shadow: 0 0 10px rgba(0,0,0,.7);
+  box-shadow: 0 0 7px rgba(0,0,0,.5);
   border-radius: 4px;
   padding: 2px !important;
   .opacity(0);
@@ -805,7 +799,6 @@ pre.prettyprint {
   padding: 6px 8px 8px;  
   max-width: 100%;
   min-width: 130px;
-  color: @tooltip-color;
   text-align: left;
   text-decoration: none;
   font-weight: 300;
@@ -828,52 +821,43 @@ pre.prettyprint {
 	  height: 10px;    
     background: transparent url(../img/arrow-down.png) no-repeat 0 0;
   }
-  &.top-left .tooltip-arrow {
-    bottom: 0;
-    right: @tooltip-arrow-width;
-    margin-bottom: -@tooltip-arrow-width;
-    border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
-    border-top-color: @tooltip-arrow-color;
-  }
-  &.top-right .tooltip-arrow {
-    bottom: 0;
-    left: @tooltip-arrow-width;
-    margin-bottom: -@tooltip-arrow-width;
-    border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
-    border-top-color: @tooltip-arrow-color;
-  }
   &.right .tooltip-arrow {
     display: none;
   }
-  &.left .tooltip-arrow {
-    top: 50%;
-    right: 0;
-    margin-top: -@tooltip-arrow-width;
-    border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
-    border-left-color: @tooltip-arrow-color;
-  }
-  &.bottom .tooltip-arrow {
-    top: 0;
-    left: 50%;
-    margin-left: -@tooltip-arrow-width;
-    border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
-    border-bottom-color: @tooltip-arrow-color;
-  }
-  &.bottom-left .tooltip-arrow {
-    top: 0;
-    right: @tooltip-arrow-width;
-    margin-top: -@tooltip-arrow-width;
-    border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
-    border-bottom-color: @tooltip-arrow-color;
-  }
-  &.bottom-right .tooltip-arrow {
-    top: 0;
-    left: @tooltip-arrow-width;
-    margin-top: -@tooltip-arrow-width;
-    border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
-    border-bottom-color: @tooltip-arrow-color;
-  }
 }
+
+
+
+//
+// Tables
+// --------------------------------------------------
+
+.myGrid {
+  width: 500px;
+  height: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

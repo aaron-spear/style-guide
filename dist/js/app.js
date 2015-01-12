@@ -1,7 +1,7 @@
 // script.js
 
 
-    var styleApp = angular.module('styleApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
+    var styleApp = angular.module('styleApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.grid']);
 
     // configure our routes
     styleApp.config(function($routeProvider) {
@@ -305,6 +305,26 @@
 		  $scope.immediateTooltip = 'Check to specify that this<br> campaign should start immediately';
 		  $scope.indefiniteTooltip = 'Check to specify that this<br> campaign should run indefinitely';
 		});		     		
-		
+ 
+ 
+ 
+		styleApp.controller('mainController', ['$scope', '$http', function ($scope, $http) {
+		  $scope.gridOptions = {
+		    enableSorting: true,
+		    jqueryUITheme: true,
+		    columnDefs: [
+		      { field: 'name', minWidth: 200, width: '50%' },
+		      { field: 'gender', width: '30%', enableColumnResizing: false },
+		      { field: 'company', width: '20%' }
+		    ]
+		  };
+		 
+		  $http.get('data/100.json').success(function(data) {
+	      $scope.gridOptions.data = data;
+	      $scope.gridOptions.enableColumnMenus = false;
+	    });
+		}]);
+		 
+	
     
      
