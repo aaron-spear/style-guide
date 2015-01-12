@@ -317,6 +317,9 @@ code {
 
 label {
 	font-weight: normal;
+	span {
+		cursor: help;
+	}
 }
 
 .required label {
@@ -337,6 +340,11 @@ form {
 			margin-bottom: 6px;
 		}
 	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	cursor: pointer;
 }
 
 p.input-group {
@@ -465,7 +473,13 @@ input[type="color"]:focus,
 	}
 }
 
+pre.prettyprint {
+	margin: -3px auto 0;
+}
 
+.forms section {
+	margin-bottom: 40px;
+}
 
 //
 // Errors
@@ -747,6 +761,23 @@ input[type="color"]:focus,
 	}
 }
 
+.spotx .select2-search-choice-close {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;	
+	background: none;
+	color: #555;
+	text-decoration: none;
+	&:before {
+		content: "\f00d";
+	}
+	&:hover {
+		color: #000;
+	}
+}
+
 
 //
 // Tooltips
@@ -773,7 +804,7 @@ input[type="color"]:focus,
 .spotx .tooltip-inner {
   padding: 6px 8px 8px;  
   max-width: 100%;
-  min-width: 120px;
+  min-width: 130px;
   color: @tooltip-color;
   text-align: left;
   text-decoration: none;
@@ -792,7 +823,7 @@ input[type="color"]:focus,
 .spotx .tooltip {
   &.top .tooltip-arrow {
     bottom: -8px;
-    left: 50%;
+    left: 52%;
 	  width: 22px;
 	  height: 10px;    
     background: transparent url(../img/arrow-down.png) no-repeat 0 0;

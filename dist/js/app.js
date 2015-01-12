@@ -286,9 +286,7 @@
                 y += node.offsetTop;
             } return y;
         }
-	
 	    };
-		    
 		});
 
 		styleApp.controller('ScrollCtrl', function($scope, $location, anchorSmoothScroll) {	    
@@ -304,10 +302,9 @@
 		styleApp.controller('TooltipCtrl', function ($scope) {
 		  $scope.dynamicTooltip = 'Hello, World!';
 		  $scope.dynamicTooltipText = 'dynamic';
-		  $scope.htmlTooltip = 'I\'ve been made <b>bold</b>!';
+		  $scope.immediateTooltip = 'Check to specify that this<br> campaign should start immediately';
+		  $scope.indefiniteTooltip = 'Check to specify that this<br> campaign should run indefinitely';
 		});		     		
-		
-
 		
     
      

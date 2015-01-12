@@ -3403,6 +3403,9 @@ code {
 label {
   font-weight: normal;
 }
+label span {
+  cursor: help;
+}
 .required label {
   font-weight: bold;
 }
@@ -3414,6 +3417,10 @@ legend {
 }
 form fieldset:first-child legend {
   margin-bottom: 6px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
 }
 p.input-group {
   margin: 0;
@@ -3522,6 +3529,12 @@ input[type="color"]:focus,
 }
 .form-group .error-container {
   position: relative;
+}
+pre.prettyprint {
+  margin: -3px auto 0;
+}
+.forms section {
+  margin-bottom: 40px;
 }
 .spotx .has-error .bootstrap-datepicker .dropdown-menu .btn-default {
   color: #555;
@@ -3758,6 +3771,22 @@ input[type="color"]:focus,
 .spotx .select2-results li {
   margin-right: 4px;
 }
+.spotx .select2-search-choice-close {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  background: none;
+  color: #555;
+  text-decoration: none;
+}
+.spotx .select2-search-choice-close:before {
+  content: "\f00d";
+}
+.spotx .select2-search-choice-close:hover {
+  color: #000;
+}
 .spotx .tooltip {
   line-height: 1.4;
   background: #eee;
@@ -3790,7 +3819,7 @@ input[type="color"]:focus,
 .spotx .tooltip-inner {
   padding: 6px 8px 8px;
   max-width: 100%;
-  min-width: 120px;
+  min-width: 130px;
   color: #ffffff;
   text-align: left;
   text-decoration: none;
@@ -3805,7 +3834,7 @@ input[type="color"]:focus,
 }
 .spotx .tooltip.top .tooltip-arrow {
   bottom: -8px;
-  left: 50%;
+  left: 52%;
   width: 22px;
   height: 10px;
   background: transparent url(../img/arrow-down.png) no-repeat 0 0;
