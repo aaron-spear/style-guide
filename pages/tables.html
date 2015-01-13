@@ -5,10 +5,39 @@
 		<p>For data tables that require functionality and scrolling.</p>
 		<div class="grid-container">
 			<div ui-grid="gridOptions" class="grid"></div>
-			<!-- <div class="bottom-fade"></div> -->	
 		</div>
-	</section>
-	
+		<br>
+		<a href="" class="btn btn-default toggle-code-1">Show Code</a>
+		<div class="zero-clipboard code-1">
+			<pre class="prettyprint lang-html">
+&lt;div class="grid-container"&gt;
+  &lt;div ui-grid="gridOptions" class="grid"&gt;&lt;/div&gt;
+&lt;/div&gt;			
+			</pre>
+			<pre class="prettyprint" id="clipboard_text_1">
+var styleApp = angular.module('styleApp', ['ui.grid']);
+
+styleApp.controller('mainController', ['$scope', '$http', function ($scope, $http) {
+  $scope.gridOptions = {
+    enableSorting: true,
+    enableColumnMenus: false,
+    enableHorizontalScrollbar: 0,
+    columnDefs: [
+      { field: 'name', minWidth: 200, width: '50%' },
+      { field: 'gender', width: '30%' },
+      { field: 'company', width: '20%' },
+    ]
+  };
+
+  $http.get('data/100.json').success(function(data) {
+    $scope.gridOptions.data = data;
+  });
+
+}]);			 			
+			</pre>				
+			<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_1">Copy</span>
+		</div>		
+	</section>	
 	
 	<section>
 		<h2>jQuery Sortable</h2>
@@ -16,28 +45,28 @@
 		<table class="table table-hover sortable">
 	    <thead>
 	      <tr >
-		      <th class="width5"></th>
-	        <th class="width40">Name</th>          
-	        <th class="width20">Channel</th>
-	        <th class="width5">Type</th>
-	        <th class="width5">Schedule</th>
-	        <th class="width5"></th>
+		      <th class="col-tb-5"></th>
+	        <th class="col-tb-40">Name</th>          
+	        <th class="col-tb-20">Channel</th>
+	        <th class="col-tb-5">Type</th>
+	        <th class="col-tb-5">Schedule</th>
+	        <th class="col-tb-5"></th>
 	      </tr>
 	    </thead>
 	    <tbody class="schedule_tbody">
 	      <tr>
-					<td class="width5 text-center drag">
+					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
 					    <i class="icon-reorder"></i>
 						</span>
 					</td>			      
-	        <td class="width40 text-left">Name<br>
+	        <td class="col-tb-40 text-left">Name<br>
 	          <span class="extrainfo">1 email address</span>
 	        </td>            
-	        <td class="width20 text-left">All</td>
-	        <td class="width5 text-left capitalize">revenue</td>
-	        <td class="width5 text-left capitalize">daily</td>
-	        <td class="width5 text-right hide-dropdown">
+	        <td class="col-tb-20 text-left">All</td>
+	        <td class="col-tb-5 text-left capitalize">revenue</td>
+	        <td class="col-tb-5 text-left capitalize">daily</td>
+	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
 	            	<i class="icon-gear"></i> 
@@ -52,18 +81,18 @@
 	        </td>        
 	      </tr>
 	      <tr>
-					<td class="width5 text-center drag">
+					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
 					    <i class="icon-reorder"></i>
 						</span>
 					</td>			      
-	        <td class="width40 text-left">Name<br>
+	        <td class="col-tb-40 text-left">Name<br>
 	          <span class="extrainfo">2 email address</span>
 	        </td>            
-	        <td class="width20 text-left">All</td>
-	        <td class="width5 text-left capitalize">revenue</td>
-	        <td class="width5 text-left capitalize">daily</td>
-	        <td class="width5 text-right hide-dropdown">
+	        <td class="col-tb-20 text-left">All</td>
+	        <td class="col-tb-5 text-left capitalize">revenue</td>
+	        <td class="col-tb-5 text-left capitalize">daily</td>
+	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
 	            	<i class="icon-gear"></i> 
@@ -78,18 +107,18 @@
 	        </td>        
 	      </tr>
 	      <tr>
-					<td class="width5 text-center drag">
+					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
 					    <i class="icon-reorder"></i>
 						</span>
 					</td>			      
-	        <td class="width40 text-left">Name<br>
+	        <td class="col-tb-40 text-left">Name<br>
 	          <span class="extrainfo">3 email address</span>
 	        </td>            
-	        <td class="width20 text-left">All</td>
-	        <td class="width5 text-left capitalize">revenue</td>
-	        <td class="width5 text-left capitalize">daily</td>
-	        <td class="width5 text-right hide-dropdown">
+	        <td class="col-tb-20 text-left">All</td>
+	        <td class="col-tb-5 text-left capitalize">revenue</td>
+	        <td class="col-tb-5 text-left capitalize">daily</td>
+	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
 	            	<i class="icon-gear"></i> 
@@ -104,18 +133,18 @@
 	        </td>        
 	      </tr>
 	      <tr>
-					<td class="width5 text-center drag">
+					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
 					    <i class="icon-reorder"></i>
 						</span>
 					</td>			      
-	        <td class="width40 text-left">Name<br>
+	        <td class="col-tb-40 text-left">Name<br>
 	          <span class="extrainfo">4 email address</span>
 	        </td>            
-	        <td class="width20 text-left">All</td>
-	        <td class="width5 text-left capitalize">revenue</td>
-	        <td class="width5 text-left capitalize">daily</td>
-	        <td class="width5 text-right hide-dropdown">
+	        <td class="col-tb-20 text-left">All</td>
+	        <td class="col-tb-5 text-left capitalize">revenue</td>
+	        <td class="col-tb-5 text-left capitalize">daily</td>
+	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
 	            	<i class="icon-gear"></i> 
@@ -130,18 +159,18 @@
 	        </td>        
 	      </tr>
 	      <tr>
-					<td class="width5 text-center drag">
+					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
 					    <i class="icon-reorder"></i>
 						</span>
 					</td>			      
-	        <td class="width40 text-left">Name<br>
+	        <td class="col-tb-40 text-left">Name<br>
 	          <span class="extrainfo">5 email address</span>
 	        </td>            
-	        <td class="width20 text-left">All</td>
-	        <td class="width5 text-left capitalize">revenue</td>
-	        <td class="width5 text-left capitalize">daily</td>
-	        <td class="width5 text-right hide-dropdown">
+	        <td class="col-tb-20 text-left">All</td>
+	        <td class="col-tb-5 text-left capitalize">revenue</td>
+	        <td class="col-tb-5 text-left capitalize">daily</td>
+	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
 	            	<i class="icon-gear"></i> 
@@ -156,18 +185,18 @@
 	        </td>        
 	      </tr>
 	      <tr>
-					<td class="width5 text-center drag">
+					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
 					    <i class="icon-reorder"></i>
 						</span>
 					</td>			      
-	        <td class="width40 text-left">Name<br>
+	        <td class="col-tb-40 text-left">Name<br>
 	          <span class="extrainfo">6 email address</span>
 	        </td>            
-	        <td class="width20 text-left">All</td>
-	        <td class="width5 text-left capitalize">revenue</td>
-	        <td class="width5 text-left capitalize">daily</td>
-	        <td class="width5 text-right hide-dropdown">
+	        <td class="col-tb-20 text-left">All</td>
+	        <td class="col-tb-5 text-left capitalize">revenue</td>
+	        <td class="col-tb-5 text-left capitalize">daily</td>
+	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
 	            	<i class="icon-gear"></i> 
@@ -182,18 +211,18 @@
 	        </td>        
 	      </tr>
 	      <tr>
-					<td class="width5 text-center drag">
+					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
 					    <i class="icon-reorder"></i>
 						</span>
 					</td>			      
-	        <td class="width40 text-left">Name<br>
+	        <td class="col-tb-40 text-left">Name<br>
 	          <span class="extrainfo">7 email address</span>
 	        </td>            
-	        <td class="width20 text-left">All</td>
-	        <td class="width5 text-left capitalize">revenue</td>
-	        <td class="width5 text-left capitalize">daily</td>
-	        <td class="width5 text-right hide-dropdown">
+	        <td class="col-tb-20 text-left">All</td>
+	        <td class="col-tb-5 text-left capitalize">revenue</td>
+	        <td class="col-tb-5 text-left capitalize">daily</td>
+	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
 	            	<i class="icon-gear"></i> 
@@ -208,12 +237,111 @@
 	        </td>        
 	      </tr>	      	      	      	      	      	      
 	    </tbody>            
-	  </table>	
+	  </table>
+	  <br>
+		<a href="" class="btn btn-default toggle-code-2">Show Code</a>
+		<div class="code-2">	  
+			<div class="zero-clipboard">
+				<pre class="prettyprint lang-html" id="clipboard_text_2">
+&lt;table class="table table-hover sortable"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th class="col-tb-5"&gt;&lt;/th&gt;
+      &lt;th class="col-tb-40"&gt;Name&lt;/th&gt;          
+      &lt;th class="col-tb-20"&gt;Channel&lt;/th&gt;
+      &lt;th class="col-tb-5"&gt;Type&lt;/th&gt;
+      &lt;th class="col-tb-5"&gt;Schedule&lt;/th&gt;
+      &lt;th class="col-tb-5"&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class="schedule_tbody"&gt;
+    &lt;tr&gt;
+      &lt;td class="col-tb-5 text-center drag"&gt;
+        &lt;span class="draghandle"&gt;
+          &lt;i class="icon-reorder"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+      &lt;/td&gt;			      
+      &lt;td class="col-tb-40 text-left"&gt;Name&lt;br&gt;
+        &lt;span class="extrainfo"&gt;1 email address&lt;/span&gt;
+      &lt;/td&gt;            
+      &lt;td class="col-tb-20 text-left"&gt;All&lt;/td&gt;
+      &lt;td class="col-tb-5 text-left capitalize"&gt;revenue&lt;/td&gt;
+      &lt;td class="col-tb-5 text-left capitalize"&gt;daily&lt;/td&gt;
+      &lt;td class="col-tb-5 text-right hide-dropdown"&gt;
+        &lt;div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving"&gt;
+          &lt;button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"&gt;
+            &lt;i class="icon-gear"&gt;&lt;/i&gt; 
+            &lt;span class="caret"&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Edit Schedule&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Delete Schedule&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Download Report&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;        
+    &lt;/tr&gt;
+    ...	      	      	      	      	      	      
+  &lt;/tbody&gt;            
+&lt;/table&gt;			
+				</pre>
+				<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_2">Copy</span>
+			</div>
+			<div class="zero-clipboard">
+				<pre class="prettyprint" id="clipboard_text_3">
+$('.sortable').sortable({
+  containerSelector: 'table',
+  itemPath: '> tbody',
+  itemSelector: 'tr',
+  placeholder: '<tr class="placeholder"/>',
+  handle: 'td.drag',
+  group: 'sortable',
+  pullPlaceholder: true,
+  
+  // animation on drop
+  onDrop: function  (item, targetContainer, _super) {
+    var clonedItem = $('<tr/>').css({height: 0})
+    item.before(clonedItem)
+    clonedItem.animate({'height': item.height()})
+
+    item.animate(clonedItem.position(), function  () {
+      clonedItem.detach()
+      _super(item)
+    })
+  },
+
+  // set item relative to cursor position
+  onDragStart: function ($item, container, _super) {
+    var offset = $item.offset(),
+    pointer = container.rootGroup.pointer
+
+    adjustment = {
+      left: pointer.left - offset.left,
+      top: pointer.top - offset.top
+    }
+
+    _super($item, container)
+  },
+  onDrag: function ($item, position) {
+    $item.css({
+      left: position.left - adjustment.left,
+      top: position.top - adjustment.top
+    })
+  }
+})			 			
+				</pre>				
+				<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_3">Copy</span>
+			</div>	 
+		</div> 
 	</section>
 </div>
 
+<script src="dist/js/run_prettify.js"></script>
+<script src="dist/js/lang-css.js"></script>
+<script src="dist/js/ZeroClipboard.js"></script>
+
 <script type="text/javascript">
-	var adjustment
+	var client = new ZeroClipboard($(".btn-clipboard-tables"));
 	
 	$('.sortable').sortable({
 	  containerSelector: 'table',
@@ -254,6 +382,15 @@
 	    })
 	  }
 	})	
+	
+	$('.code-1, .code-2').hide();
+	
+	$('.toggle-code-1').click(function (){
+		$('.code-1').toggle('normal');
+	});
+	$('.toggle-code-2').click(function (){
+		$('.code-2').toggle('normal');
+	});	
 </script>
 
 

@@ -334,6 +334,23 @@ body.dragging * {
 	cursor: move;
 }
 
+.tables .zero-clipboard {
+	margin-top: 20px;
+}
+
+.tables pre.prettyprint {
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;	
+}
+
+
+
+
+
+
+
+
+
 
 
 

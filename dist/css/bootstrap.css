@@ -3537,9 +3537,6 @@ input[type="button"].btn-block {
 .spotx .form-group .error-container {
   position: relative;
 }
-.spotx pre.prettyprint {
-  margin: -3px auto 0;
-}
 .spotx .forms section {
   margin-bottom: 40px;
 }
@@ -3876,13 +3873,13 @@ input[type="button"].btn-block {
 .spotx .tables td.drag {
   vertical-align: middle;
 }
-.spotx .tables .width5 {
+.spotx .tables .col-tb-5 {
   width: 5%;
 }
-.spotx .tables .width20 {
+.spotx .tables .col-tb-20 {
   width: 20%;
 }
-.spotx .tables .width40 {
+.spotx .tables .col-tb-40 {
   width: 40%;
 }
 .spotx .tables td.capitalize {
