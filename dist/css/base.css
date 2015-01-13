@@ -285,12 +285,54 @@ body {
 }
 
 
+/* Sortable
+============================================================================= */
 
+body.dragging,
+body.dragging * {
+  cursor: move !important;
+}
 
+.dragged {
+	position: absolute !important;
+	border-bottom: #ddd 1px solid;
+  top: 0;
+  opacity: .5;
+  z-index: 2000;
+}
 
+.tables .sortable tr {
+  position: relative;
+}
 
+.tables .sortable tr:before {
+  position: absolute;
+}
 
+.tables .sortable .placeholder {
+	display: block;
+	background: #777;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
 
+.tables .sortable tr.placeholder:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-left-color: #777;
+	margin-top: -5px;
+	left: -7px;
+	border-right: none;
+}
+
+.tables .sortable td.drag {
+	cursor: move;
+}
 
 
 
