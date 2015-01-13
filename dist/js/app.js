@@ -307,24 +307,23 @@
 		});		     		
  
  
- 
 		styleApp.controller('mainController', ['$scope', '$http', function ($scope, $http) {
 		  $scope.gridOptions = {
 		    enableSorting: true,
-		    jqueryUITheme: true,
+		    enableColumnMenus: false,
+		    enableHorizontalScrollbar: 0,
 		    columnDefs: [
 		      { field: 'name', minWidth: 200, width: '50%' },
-		      { field: 'gender', width: '30%', enableColumnResizing: false },
-		      { field: 'company', width: '20%' }
+		      { field: 'gender', width: '30%' },
+		      { field: 'company', width: '20%' },
 		    ]
 		  };
 		 
 		  $http.get('data/100.json').success(function(data) {
 	      $scope.gridOptions.data = data;
-	      $scope.gridOptions.enableColumnMenus = false;
 	    });
+	    
 		}]);
 		 
-	
     
      

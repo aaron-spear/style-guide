@@ -1,7 +1,213 @@
 <h1 class="page-header">Tables</h1>
-
-<section id="ui-grid">
-	<h2>UI Grid</h2>
-	<p>For data tables that require functionality and scrolling.</p>
-	<div ui-grid="gridOptions" class="grid"></div>
-</section>
+<div class="tables">
+	<section id="ui-grid">
+		<h2>UI Grid</h2>
+		<p>For data tables that require functionality and scrolling.</p>
+		<div class="grid-container">
+			<div ui-grid="gridOptions" class="grid"></div>
+			<!-- <div class="bottom-fade"></div> -->	
+		</div>
+	</section>
+	
+	
+	<section class="selectable">
+		<h2>jQuery Sortable</h2>
+		<p>Library used for drag and drop table rows.</p>	
+		<table class="table table-hover">
+	    <thead>
+	      <tr>
+		      <th class="width5"></th>
+	        <th class="width40">Name</th>          
+	        <th class="width20">Channel</th>
+	        <th class="width5">Type</th>
+	        <th class="width5">Schedule</th>
+	        <th class="width5"></th>
+	      </tr>
+	    </thead>
+	    <tbody class="schedule_tbody">
+	      <tr>
+					<td class="width5 text-center">
+						<span class="draghandle">
+					    <i class="icon-reorder"></i>
+						</span>
+					</td>			      
+	        <td class="width40 text-left">Name<br>
+	          <span class="extrainfo">1 email address</span>
+	        </td>            
+	        <td class="width20 text-left">All</td>
+	        <td class="width5 text-left capitalize">revenue</td>
+	        <td class="width5 text-left capitalize">daily</td>
+	        <td class="width5 text-right hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>
+	        </td>        
+	      </tr>
+	      <tr>
+					<td class="width5 text-center">
+						<span class="draghandle">
+					    <i class="icon-reorder"></i>
+						</span>
+					</td>			      
+	        <td class="width40 text-left">Name<br>
+	          <span class="extrainfo">1 email address</span>
+	        </td>            
+	        <td class="width20 text-left">All</td>
+	        <td class="width5 text-left capitalize">revenue</td>
+	        <td class="width5 text-left capitalize">daily</td>
+	        <td class="width5 text-right hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>
+	        </td>        
+	      </tr>
+	      <tr>
+					<td class="width5 text-center">
+						<span class="draghandle">
+					    <i class="icon-reorder"></i>
+						</span>
+					</td>			      
+	        <td class="width40 text-left">Name<br>
+	          <span class="extrainfo">1 email address</span>
+	        </td>            
+	        <td class="width20 text-left">All</td>
+	        <td class="width5 text-left capitalize">revenue</td>
+	        <td class="width5 text-left capitalize">daily</td>
+	        <td class="width5 text-right hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>
+	        </td>        
+	      </tr>
+	      <tr>
+					<td class="width5 text-center">
+						<span class="draghandle">
+					    <i class="icon-reorder"></i>
+						</span>
+					</td>			      
+	        <td class="width40 text-left">Name<br>
+	          <span class="extrainfo">1 email address</span>
+	        </td>            
+	        <td class="width20 text-left">All</td>
+	        <td class="width5 text-left capitalize">revenue</td>
+	        <td class="width5 text-left capitalize">daily</td>
+	        <td class="width5 text-right hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>
+	        </td>        
+	      </tr>
+	      <tr>
+					<td class="width5 text-center">
+						<span class="draghandle">
+					    <i class="icon-reorder"></i>
+						</span>
+					</td>			      
+	        <td class="width40 text-left">Name<br>
+	          <span class="extrainfo">1 email address</span>
+	        </td>            
+	        <td class="width20 text-left">All</td>
+	        <td class="width5 text-left capitalize">revenue</td>
+	        <td class="width5 text-left capitalize">daily</td>
+	        <td class="width5 text-right hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>
+	        </td>        
+	      </tr>
+	      <tr>
+					<td class="width5 text-center">
+						<span class="draghandle">
+					    <i class="icon-reorder"></i>
+						</span>
+					</td>			      
+	        <td class="width40 text-left">Name<br>
+	          <span class="extrainfo">1 email address</span>
+	        </td>            
+	        <td class="width20 text-left">All</td>
+	        <td class="width5 text-left capitalize">revenue</td>
+	        <td class="width5 text-left capitalize">daily</td>
+	        <td class="width5 text-right hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>
+	        </td>        
+	      </tr>
+	      <tr>
+					<td class="width5 text-center">
+						<span class="draghandle">
+					    <i class="icon-reorder"></i>
+						</span>
+					</td>			      
+	        <td class="width40 text-left">Name<br>
+	          <span class="extrainfo">1 email address</span>
+	        </td>            
+	        <td class="width20 text-left">All</td>
+	        <td class="width5 text-left capitalize">revenue</td>
+	        <td class="width5 text-left capitalize">daily</td>
+	        <td class="width5 text-right hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>
+	        </td>        
+	      </tr>	      	      	      	      	      	      
+	    </tbody>            
+	  </table>	
+	</section>
+</div>
