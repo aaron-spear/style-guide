@@ -279,7 +279,10 @@ body {
 
 /* PAGES
 ============================================================================= */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 213492f3f1a880d902a5fa08dfda814f224e13fe
 .page.ng-enter {
   -webkit-transition:0.5s linear all;
   transition:0.5s linear all;
