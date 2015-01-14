@@ -103,12 +103,10 @@
 										  <option>(GMT +11:00) Magadan, New Caledonia</option>
 										</select>								
 									</div>				
-								</div>								
-								<div class="checkbox">
-								  <label>
-								    <input type="checkbox" value="" ng-click="isCollapsed = !isCollapsed"  tooltip-html-unsafe="{{immediateTooltip}}" tooltip-trigger="mouseenter">
-								    Starts Immediately
-								  </label>
+								</div>																
+								<div class="checkbox checkbox-primary">
+							    <input type="checkbox" id="immediate" value="" ng-click="isCollapsed = !isCollapsed"  tooltip-html-unsafe="{{immediateTooltip}}" tooltip-trigger="mouseenter">
+							    <label for="immediate">Starts Immediately</label>
 								</div>														
 							</div>	
 						</div><br>
@@ -143,11 +141,9 @@
 										</select>									
 									</div>														
 								</div>
-								<div class="checkbox">
-								  <label>
-								    <input type="checkbox" value="" ng-click="isCollapsed1 = !isCollapsed1" tooltip-html-unsafe="{{indefiniteTooltip}}" tooltip-trigger="mouseenter">
-								    Runs Indefinitely 
-								  </label>
+								<div class="checkbox checkbox-primary">
+								  <input type="checkbox" id="indefinite" value="" ng-click="isCollapsed1 = !isCollapsed1" tooltip-html-unsafe="{{indefiniteTooltip}}" tooltip-trigger="mouseenter">
+								  <label for="indefinite">Starts Immediately</label>
 								</div>							
 							</div>															
 						</div>
@@ -211,84 +207,74 @@
 		<section id="checkboxes">
 			<h2>Checkboxes and Radios</h2>
 			<div class="element-example">
-				<div class="checkbox">
-				  <label>
-				    <input type="checkbox" value="" checked>
-				    Option one
-				  </label>
-				</div>
-				<div class="checkbox">
-				  <label>
-				    <input type="checkbox" value="">
-				    Option two
-				  </label>
-				</div>	
-				<div class="checkbox disabled">
-				  <label>
-				    <input type="checkbox" value="" disabled>
-				    Option three (disabled)
-				  </label>
-				</div>
+			  <div class="checkbox checkbox-default">
+			    <input type="checkbox" id="checkbox1">
+			    <label for="checkbox1">Checkbox Default</label>
+			  </div>		
+			  <div class="checkbox checkbox-primary">
+			    <input type="checkbox" id="checkbox2">
+			    <label for="checkbox2">Checkbox Primary</label>
+			  </div>				
+			  <div class="checkbox checkbox-success">
+			    <input type="checkbox" id="checkbox3">
+			    <label for="checkbox3">Checkbox Secondary</label>
+			  </div>		
+			  <div class="checkbox checkbox-disabled">
+			    <input type="checkbox" id="checkbox4" disabled>
+			    <label for="checkbox4">Checkbox Disabled</label>
+			  </div>		
 				<br>
-				<div class="radio">
-				  <label>
-				    <input type="radio" name="options-radios" id="options-radios1" value="option1" checked>
-				    Option one
-				  </label>
-				</div>
-				<div class="radio">
-				  <label>
-				    <input type="radio" name="options-radios" id="options-radios2" value="option2">
-				    Option two
-				  </label>
-				</div>
-				<div class="radio disabled">
-				  <label>
-				    <input type="radio" name="options-radios" id="options-radios3" value="option3" disabled>
-				    Option three (disabled)
-				  </label>
-				</div>	
+			  <div class="radio radio-default">
+		      <input type="radio" name="radio" id="radio1" value="option1" checked>
+		      <label for="radio1">Radio Default</label>
+			  </div>
+			  <div class="radio radio-primary">
+		      <input type="radio" name="radio" id="radio2" value="option2">
+		      <label for="radio2">Radio Primary</label>
+			  </div>
+			  <div class="radio radio-success">
+		      <input type="radio" name="radio" id="radio3" value="option3">
+		      <label for="radio3">Radio Secondary</label>
+			  </div>
+			  <div class="radio radio-disabled">
+		      <input type="radio" name="radio" id="radio4" value="option4" disabled>
+		      <label for="radio4">Radio Disabled</label>
+			  </div>			  			  
 			</div>
 			<div class="zero-clipboard">
 			<pre class="prettyprint lang-html" id="clipboard_text_3">
-&lt;div class="element-example"&gt;
-  &lt;div class="checkbox"&gt;
-    &lt;label&gt;
-      &lt;input type="checkbox" value=""&gt;
-      Option one
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="checkbox"&gt;
-    &lt;label&gt;
-      &lt;input type="checkbox" value=""&gt;
-      Option two
-    &lt;/label&gt;
-  &lt;/div&gt;	
-  &lt;div class="checkbox disabled"&gt;
-    &lt;label&gt;
-      &lt;input type="checkbox" value="" disabled&gt;
-      Option three (disabled)
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;br&gt;
-  &lt;div class="radio"&gt;
-    &lt;label&gt;
-      &lt;input type="radio" name="options-radios" id="options-radios1" value="option1" checked&gt;
-      Option one
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="radio"&gt;
-    &lt;label&gt;
-      &lt;input type="radio" name="options-radios" id="options-radios2" value="option2"&gt;
-      Option two
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="radio disabled"&gt;
-    &lt;label&gt;
-      &lt;input type="radio" name="options-radios" id="options-radios3" value="option3" disabled&gt;
-      Option three (disabled)
-    &lt;/label&gt;
-  &lt;/div&gt;	
+&lt;div class="checkbox checkbox-default"&gt;
+  &lt;input type="checkbox" id="checkbox1"&gt;
+  &lt;label for="checkbox1"&gt;Checkbox Default&lt;/label&gt;
+&lt;/div&gt;		
+&lt;div class="checkbox checkbox-primary"&gt;
+  &lt;input type="checkbox" id="checkbox2"&gt;
+  &lt;label for="checkbox2"&gt;Checkbox Primary&lt;/label&gt;
+&lt;/div&gt;				
+&lt;div class="checkbox checkbox-secondary"&gt;
+  &lt;input type="checkbox" id="checkbox3"&gt;
+  &lt;label for="checkbox3"&gt;Checkbox Secondary&lt;/label&gt;
+&lt;/div&gt;		
+&lt;div class="checkbox checkbox-disabled"&gt;
+  &lt;input type="checkbox" id="checkbox4" disabled&gt;
+  &lt;label for="checkbox4"&gt;Checkbox Disabled&lt;/label&gt;
+&lt;/div&gt;		
+&lt;br&gt;
+&lt;div class="radio radio-default"&gt;
+  &lt;input type="radio" name="radio" id="radio1" value="option1" checked&gt;
+  &lt;label for="radio1"&gt;Radio Default&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio radio-primary"&gt;
+  &lt;input type="radio" name="radio" id="radio2" value="option2"&gt;
+  &lt;label for="radio2"&gt;Radio Primary&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio radio-secondary"&gt;
+  &lt;input type="radio" name="radio" id="radio3" value="option3"&gt;
+  &lt;label for="radio3"&gt;Radio Secondary&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio radio-disabled"&gt;
+  &lt;input type="radio" name="radio" id="radio4" value="option4" disabled&gt;
+  &lt;label for="radio4"&gt;Radio Disabled&lt;/label&gt;
 &lt;/div&gt;
 			</pre>	
 			<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_3">Copy</span>

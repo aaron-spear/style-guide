@@ -77,6 +77,7 @@
 			
 			  // set item relative to cursor position
 			  onDragStart: function ($item, container, _super) {
+				  console.log('test');
 			    var offset = $item.offset(),
 			    pointer = container.rootGroup.pointer
 			
@@ -93,16 +94,20 @@
 			      top: position.top - adjustment.top
 			    })
 			  }
+			}).on('$destroy', function(){
+				$(this).sortable( "destroy" );
 			});
 			
 			$('.code-1, .code-2').hide();	
 			
 			$('.toggle-code-1').click(function (){
 				$('.code-1').toggle('normal');
+				$(this).html($(this).text() == 'Show Code' ? 'Hide Code' : 'Show Code');
 			});
 			
 			$('.toggle-code-2').click(function (){
 				$('.code-2').toggle('normal');
+				$(this).html($(this).text() == 'Show Code' ? 'Hide Code' : 'Show Code');			
 			});					        
 		});
 		
