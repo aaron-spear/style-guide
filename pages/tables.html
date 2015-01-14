@@ -336,62 +336,10 @@ $('.sortable').sortable({
 	</section>
 </div>
 
-<script src="dist/js/run_prettify.js"></script>
-<script src="dist/js/lang-css.js"></script>
-<script src="dist/js/ZeroClipboard.js"></script>
+<script src="dist/js/vendor/prettify.js"></script>
+<script src="dist/js/vendor/lang-css.js"></script>
+<script src="dist/js/vendor/zeroclipboard.js"></script>
 
-<script type="text/javascript">
-	var client = new ZeroClipboard($(".btn-clipboard-tables"));
-	
-	$('.sortable').sortable({
-	  containerSelector: 'table',
-	  itemPath: '> tbody',
-	  itemSelector: 'tr',
-	  placeholder: '<tr class="placeholder"/>',
-	  handle: 'td.drag',
-	  group: 'sortable',
-	  pullPlaceholder: true,
-	  // animation on drop
-	  onDrop: function  (item, targetContainer, _super) {
-	    var clonedItem = $('<tr/>').css({height: 0})
-	    item.before(clonedItem)
-	    clonedItem.animate({'height': item.height()})
-	    
-	    item.animate(clonedItem.position(), function  () {
-	      clonedItem.detach()
-	      _super(item)
-	    })
-	  },
-	
-	  // set item relative to cursor position
-	  onDragStart: function ($item, container, _super) {
-	    var offset = $item.offset(),
-	    pointer = container.rootGroup.pointer
-	
-	    adjustment = {
-	      left: pointer.left - offset.left,
-	      top: pointer.top - offset.top
-	    }
-	
-	    _super($item, container)
-	  },
-	  onDrag: function ($item, position) {
-	    $item.css({
-	      left: position.left - adjustment.left,
-	      top: position.top - adjustment.top
-	    })
-	  }
-	})	
-	
-	$('.code-1, .code-2').hide();
-	
-	$('.toggle-code-1').click(function (){
-		$('.code-1').toggle('normal');
-	});
-	$('.toggle-code-2').click(function (){
-		$('.code-2').toggle('normal');
-	});	
-</script>
 
 
 

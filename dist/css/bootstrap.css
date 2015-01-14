@@ -3977,6 +3977,17 @@ input[type="button"].btn-block {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
 }
+.spotx .panel-group .panel-heading + .panel-collapse > .panel-body,
+.spotx .panel-group .panel-heading + .panel-collapse > .list-group {
+  padding: 0;
+  border: 0;
+  background-color: #9ac83c;
+}
+.spotx .panel-default > .panel-heading {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
 .logos {
   position: relative;
   margin-top: 40px;
@@ -4820,11 +4831,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .nav-sub.active {
   background: #9ac83c;
 }
-.nav .nav-sub .nav {
-  display: none;
+.nav .nav-sub.nav {
   margin: 0;
 }
-.nav .nav-sub .nav > li > a {
+.nav .nav-sub.nav > li > a {
   color: #fff;
   background: transparent;
   padding-right: 20px;
@@ -4833,10 +4843,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
 }
-.nav .nav-sub .nav > li > a:hover {
+.nav .nav-sub.nav > li > a:hover {
   background: #add758;
 }
-.nav .nav-sub .nav > li.active > a {
+.nav .nav-sub.nav > li.active > a {
   background: #add758;
 }
 .nav-tabs {

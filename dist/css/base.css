@@ -200,21 +200,42 @@ body {
 .nav-sidebar {
   margin-bottom: 20px;
 }
-.nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
-  font-weight: 300;
-  font-size: 15px
-	-webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;  		  
+.nav-sidebar > li > .panel {		
+  box-shadow: none;
+  border: none;  
+  border-radius: 0;
+  background: none;
+  min-height: 40px;
 }
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
-  color: #fff;
+.nav-sidebar > .active > .panel,
+.nav-sidebar > .active > .panel:hover,
+.nav-sidebar > .active > .panel:focus {
   background-color: #9ac83c;
 }
+.nav-sidebar li .panel h4 a {
+	display: block;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 40px;
+  padding-right: 20px;
+  padding-left: 20px;  
+}
 
+.nav-sidebar li.active .panel h4 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav-sidebar li.active .panel h4 a:hover {
+	background-color: #9ac83c;
+}
+
+.nav-sidebar li .panel h4 a:hover {
+	text-decoration: none;
+	background-color: #f1f1f1;
+	-webkit-transition: background-color ease-out .2s;
+  transition: background-color ease-out .2s; 			
+}
 
 /*
  * Main content
@@ -258,9 +279,6 @@ body {
 
 /* PAGES
 ============================================================================= */
-
-	padding: 0 40px 80px 0;
-}
 
 .page.ng-enter {
   -webkit-transition:0.5s linear all;
