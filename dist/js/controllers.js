@@ -110,8 +110,12 @@
 				$(this).html($(this).text() == 'Show Code' ? 'Hide Code' : 'Show Code');			
 			});					        
 		});
-		
-		styleApp.controller('spacingController', function($scope) {
+
+		styleApp.controller('modalsController', function($scope) {
+	    $scope.pageClass = 'page-modals';
+		});		
+
+		styleApp.controller('cssController', function($scope) {
 	    $scope.pageClass = 'page-css';
 		});
 		
