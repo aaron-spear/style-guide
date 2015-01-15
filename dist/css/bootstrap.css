@@ -3413,6 +3413,10 @@ input[type="button"].btn-block {
 .spotx label span {
   cursor: help;
 }
+.spotx .checkbox label {
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
 .spotx .required label {
   font-weight: bold;
 }
@@ -3514,9 +3518,6 @@ input[type="button"].btn-block {
   .spotx .start-end .col-md-4,
   .spotx .start-end .col-md-8 {
     padding: 0 10px 0 0;
-  }
-  .spotx .start-end .form-control {
-    padding: 6px 10px;
   }
   .spotx .start-end .checkbox-row {
     padding: 8px 0 0 26%;
