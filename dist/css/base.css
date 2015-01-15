@@ -256,6 +256,21 @@ body {
   margin-top: 0;
 }
 
+.bg-green {
+	background: #9ac83c;
+}
+
+.bg-green h1,
+.bg-green h2,
+.bg-green h3,
+.bg-green h4,
+.bg-green h5,
+.bg-green h6 {
+		color: #fff;
+		font-weight: 400;
+		letter-spacing: .5;
+	}			
+}
 
 /*
  * Placeholder dashboard ideas
@@ -279,10 +294,6 @@ body {
 
 /* PAGES
 ============================================================================= */
-<<<<<<< HEAD
-
-=======
->>>>>>> 213492f3f1a880d902a5fa08dfda814f224e13fe
 .page.ng-enter {
   -webkit-transition:0.5s linear all;
   transition:0.5s linear all;

@@ -3509,6 +3509,12 @@ input[type="button"].btn-block {
 .spotx .element-example-sizing input[type=text] + input[type=text] {
   margin: 10px 0;
 }
+.spotx .select2-container-multi .select2-search-choice-close {
+  left: 4px;
+}
+.spotx .select2-search-choice-close {
+  margin-top: -8px;
+}
 .spotx .checkbox-row {
   padding: 0 15px;
 }
@@ -3817,13 +3823,14 @@ input[type="button"].btn-block {
   padding: 0 15px;
 }
 .spotx .tooltip-inner {
-  padding: 6px 8px 8px;
+  padding: 6px 8px;
   max-width: 100%;
   min-width: 130px;
   text-align: left;
   text-decoration: none;
   font-weight: 300;
-  font-size: 11px;
+  font-size: 12px;
+  line-height: 16px;
   background-color: #444;
   border-radius: 3px;
 }
@@ -4264,26 +4271,26 @@ input[type="button"].btn-block {
   color: #999;
   font-weight: 300;
 }
-.element-example.green-bg {
+.element-example.bg-green {
   background: #9ac83c;
 }
-.element-example.green-bg h1,
-.element-example.green-bg h2,
-.element-example.green-bg h3,
-.element-example.green-bg h4,
-.element-example.green-bg h5,
-.element-example.green-bg h6 {
+.element-example.bg-green h1,
+.element-example.bg-green h2,
+.element-example.bg-green h3,
+.element-example.bg-green h4,
+.element-example.bg-green h5,
+.element-example.bg-green h6 {
   color: #fff;
   font-weight: 400;
   letter-spacing: .5;
 }
-.element-example.green-bg .table tr td {
+.element-example.bg-green .table tr td {
   border-top: rgba(255, 255, 255, 0.1) 1px solid;
 }
-.element-example.green-bg .table tr:first-child td {
+.element-example.bg-green .table tr:first-child td {
   border: none;
 }
-.element-example.green-bg .table tr .type-info {
+.element-example.bg-green .table tr .type-info {
   color: rgba(255, 255, 255, 0.9);
 }
 .fade {
