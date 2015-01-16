@@ -1,7 +1,7 @@
 // script.js
 
 
-    var styleApp = angular.module('styleApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.grid']);
+    var styleApp = angular.module('styleApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ui.grid', 'perfect_scrollbar']);
 
     // configure our routes
     styleApp.config(function($routeProvider) {

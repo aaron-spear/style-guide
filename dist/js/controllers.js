@@ -4,7 +4,7 @@
 		// Pages
 		
 		styleApp.controller('overviewController', function($scope) {
-	    $scope.pageClass = 'page-overview';		   
+	    $scope.pageClass = 'page-overview';		  
 		});
 		
 		styleApp.controller('logoController', function($scope) {
@@ -355,9 +355,33 @@
 		    $modalInstance.dismiss('cancel');
 		  };
 		});
+		
+		
+		
+		// Perfect Scroll			
+		
+		styleApp.controller('perfectScrollCtrl', function ($scope) {
+			
+      $scope.someArray = [1, 2, 3];
 
+      $scope.addItem = function() {
+          var arrayLength = $scope.someArray.length;
+          var nextValue = arrayLength > 0 ? $scope.someArray[arrayLength - 1] + 1 : 1;
+          $scope.someArray.push(nextValue);
+      };
 
+      $scope.removeItem = function() {
+          if ($scope.someArray.length) { $scope.someArray.pop(); }
+      }
 
+      $scope.scrollTop = 0
+      $scope.scrollHeight = 0
+      $scope.onScroll = function (scrollTop, scrollHeight) {
+          $scope.scrollTop = scrollTop
+          $scope.scrollHeight = scrollHeight
+      }		
+		
+		});			
 
 
 

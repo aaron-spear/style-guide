@@ -197,6 +197,13 @@ body {
 }
 
 /* Sidebar navigation */
+
+.scroller {
+  height: 640px;
+  overflow-y: hidden;
+  position: relative;
+}
+
 .nav-sidebar {
   margin-bottom: 20px;
 }

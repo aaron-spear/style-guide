@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="dist/img/favicon.ico">
 
-    <title>spotXchange style guide</title>
+    <title>UX style guide</title>
 
     <!-- Bootstrap core CSS -->
     <link type="text/css" href="dist/css/bootstrap.css" rel="stylesheet">
@@ -22,6 +22,7 @@
     <link type="text/css" href="dist/css/select2-bootstrap.css" rel="stylesheet">
     <link type="text/css" href="dist/css/ui-grid.css" rel="stylesheet">
     <link type="text/css" href="dist/css/bootstrap-checkbox.css" rel="stylesheet">
+    <link type="text/css" href="dist/css/perfect-scrollbar.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -59,64 +60,77 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar-left">
 	        <div class="divider"></div>
-					<div ng-controller="navAccordianCtrl">
-					  <accordion>	        
-		          <ul class="nav nav-sidebar" ng-controller="navCtrl">
-		            <li class="level-1 overview" active><accordion-group heading="Overview" ng-click="go('/overview')"></li>
-		            <li class="level-1 logos" active><accordion-group heading="Our Logo" ng-click="go('/logo')"></li>
-		            <li class="level-1 colors" active><accordion-group heading="Colors" ng-click="go('/colors')"></li>
-		            <li class="level-1 typefaces" active><accordion-group heading="Typefaces" ng-click="go('/typefaces')"></li>
-		            <li class="level-1 headings" active><accordion-group heading="Headings" ng-click="go('/headings')"></li>
-								<li class="level-1 forms" sub>
-							    <accordion-group heading="Forms" ng-click="go('/forms')">
-					          <ul class="nav nav-sub" ng-controller="scrollCtrl">
-						          <li class="example" sub><a href="" ng-click="gotoElement('example')">Form Example</a></li>
-						          <li class="tooltips" sub><a href="" ng-click="gotoElement('tooltips')">Tooltips</a></li>
-						          <li class="checkboxes-radios" active-sub><a href="" ng-click="gotoElement('checkboxes')">Checkboxes and Radios</a></li>
-						          <li class="selects" sub><a href="" ng-click="gotoElement('selects')">Selects</a></li>
-						          <li class="sizes" sub><a href="" ng-click="gotoElement('sizes')">Sizes</a></li>
-						          <li class="date-time" sub><a href="" ng-click="gotoElement('date-time')">Date & Time Picker</a></li>
-						          <li class="column" sub><a href="" ng-click="gotoElement('columns')">Column Sizing</a></li>
-					          </ul>
-							    </accordion-group>		
-								</li>                 
-		            <li class="level-1 buttons" active><accordion-group heading="Buttons" ng-click="go('/buttons')"></li>            
-		            <li class="level-1 tables" active><accordion-group heading="Tables" ng-click="go('/tables')"></li>           
-								<li class="level-1 modals" active><accordion-group heading="Modals" ng-click="go('/modals')"></li>
-		            <li class="level-1 css" active><accordion-group heading="CSS / LESS" ng-click="go('/css')"></li>
-		            <li class="level-1 icons" active><accordion-group heading="App Icons" ng-click="go('/icons')"></li>
-		          </ul>
-					  </accordion>
-					</div>          
+			    <div ng-controller="perfectScrollCtrl">
+		        <perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="3">
+							<div ng-controller="navAccordianCtrl">
+							  <accordion>	        
+				          <ul class="nav nav-sidebar" ng-controller="navCtrl">
+				            <li class="level-1 overview" active><accordion-group heading="Overview" ng-click="go('/overview')"></li>
+				            <li class="level-1 logos" active><accordion-group heading="Our Logo" ng-click="go('/logo')"></li>
+				            <li class="level-1 colors" active><accordion-group heading="Colors" ng-click="go('/colors')"></li>
+				            <li class="level-1 typefaces" active><accordion-group heading="Typefaces" ng-click="go('/typefaces')"></li>
+				            <li class="level-1 headings" active><accordion-group heading="Headings" ng-click="go('/headings')"></li>
+										<li class="level-1 forms" sub>
+									    <accordion-group heading="Forms" ng-click="go('/forms')">
+							          <ul class="nav nav-sub" ng-controller="scrollCtrl">
+								          <li class="example" sub><a href="" ng-click="gotoElement('example')">Form Example</a></li>
+								          <li class="tooltips" sub><a href="" ng-click="gotoElement('tooltips')">Tooltips</a></li>
+								          <li class="checkboxes-radios" active-sub><a href="" ng-click="gotoElement('checkboxes')">Checkboxes and Radios</a></li>
+								          <li class="selects" sub><a href="" ng-click="gotoElement('selects')">Selects</a></li>
+								          <li class="sizes" sub><a href="" ng-click="gotoElement('sizes')">Sizes</a></li>
+								          <li class="date-time" sub><a href="" ng-click="gotoElement('date-time')">Date & Time Picker</a></li>
+								          <li class="column" sub><a href="" ng-click="gotoElement('columns')">Column Sizing</a></li>
+							          </ul>
+									    </accordion-group>		
+										</li>                 
+				            <li class="level-1 buttons" active><accordion-group heading="Buttons" ng-click="go('/buttons')"></li>            
+				            <li class="level-1 tables" active><accordion-group heading="Tables" ng-click="go('/tables')"></li>           
+										<li class="level-1 modals" active><accordion-group heading="Modals" ng-click="go('/modals')"></li>
+				            <li class="level-1 css" active><accordion-group heading="CSS / LESS" ng-click="go('/css')"></li>
+				            <li class="level-1 icons" active><accordion-group heading="App Icons" ng-click="go('/icons')"></li>
+				          </ul>
+							  </accordion>
+							</div>          		
+		        </perfect-scrollbar>
+			    </div>	        
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-	        <div class="page {{ pageClass }}" ng-view ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}"></div>                    	        
+	        <div class="page {{ pageClass }}" ng-view></div>                    	        
         </div>
       </div>
     </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery --> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     
-    <script type="text/javascript" src="dist/js/vendor/bootstrap/bootstrap.min.js"></script>
+    <!-- Bootstrap --> 
+    <script type="text/javascript" src="dist/js/vendor/bootstrap/bootstrap.min.js"></script>    
     
+    <!-- Angular --> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>   
     
-    <script type="text/javascript" src="dist/js/app.js"></script>
-    <script type="text/javascript" src="dist/js/controllers.js"></script>
-    <script type="text/javascript" src="dist/js/directives.js"></script>
-		<script type="text/javascript" src="dist/js/services.js"></script>
-		<script type="text/javascript" src="dist/js/filters.js"></script>
-    <script type="text/javascript" src="dist/js/main.js"></script>
     <script type="text/javascript" src="dist/js/vendor/bootstrap/ui-bootstrap.min.js"></script>
-    <script type="text/javascript" src="dist/js/vendor/timepicker.js"></script>
+    
+		<!-- Custom -->    
+    <script type="text/javascript" src="dist/js/app.js"></script>
+    <script type="text/javascript" src="dist/js/main.js"></script>    
+		<script type="text/javascript" src="dist/js/filters.js"></script>   
+		<script type="text/javascript" src="dist/js/services.js"></script>	
+    <script type="text/javascript" src="dist/js/directives.js"></script>			 
+    <script type="text/javascript" src="dist/js/controllers.js"></script>
+    
+    <script type="text/javascript" src="dist/js/vendor/jquery/jquery-sortable.js"></script>
+    <script type="text/javascript" src="dist/js/vendor/angular-perfect-scrollbar.js"></script>    
+    <script type="text/javascript" src="dist/js/vendor/perfect-scrollbar.with-mousewheel.min.js"></script>        
+
+		<!-- Vendor -->    
     <script type="text/javascript" src="dist/js/vendor/select2.js"></script>
     <script type="text/javascript" src="dist/js/vendor/ui-grid.js"></script>
-    <script type="text/javascript" src="dist/js/vendor/jquery/jquery-sortable.js"></script>
+		<script type="text/javascript" src="dist/js/vendor/timepicker.js"></script>    
     
     <script type="text/javascript" src="assets/js/docs.min.js"></script>
     
