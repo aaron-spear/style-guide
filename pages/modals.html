@@ -1,2 +1,60 @@
 <h1 class="page-header">Modals</h1>
-<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+<p>Modals use UI Bootstrap and use <code>ng-click="open()"</code> to activate. Use <code>ng-click="open(lg)"</code> or <code>ng-click="open(sm)"</code> for size variations.</p>     
+<div class="element-example">
+	<div ng-controller="modalCtrl">
+		<script type="text/ng-template" id="myModalContent.html">
+			<div class="modal-header">
+				<h3 class="modal-title">I'm a modal</h3>
+			</div>
+			<div class="modal-body">
+				<ul>
+					<li ng-repeat="item in items">
+						<a ng-click="selected.item = item">{{ item }}</a>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-link" ng-click="cancel()">Cancel</button>
+				<button class="btn btn-primary" ng-click="ok()">Continue</button>			
+			</div>
+		</script>
+		
+		<button class="btn btn-default" ng-click="open()">Open me!</button>
+		<button class="btn btn-default" ng-click="open('lg')">Large modal</button>
+		<button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+	</div>
+</div>
+<div class="zero-clipboard">
+<pre class="prettyprint lang-html" id="clipboard_text">
+&lt;div ng-controller="modalCtrl"&gt;
+  &lt;script type="text/ng-template" id="myModalContent.html"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3 class="modal-title"&gt;I'm a modal&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;ul&gt;
+        &lt;li ng-repeat="item in items"&gt;
+          &lt;a ng-click="selected.item = item"&gt;{{ item }}&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-link" ng-click="cancel()"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary" ng-click="ok()"&gt;Continue&lt;/button&gt;			
+    &lt;/div&gt;
+  &lt;/script&gt;
+
+  &lt;button class="btn btn-default" ng-click="open()"&gt;Open me!&lt;/button&gt;
+  &lt;button class="btn btn-default" ng-click="open('lg')"&gt;Large modal&lt;/button&gt;
+  &lt;button class="btn btn-default" ng-click="open('sm')"&gt;Small modal&lt;/button&gt;
+&lt;/div&gt;
+</pre>	
+<span class="btn-copy btn-clipboard-modals" data-clipboard-target="clipboard_text">Copy</span>
+</div>
+
+<script src="dist/js/vendor/prettify.js"></script>
+<script src="dist/js/vendor/zeroclipboard.js"></script>
+
+<script>
+	var client = new ZeroClipboard($(".btn-clipboard-modals"));
+</script>

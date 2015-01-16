@@ -3996,6 +3996,14 @@ input[type="button"].btn-block {
   padding: 0;
   border-radius: 0;
 }
+/* Modal
+============================================================================= */
+.modal-dialog {
+  margin: 60px auto !important;
+}
+.modal-open .modal {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
 .logos {
   position: relative;
   margin-top: 40px;
