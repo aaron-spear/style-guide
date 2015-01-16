@@ -1,5 +1,5 @@
 <h1 class="page-header">Tables</h1>
-<div class="tables">
+<div class="tables" ng-controller="gridCtrl">
 	<section id="ui-grid">
 		<h2>UI Grid</h2>
 		<p>For data tables that require functionality and scrolling.</p>
@@ -7,7 +7,6 @@
 			<div ui-grid="gridOptions" class="grid"></div>
 		</div>
 		<br>
-		<a href="" class="btn btn-default toggle-code-1">Show Code</a>
 		<div class="zero-clipboard code-1">
 			<pre class="prettyprint lang-html">
 &lt;div class="grid-container"&gt;
@@ -239,7 +238,6 @@ styleApp.controller('mainController', ['$scope', '$http', function ($scope, $htt
 	    </tbody>            
 	  </table>
 	  <br>
-		<a href="" class="btn btn-default toggle-code-2">Show Code</a>
 		<div class="code-2">	  
 			<div class="zero-clipboard">
 				<pre class="prettyprint lang-html" id="clipboard_text_2">

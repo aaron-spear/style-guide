@@ -9,12 +9,12 @@
 
         .when('/', {
             templateUrl : 'pages/overview.html',
-            controller  : 'mainController'
+            controller  : 'overviewController'
         })
         
         .when('/overview', {
             templateUrl : 'pages/overview.html',
-            controller  : 'mainController'
+            controller  : 'overviewController'
         })            
 
         .when('/logo', {

@@ -36,22 +36,32 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
-  <body class="left-nav-open spotx" ng-controller="mainController">
+  <body class="left-nav-open spotx" ng-controller="mainCtrl">
 	  
     <header class="navbar navbar-inverse navbar-fixed-top">
       <a class="leftmenu-trigger active">
 	      <div class="patty"></div>
       </a>
       <a class="logo">&nbsp;</a>
+      <div>
+				<div class="switch">
+				  <input id="cmn-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+				  <label for="cmn-toggle"></label>
+				  <div class="tooltip toggle-code top">
+				  	<div class="tooltip-arrow"></div>
+				  	<div class="tooltip-inner">code snippets off</div>
+				  </div>
+				</div>      	      
+      </div>
     </header>
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar-left">
 	        <div class="divider"></div>
-					<div ng-controller="NavAccordianCtrl">
+					<div ng-controller="navAccordianCtrl">
 					  <accordion>	        
-		          <ul class="nav nav-sidebar" ng-controller="navController">
+		          <ul class="nav nav-sidebar" ng-controller="navCtrl">
 		            <li class="level-1 overview" active><accordion-group heading="Overview" ng-click="go('/overview')"></li>
 		            <li class="level-1 logos" active><accordion-group heading="Our Logo" ng-click="go('/logo')"></li>
 		            <li class="level-1 colors" active><accordion-group heading="Colors" ng-click="go('/colors')"></li>
@@ -59,7 +69,7 @@
 		            <li class="level-1 headings" active><accordion-group heading="Headings" ng-click="go('/headings')"></li>
 								<li class="level-1 forms" sub>
 							    <accordion-group heading="Forms" ng-click="go('/forms')">
-					          <ul class="nav nav-sub" ng-controller="ScrollCtrl">
+					          <ul class="nav nav-sub" ng-controller="scrollCtrl">
 						          <li class="example" sub><a href="" ng-click="gotoElement('example')">Form Example</a></li>
 						          <li class="tooltips" sub><a href="" ng-click="gotoElement('tooltips')">Tooltips</a></li>
 						          <li class="checkboxes-radios" active-sub><a href="" ng-click="gotoElement('checkboxes')">Checkboxes and Radios</a></li>

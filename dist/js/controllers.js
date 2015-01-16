@@ -3,8 +3,8 @@
 
 		// Pages
 		
-		styleApp.controller('mainController', function($scope) {
-	    $scope.pageClass = 'page-overview';
+		styleApp.controller('overviewController', function($scope) {
+	    $scope.pageClass = 'page-overview';		   
 		});
 		
 		styleApp.controller('logoController', function($scope) {
@@ -30,9 +30,12 @@
 		styleApp.controller('formsController', function($scope) {
 		  $scope.pageClass = 'page-forms';
 			var client = new ZeroClipboard($(".btn-clipboard-forms"));	
+			
 			$('.timepicker').timepicker();
+			
 			$('select.select2-search').select2();
 			$('select.select2').select2({minimumResultsForSearch: -1});
+			
 			$('button.create').click(function() {
 				$('.form-group.required').addClass('has-error');
 				$('.alert-danger').addClass('show');
@@ -96,19 +99,7 @@
 			  }
 			}).on('$destroy', function(){
 				$(this).sortable( "destroy" );
-			});
-			
-			$('.code-1, .code-2').hide();	
-			
-			$('.toggle-code-1').click(function (){
-				$('.code-1').toggle('normal');
-				$(this).html($(this).text() == 'Show Code' ? 'Hide Code' : 'Show Code');
-			});
-			
-			$('.toggle-code-2').click(function (){
-				$('.code-2').toggle('normal');
-				$(this).html($(this).text() == 'Show Code' ? 'Hide Code' : 'Show Code');			
-			});					        
+			});						        
 		});
 
 		styleApp.controller('modalsController', function($scope) {
@@ -126,9 +117,25 @@
 		
 		
 		
+		// Main                
+		
+		styleApp.controller('mainCtrl', function () {
+			$('.switch label').hover(function() {
+			  $('.switch .tooltip').toggleClass('show');
+			});			
+			
+			$('.switch label').click(function (){
+				$('.zero-clipboard').fadeToggle()
+				$('.switch .tooltip .tooltip-inner').html($('.switch .tooltip .tooltip-inner').text() == 'code snippets off' ? 'code snippets on' : 'code snippets off');	
+			});						
+		});   
+		
+		
+		
+		
 		// Tabs                 
 		
-		styleApp.controller('TabController', function () {
+		styleApp.controller('tabCtrl', function () {
 		    this.tab = 1;
 		
 		    this.setTab = function (tabId) {
@@ -138,14 +145,14 @@
 		    this.isSet = function (tabId) {
 		        return this.tab === tabId;
 		    };
-		});   
+		});   		
 		
 		
 		
 		
 		// Date Picker    
 		
-		styleApp.controller('DatepickerCtrl', function ($scope) {
+		styleApp.controller('datepickerCtrl', function ($scope) {
 		  $scope.today = function() {
 		    $scope.dt = new Date();
 		  };
@@ -187,7 +194,7 @@
 		
 		// Time Picker		 
 		
-		styleApp.controller('TimepickerDemoCtrl', function ($scope, $log) {
+		styleApp.controller('timepickerCtrl', function ($scope, $log) {
 		  $scope.mytime = new Date();
 		
 		  $scope.hstep = 1;
@@ -223,7 +230,7 @@
 				
 		// Scroll				
 		
-		styleApp.controller('ScrollCtrl', function($scope, $location, anchorSmoothScroll) {	    
+		styleApp.controller('scrollCtrl', function($scope, $location, anchorSmoothScroll) {	    
 		  $scope.gotoElement = function (eID){
 		    anchorSmoothScroll.scrollTo(eID);	      
 		  };
@@ -232,14 +239,14 @@
 		
 		// Collapse		
 		
-		styleApp.controller('CollapseCtrl', function ($scope) {
+		styleApp.controller('collapseCtrl', function ($scope) {
 		  $scope.isCollapsed = false;
 		}); 
 		
 		
 		// Tooltip	
 		
-		styleApp.controller('TooltipCtrl', function ($scope) {
+		styleApp.controller('tooltipCtrl', function ($scope) {
 		  $scope.dynamicTooltip = 'Hello, World!';
 		  $scope.dynamicTooltipText = 'dynamic';
 		  $scope.immediateTooltip = 'Check to specify that this<br> campaign should start immediately';
@@ -247,9 +254,9 @@
 		});		
 		
 		
-		// Main     		
+		// UI Grid     		
 				
-		styleApp.controller('mainController', ['$scope', '$http', function ($scope, $http) {
+		styleApp.controller('gridCtrl', ['$scope', '$http', function ($scope, $http) {
 		  $scope.gridOptions = {
 		    enableSorting: true,
 		    enableColumnMenus: false,
@@ -271,13 +278,13 @@
 				
 		// Nav		
 		
-		styleApp.controller('navController', function($scope, $location) {
+		styleApp.controller('navCtrl', function($scope, $location) {
 		  $scope.go = function (path) {
 			  $location.path(path);
 			};
 		});			
 		
-		styleApp.controller('NavAccordianCtrl', function ($scope) {
+		styleApp.controller('navAccordianCtrl', function ($scope) {
 		  $scope.oneAtATime = true;
 		
 		  $scope.groups = [

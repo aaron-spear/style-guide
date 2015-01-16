@@ -86,7 +86,7 @@
     display: inline-block;
     position: relative;
     padding-left: 5px;
-    line-height: 16px; }
+    line-height: 18px; }
 .radio label::before {
     content: "";
     display: inline-block;

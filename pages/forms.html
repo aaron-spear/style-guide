@@ -1,7 +1,7 @@
 <h1 class="page-header">Forms</h1>
 
-<div id="scrollArea" ng-controller="ScrollCtrl" class="forms">
-	<div ng-controller="TooltipCtrl">
+<div id="scrollArea" ng-controller="scrollCtrl" class="forms">
+	<div ng-controller="tooltipCtrl">
 		<section id="example">
 			<h2>Form Example</h2>
 			<p>Submit the form below for an example of error handling. Errors styling is displayed when the <code>has-error</code> class is added to the containing <code>&lt;div&gt;</code></p>
@@ -69,14 +69,14 @@
 					    </div>
 					  </div>			  
 					</fieldset>		
-					<fieldset class="start-end" ng-controller="CollapseCtrl">
+					<fieldset class="start-end" ng-controller="collapseCtrl">
 						<legend>Flighting</legend>
 						<div class="form-group required">
 							<label for="start" class="col-sm-3 control-label inline-label"><span tooltip="When checked, this campaign will start immediately when saved. If you uncheck this option you will be able to set a specific future date and time for this campaign to start." tooltip-trigger="mouseenter">Start Date:</span></label>							
 							<div class="datetime-container">										
 								<div class="clearfix error-container" collapse="isCollapsed">
 									<span class="help-block">Start Date must be before End Date</span>	
-									<div ng-controller="DatepickerCtrl">
+									<div ng-controller="datepickerCtrl">
 									  <div class="col-md-3">
 								      <p class="input-group bootstrap-datepicker">
 								        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
@@ -115,7 +115,7 @@
 							<div class="datetime-container">							
 								<div class="clearfix error-container" collapse="isCollapsed1">	
 									<span class="help-block">End Date must be after Start Date</span>					
-									<div ng-controller="DatepickerCtrl">
+									<div ng-controller="datepickerCtrl">
 									  <div class="col-md-3">
 								      <p class="input-group bootstrap-datepicker">
 								        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
@@ -406,7 +406,7 @@
 			<p>Datepicker is using UI Bootstrap, Timepicker is using AngularStrap for now.</p>
 			<div class="element-example">
 			
-				<div ng-controller="DatepickerCtrl">
+				<div ng-controller="datepickerCtrl">
 				  <div class="row">
 					  <div class="form-group col-md-6">
 					    <label for="standard-input">Date Picker</label>
@@ -431,7 +431,7 @@
 			</div>
 			<div class="zero-clipboard">
 			<pre class="prettyprint lang-html" id="clipboard_text_6">
-&lt;div ng-controller="DatepickerCtrl"&gt;
+&lt;div ng-controller="datepickerCtrl"&gt;
   &lt;div class="row"&gt;
     &lt;div class="form-group col-md-6"&gt;
       &lt;label for="standard-input"&gt;Date Picker&lt;/label&gt;

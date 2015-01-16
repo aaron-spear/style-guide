@@ -3628,7 +3628,7 @@ input[type="button"].btn-block {
   outline: none;
 }
 .spotx .zero-clipboard {
-  display: block;
+  display: none;
   position: relative;
 }
 .spotx .zero-clipboard .btn-copy {
@@ -4161,7 +4161,7 @@ input[type="button"].btn-block {
 @media (min-width: 1200px) {
   .colors .color {
     width: 100%;
-    height: 200px;
+    height: 180px;
   }
 }
 .x-colors {
