@@ -24,16 +24,18 @@ $(function() {
 	  $('.nav .logos').addClass('active');
   } else if(/colors/.test(loc)) {
 	  $('.nav .colors').addClass('active');
-  } else if(/typefaces/.test(loc)) {
-	  $('.nav .typefaces').addClass('active');
-	} else if(/headings/.test(loc)) {
-	  $('.nav .headings').addClass('active');
+  } else if(/typography/.test(loc)) {
+	  $('.nav .typography').addClass('active');
+  } else if(/layout/.test(loc)) {
+	  $('.nav .layout').addClass('active');	  
 	} else if(/forms/.test(loc)) {
 	  $('.nav .forms').addClass('active');
 	} else if(/buttons/.test(loc)) {
 	  $('.nav .buttons').addClass('active');
 	} else if(/tables/.test(loc)) {
 	  $('.nav .tables').addClass('active');
+	} else if(/graphs/.test(loc)) {
+	  $('.nav .graphs').addClass('active');
 	} else if(/css/.test(loc)) {
 	  $('.nav .css').addClass('active');
 	} else if(/icons/.test(loc)) {

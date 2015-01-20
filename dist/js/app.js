@@ -27,15 +27,15 @@
             controller  : 'colorsController'
         })
         
-        .when('/typefaces', {
-            templateUrl : 'pages/typefaces.html',
-            controller  : 'typefacesController'
+        .when('/typography', {
+            templateUrl : 'pages/typography.html',
+            controller  : 'typographyController'
         })
-
-        .when('/headings', {
-            templateUrl : 'pages/headings.html',
-            controller  : 'headingsController'
-        })
+        
+        .when('/layout', {
+            templateUrl : 'pages/layout.html',
+            controller  : 'layoutController'
+        })        
         
         .when('/forms', {
             templateUrl : 'pages/forms.html',
@@ -67,9 +67,9 @@
             controller  : 'iconsController'
         })
         
-        .when('/data', {
-            templateUrl : 'pages/data.html',
-            controller  : 'dataController'
+        .when('/graphs', {
+            templateUrl : 'pages/graphs.html',
+            controller  : 'graphsController'
         })        
                                                           
     });

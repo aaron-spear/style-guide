@@ -15,17 +15,13 @@
 	    $scope.pageClass = 'page-colors';
 		});
 		
-		styleApp.controller('typefacesController', function($scope) {
-	    $scope.pageClass = 'page-type';
+		styleApp.controller('typographyController', function($scope) {
+	    $scope.pageClass = 'page-typography';
 		});
 		
-		styleApp.controller('elementsController', function($scope) {
-	    $scope.pageClass = 'page-elements';
-		});
-		
-		styleApp.controller('headingsController', function($scope) {
-	    $scope.pageClass = 'page-headings';
-		});
+		styleApp.controller('layoutController', function($scope) {
+	    $scope.pageClass = 'page-layout';
+		});		
 		
 		styleApp.controller('formsController', function($scope) {
 		  $scope.pageClass = 'page-forms';
@@ -114,8 +110,8 @@
 	    $scope.pageClass = 'page-icons';
 		}); 
 		
-		styleApp.controller('dataController', function($scope) {
-	    $scope.pageClass = 'data-icons';
+		styleApp.controller('graphsController', function($scope) {
+	    $scope.pageClass = 'page-graphs';
 		}); 		
 		
 		

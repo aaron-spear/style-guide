@@ -4004,6 +4004,11 @@ input[type="button"].btn-block {
 .modal-open .modal {
   background: rgba(0, 0, 0, 0.7) !important;
 }
+/* Misc
+============================================================================= */
+.dropdown-menu {
+  padding: 5px;
+}
 .logos {
   position: relative;
   margin-top: 40px;
@@ -4187,7 +4192,7 @@ input[type="button"].btn-block {
 }
 .x-colors li a div {
   position: absolute;
-  top: -100%;
+  top: 0;
   width: 100%;
   height: 100%;
 }
