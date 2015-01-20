@@ -114,7 +114,9 @@
 	    $scope.pageClass = 'page-icons';
 		}); 
 		
-		
+		styleApp.controller('dataController', function($scope) {
+	    $scope.pageClass = 'data-icons';
+		}); 		
 		
 		
 		// Main                

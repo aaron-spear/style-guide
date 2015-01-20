@@ -66,6 +66,11 @@
             templateUrl : 'pages/icons.html',
             controller  : 'iconsController'
         })
+        
+        .when('/data', {
+            templateUrl : 'pages/data.html',
+            controller  : 'dataController'
+        })        
                                                           
     });
 
