@@ -1,0 +1,23 @@
+//
+// Layout
+// --------------------------------------------------
+
+.layout {
+	.element-example {
+		&.grid {
+			border: none;	
+		}
+	}
+}
+
+.show-grid {
+	margin-bottom: 15px;
+	[class^=col-] {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: #eee;
+		background-color: rgba(0,0,0,.05);
+		border: 1px solid #ddd;
+		border: 1px solid rgba(0,0,0,.1);
+	}	
+}

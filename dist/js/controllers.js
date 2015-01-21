@@ -21,6 +21,7 @@
 		
 		styleApp.controller('layoutController', function($scope) {
 	    $scope.pageClass = 'page-layout';
+	    var client = new ZeroClipboard($(".btn-clipboard-layout"));	
 		});		
 		
 		styleApp.controller('formsController', function($scope) {
@@ -123,7 +124,7 @@
 			});			
 			
 			$('.switch label').click(function (){
-				$('.zero-clipboard').fadeToggle()
+				$('.zero-clipboard').fadeToggle();
 				$('.switch .tooltip .tooltip-inner').html($('.switch .tooltip .tooltip-inner').text() == 'code snippets off' ? 'code snippets on' : 'code snippets off');	
 			});						
 		});   

@@ -4306,6 +4306,20 @@ input[type="button"].btn-block {
 .element-example.bg-green .table tr .type-info {
   color: rgba(255, 255, 255, 0.9);
 }
+.layout .element-example.grid {
+  border: none;
+}
+.show-grid {
+  margin-bottom: 15px;
+}
+.show-grid [class^=col-] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
