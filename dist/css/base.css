@@ -340,6 +340,10 @@ body.dragging * {
   z-index: 2000;
 }
 
+.spotx .tables .dragged .tools {
+	visibility: hidden !important;
+}
+
 .tables .sortable tr {
   position: relative;
 }

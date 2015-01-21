@@ -4208,14 +4208,14 @@ input[type="button"].btn-block {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -10px 0 rgba(255, 255, 255, 0.3);
 }
 .font-top {
-  padding-top: 15px;
+  padding-top: 20px;
 }
 .font-top h2 {
   float: left;
 }
 .font-top .btn {
   float: right;
-  margin-top: 20px;
+  margin: 5px 0;
 }
 .gotham-bold {
   font-family: 'Gotham-Bold', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
