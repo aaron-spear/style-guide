@@ -114,7 +114,7 @@
   </div>		  
 </div>
 <div class="zero-clipboard">
-<pre class="prettyprint lang-html" id="clipboard_text_3">
+	<pre class="prettyprint lang-html" id="clipboard_text_3">
 &lt;div class="btn-group btn-group-sm"&gt;
   &lt;a href active class="btn btn-primary"&gt;split&lt;/a&gt;
   &lt;a href active class="btn btn-primary"&gt;buttons&lt;/a&gt;
@@ -132,9 +132,36 @@
   &lt;a href active class="btn btn-primary"&gt;buttons&lt;/a&gt;
   &lt;a href active class="btn btn-primary"&gt;large&lt;/a&gt;
 &lt;/div&gt;
-</pre>	
-<span class="btn-copy btn-clipboard-buttons" data-clipboard-target="clipboard_text_3">Copy</span>
+	</pre>	
+	<span class="btn-copy btn-clipboard-buttons" data-clipboard-target="clipboard_text_3">Copy</span>
 </div>
+
+<h2>Tabs</h2>
+<p></p>
+<div class="element-example tabs">
+  <tabset class="tabs tabs-style-underline">
+    <tab heading="Static title">Static content</tab>
+    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+      {{tab.content}}
+    </tab>
+  </tabset>
+
+  <hr />
+
+  <tabset justified="true">
+    <tab heading="Justified">Justified content</tab>
+    <tab heading="SJ">Short Labeled Justified content</tab>
+    <tab heading="Long Justified">Long Labeled Justified content</tab>
+  </tabset>		  
+</div>
+<div class="zero-clipboard">
+	<pre class="prettyprint lang-html" id="clipboard_text_5">
+
+	</pre>	
+	<span class="btn-copy btn-clipboard-buttons" data-clipboard-target="clipboard_text_5">Copy</span>
+</div>
+
+
 
 
 <script src="dist/js/vendor/prettify.js"></script>

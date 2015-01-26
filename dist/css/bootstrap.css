@@ -3132,6 +3132,10 @@ input[type="button"].btn-block {
 		margin-top: 10px !important;
 	}
 	*/
+  /* Misc
+	============================================================================= */
+  /* Misc
+	============================================================================= */
 }
 .spotx h2,
 .spotx .h2 {
@@ -4003,6 +4007,63 @@ input[type="button"].btn-block {
   padding: 0;
   border-radius: 0;
 }
+.spotx .nav-tabs,
+.spotx .nav-tabs.nav-justified {
+  padding: 5px;
+  background: #eee;
+  border: none;
+}
+.spotx .nav-tabs > li,
+.spotx .nav-tabs.nav-justified > li {
+  margin-bottom: 0;
+  margin-right: 5px;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.spotx .nav-tabs > li a,
+.spotx .nav-tabs.nav-justified > li a {
+  border-radius: 0;
+  overflow: hidden;
+  font-weight: 600;
+  color: #777;
+  background: #fff;
+  margin-right: 0;
+  border: none;
+}
+.spotx .nav-tabs > li.active > a,
+.spotx .nav-tabs.nav-justified > li.active > a,
+.spotx .nav-tabs > li.active > a:hover,
+.spotx .nav-tabs.nav-justified > li.active > a:hover,
+.spotx .nav-tabs > li.active > a:focus,
+.spotx .nav-tabs.nav-justified > li.active > a:focus {
+  color: #fff;
+  border: none;
+  background: #8ec641;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.spotx .nav-tabs > li.active > a::before,
+.spotx .nav-tabs.nav-justified > li.active > a::before {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.spotx .nav-tabs > li > a:hover,
+.spotx .nav-tabs.nav-justified > li > a:hover {
+  background: #fff;
+  color: #8ec641;
+}
+.spotx .tab-content {
+  width: 100%;
+  height: 50px;
+  padding: 15px 0 0 15px;
+}
+.spotx .dropdown-menu {
+  padding: 5px;
+}
+.spotx .btn-group {
+  margin-bottom: 10px;
+}
+.spotx .nav-tabs > li > a {
+  line-height: 40px;
+}
 /* Modal
 ============================================================================= */
 .modal-dialog {
@@ -4010,14 +4071,6 @@ input[type="button"].btn-block {
 }
 .modal-open .modal {
   background: rgba(0, 0, 0, 0.7) !important;
-}
-/* Misc
-============================================================================= */
-.dropdown-menu {
-  padding: 5px;
-}
-.btn-group {
-  margin-bottom: 10px;
 }
 .logos {
   position: relative;
