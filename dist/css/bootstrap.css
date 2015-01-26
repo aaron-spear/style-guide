@@ -3123,6 +3123,11 @@ input[type="button"].btn-block {
 }
 .spotx {
   /*
+	input[type="file"] {
+	  display: none;
+	}
+*/
+  /*
 	.select2-container {
 		margin-top: 10px !important;
 	}
@@ -3296,6 +3301,11 @@ input[type="button"].btn-block {
   background-color: #1483ae;
   background-image: none;
 }
+.spotx .btn-secondary:active,
+.spotx .btn-secondary.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
 .spotx .rightmenu-trigger {
   float: right;
   border-left: 1px solid #27292d;
@@ -3438,9 +3448,6 @@ input[type="button"].btn-block {
 }
 .spotx p.required {
   margin-bottom: 20px;
-}
-.spotx input[type="file"] {
-  display: none;
 }
 .spotx .custom-file-upload {
   cursor: pointer;
@@ -4008,6 +4015,9 @@ input[type="button"].btn-block {
 ============================================================================= */
 .dropdown-menu {
   padding: 5px;
+}
+.btn-group {
+  margin-bottom: 10px;
 }
 .logos {
   position: relative;

@@ -43,7 +43,8 @@
 			});				
 			$('button.close').click(function() {
 				$('.alert-danger').removeClass('show');
-			});						
+			});	
+			$('input[type=file]').bootstrapFileInput();					
 		});
 		
 		styleApp.controller('buttonsController', function($scope) {
