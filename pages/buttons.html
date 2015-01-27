@@ -38,7 +38,7 @@
 <span class="btn-copy btn-clipboard-buttons" data-clipboard-target="clipboard_text_0">Copy</span>
 </div>
 <br>
-<p>Buttons on green backgrounds should use the <code>.btn-default</code> class</p>
+<p>Buttons on green backgrounds should use the <code>.btn-default</code> class.</p>
 <div class="element-example bg-green">
 	<button class="btn btn-default" type="submit">On Green</button>
 </div>
@@ -137,31 +137,54 @@
 </div>
 
 <h2>Tabs</h2>
-<p></p>
-<div class="element-example tabs">
-  <tabset class="tabs tabs-style-underline">
+<p>Use <code>.tabs-style-default</code>, <code>.tabs-style-btns</code>, <code>.tabs-style-fill</code> as seen in the examples below to display the different tab styles.</p>
+<div class="element-example">
+  <tabset class="tabs tabs-style-default">
     <tab heading="Static title">Static content</tab>
     <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
       {{tab.content}}
     </tab>
-  </tabset>
-
-  <hr />
-
-  <tabset justified="true">
-    <tab heading="Justified">Justified content</tab>
-    <tab heading="SJ">Short Labeled Justified content</tab>
-    <tab heading="Long Justified">Long Labeled Justified content</tab>
-  </tabset>		  
+  </tabset>	 
+  <hr/>
+  <tabset class="tabs tabs-style-btns">
+    <tab heading="Static title">Static content</tab>
+    <tab ng-repeat="tab in tabs1" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+      {{tab.content}}
+    </tab>
+  </tabset>	 
+  <hr/>
+  <tabset class="tabs tabs-style-btns tabs-style-fill">
+    <tab heading="Static title">Static content</tab>
+    <tab ng-repeat="tab in tabs2" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+      {{tab.content}}
+    </tab>
+  </tabset>	    
 </div>
 <div class="zero-clipboard">
-	<pre class="prettyprint lang-html" id="clipboard_text_5">
-
+	<pre class="prettyprint lang-html" id="clipboard_text_4">
+&lt;tabset class="tabs tabs-style-default"&gt;
+  &lt;tab heading="Static title"&gt;Static content&lt;/tab&gt;
+  &lt;tab ng-repeat="tab in tabs" heading="&#123;&#123;tab.title&#125;&#125;" active="tab.active" disabled="tab.disabled"&gt;
+    tab.content
+  &lt;/tab&gt;
+&lt;/tabset&gt;	 
+&lt;hr/&gt;
+&lt;tabset class="tabs tabs-style-btns"&gt;
+  &lt;tab heading="Static title"&gt;Static content&lt;/tab&gt;
+  &lt;tab ng-repeat="tab in tabs1" heading="&#123;&#123;tab.title&#125;&#125;" active="tab.active" disabled="tab.disabled"&gt;
+    tab.content
+  &lt;/tab&gt;
+&lt;/tabset&gt;	 
+&lt;hr/&gt;
+&lt;tabset class="tabs tabs-style-btns tabs-style-fill"&gt;
+  &lt;tab heading="Static title"&gt;Static content&lt;/tab&gt;
+  &lt;tab ng-repeat="tab in tabs2" heading="&#123;&#123;tab.title&#125;&#125;" active="tab.active" disabled="tab.disabled"&gt;
+    tab.content
+  &lt;/tab&gt;
+&lt;/tabset&gt;	
 	</pre>	
-	<span class="btn-copy btn-clipboard-buttons" data-clipboard-target="clipboard_text_5">Copy</span>
+	<span class="btn-copy btn-clipboard-buttons" data-clipboard-target="clipboard_text_4">Copy</span>
 </div>
-
-
 
 
 <script src="dist/js/vendor/prettify.js"></script>

@@ -54,6 +54,16 @@
 		    { title:'Dynamic Title 1', content:'Dynamic content 1' },
 		    { title:'Dynamic Title 2', content:'Dynamic content 2' }
 		  ];
+		  
+		  $scope.tabs1 = [
+		    { title:'Dynamic Title 1', content:'Dynamic content 1' },
+		    { title:'Dynamic Title 2', content:'Dynamic content 2' }
+		  ];	
+		  
+		  $scope.tabs2 = [
+		    { title:'Dynamic Title 1', content:'Dynamic content 1' },
+		    { title:'Dynamic Title 2', content:'Dynamic content 2' }
+		  ];			  	  
 		
 		  $scope.alertMe = function() {
 		    setTimeout(function() {
