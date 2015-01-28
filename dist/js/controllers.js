@@ -272,29 +272,21 @@
 		  $scope.dynamicTooltipText = 'dynamic';
 		  $scope.immediateTooltip = 'Check to specify that this<br> campaign should start immediately';
 		  $scope.indefiniteTooltip = 'Check to specify that this<br> campaign should run indefinitely';
-		});		
+		});			
 		
 		
-		// UI Grid     		
-				
-		styleApp.controller('gridCtrl', ['$scope', '$http', function ($scope, $http) {
-		  $scope.gridOptions = {
-		    enableSorting: true,
-		    enableColumnMenus: false,
-		    enableHorizontalScrollbar: 0,
-		    columnDefs: [
-		      { field: 'name', minWidth: 200, width: '50%' },
-		      { field: 'gender', width: '30%' },
-		      { field: 'company', width: '20%' },
-		    ]
-		  };
-		 
-		  $http.get('data/100.json').success(function(data) {
-		    $scope.gridOptions.data = data;
-		  });
-		  
-		}]);
+		// Smart Table
+		
+		styleApp.controller('smartCtrl', ['$scope', '$filter', function (scope, filter) {
 			
+	    scope.rowCollection = [
+        {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 10:10 PM (GMT -0700)', floor: '$10.00', rev: '$100.00', imp: '1,000', cpm: '$0.00', status: 'Paused'},
+        {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 11:11 PM (GMT -0700)', floor: '$11.00', rev: '$110.00', imp: '2,000', cpm: '$1.00', status: 'Running'},
+        {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 12:12 PM (GMT -0700)', floor: '$12.00', rev: '$120.00', imp: '3,000', cpm: '$2.00', status: 'Pending'},
+        {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 13:13 PM (GMT -0700)', floor: '$13.00', rev: '$130.00', imp: '4,000', cpm: '$3.00', status: 'Archived'}
+	    ];			
+		
+		}]);			
 		
 				
 		// Nav		

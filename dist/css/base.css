@@ -466,7 +466,12 @@ input.cmn-toggle-round:checked + label:after {
   margin-left: 28px;
 }
 
-
+.info-block {
+	font-size: 83%;
+	color: #999;
+	line-height: 12px;
+	padding-bottom: 0px;	
+}
 
 
 

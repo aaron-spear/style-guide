@@ -19,10 +19,11 @@
 						<legend>Campaign Settings</legend>
 						<p class="required">Required fields shown in <strong>bold</strong> text. Hover labels for more information.</p>
 					  <div class="form-group required">
-					    <label for="name" class="col-sm-3 control-label"><span tooltip="This name will be used to identify the campaign in reports and the UI." tooltip-trigger="mouseenter">Name:</span></label>
+					    <label for="name" class="col-sm-3 control-label"><span tooltip="This name will be used to identify the campaign in reports and the UI." tooltip-trigger="mouseenter">Name:</span></label>					    
 					    <div class="col-sm-5 error-container">
 						    <span class="help-block">Name is required</span>
 					      <input type="text" class="form-control" tooltip="Short name to identify this campaign" tooltip-trigger="mouseenter" id="name">				      
+					      <span class="info-block">Example block-level info text here.</span>
 					    </div>
 					  </div>
 					  <div class="form-group">
@@ -509,11 +510,15 @@
 			<h2>File Input</h2>
 			<p>File inputs are customized to look like regular buttons in all browsers.</p>
 			<div class="element-example">
-				<input type="file" title="Choose File">
+				<input type="file"/>
 			</div>
 			<div class="zero-clipboard">
-			<pre class="prettyprint lang-html" id="clipboard_text_9">
+			<pre class="prettyprint lang-html lang-js" id="clipboard_text_9">
 &lt;input type="file" title="Choose File"&gt;
+
+&lt;script&gt;
+  $('input[type=file]').bootstrapFileInput();	
+&lt;/script&gt;
 			</pre>	
 			<span class="btn-copy btn-clipboard-forms" data-clipboard-target="clipboard_text_9">Copy</span>
 			</div>

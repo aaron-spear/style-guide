@@ -1,38 +1,59 @@
 <h1 class="page-header">Tables</h1>
-<div class="tables" ng-controller="gridCtrl">
-	<section id="ui-grid">
-		<h2>UI Grid</h2>
-		<p>For data tables that require functionality and scrolling.</p>
-		<div class="grid-container">
-			<div ui-grid="gridOptions" class="grid"></div>
+<div class="tables">
+	<section id="smart-table">
+		<h2>Filters, Grouping & Sorting</h2>
+		<p></p>
+		<div ng-controller="smartCtrl">
+			<table st-table="rowCollection" class="table table-striped">
+				<thead>
+				<tr>
+					<th st-sort="name">Name<i class="fa"></i></th>
+					<th st-sort="ends">Ends<i class="fa"></i></th>
+					<th st-sort="floor">Floor<i class="fa"></i></th>
+					<th st-sort="rev">$ Rev<i class="fa"></i></th>
+					<th st-sort="imp"># Imp<i class="fa"></i></th>
+					<th st-sort="ecpm">eCPM<i class="fa"></i></th>
+					<th st-sort="status">Status<i class="fa"></i></th>
+					<th st-sort="tools"></th>
+				</tr>
+				<tr>
+					<th colspan="8"><input st-search="" class="form-control" placeholder="search ..." type="text"/></th>
+				</tr>
+				</thead>
+				<tbody ng-controller="collapseCtrl">
+				<tr>
+					<td ng-click="isCollapsed = !isCollapsed">Tier 1 (4)</td>
+				</tr>
+				<tr ng-repeat="row in rowCollection" collapse="isCollapsed">
+					<td class="name"><a href="">{{row.name}}</a><br/><span class="code">{{row.code}}</span></td>
+					<td>{{row.ends}}</td>
+					<td>{{row.floor}}</td>
+					<td>{{row.rev}}</td>
+					<td>{{row.imp}}</td>
+					<td>{{row.cpm}}</td>
+					<td>{{row.status}}</td>
+					<td class="hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>						
+					</td>
+				</tr>				
+				</tbody>
+			</table>		
+	
 		</div>
 		<br>
 		<div class="zero-clipboard code-1">
-			<pre class="prettyprint lang-html">
-&lt;div class="grid-container"&gt;
-  &lt;div ui-grid="gridOptions" class="grid"&gt;&lt;/div&gt;
-&lt;/div&gt;			
-			</pre>
 			<pre class="prettyprint" id="clipboard_text_1">
-var styleApp = angular.module('styleApp', ['ui.grid']);
-
-styleApp.controller('mainController', ['$scope', '$http', function ($scope, $http) {
-  $scope.gridOptions = {
-    enableSorting: true,
-    enableColumnMenus: false,
-    enableHorizontalScrollbar: 0,
-    columnDefs: [
-      { field: 'name', minWidth: 200, width: '50%' },
-      { field: 'gender', width: '30%' },
-      { field: 'company', width: '20%' },
-    ]
-  };
-
-  $http.get('data/100.json').success(function(data) {
-    $scope.gridOptions.data = data;
-  });
-
-}]);			 			
+	 			
 			</pre>				
 			<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_1">Copy</span>
 		</div>		

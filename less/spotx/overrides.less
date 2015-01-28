@@ -378,6 +378,7 @@
 	}
 	
 	.form-control {
+		font-weight: 400;
 		-webkit-transition: all ease-in-out .15s;
 	  transition: all ease-in-out .15s; 	
 	}
@@ -849,6 +850,7 @@
 	// Tables
 	// --------------------------------------------------
 	
+/*
 	.tables {
 		section {
 			margin-bottom: 60px;
@@ -918,17 +920,56 @@
 		}			
 	}
 
+	input[type="text"].ui-grid-filter-input {
+		display: block;
+		width: 60%;
+		height: 34px;
+		padding: 6px 12px;
+		font-size: 14px;
+		line-height: 1.42857143;
+		font-weight: 400;
+		color: #555555;
+		background-color: #ffffff;
+		background-image: none;
+		border: 1px solid #cccccc;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+		-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+		-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+		transition: border linear 0.2s, box-shadow linear 0.2s;	
+		&:focus {
+			border-color: rgba(82, 168, 236, 0.8);
+			outline: 0;
+			outline: thin dotted \9;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+			-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+		}
+	}
+	
+	.ui-grid-filter-container {
+		padding: 8px 10px;
+	}
+	
+	.ui-grid-row-header-cell {
+		border-bottom: none;
+	}
+*/
+
+/*
 	.ui-grid {
 		border: none;		
-		// border-bottom: 1px solid #dddddd;	
 		.ui-grid-top-panel {
 			position: relative;
 			overflow: hidden;
-		  background: #444444;
 		  color: white;
 		  font-size: 13px;
 		  line-height: 14px;
 		  font-weight: 600;		  
+		  background: #ddd;
 			-webkit-border-top-right-radius: 4px;
 			-webkit-border-bottom-right-radius: 0;
 			-webkit-border-bottom-left-radius: 0;
@@ -944,6 +985,10 @@
 			-moz-background-clip: padding-box;
 			-webkit-background-clip: padding-box;
 			background-clip: padding-box;
+			.ui-grid-cell-contents {
+				background: #444;
+				border-right: #777 1px solid;
+			}
 		}
 		.ui-grid-row {
 			height: auto;
@@ -960,7 +1005,7 @@
 			}
 		}
 		.ui-grid-header-cell:not(:last-child) .ui-grid-vertical-bar	{
-			background: #777;
+			background: transparent;
 		}
 		.ui-grid-cell-contents {
 			padding: 8px;
@@ -978,7 +1023,79 @@
 			color: #777;
 		}
 	}
+*/
 
+	.table > thead > tr > th, 
+	.table > tbody > tr > th, 
+	.table > tfoot > tr > th, 
+	.table > thead > tr > td, 
+	.table > tbody > tr > td, 
+	.table > tfoot > tr > td {
+		vertical-align: middle;
+	}
+	
+	.table {
+		> thead > tr {
+			background: #ddd;
+			> th {
+				border-bottom: 1px solid #dddddd;
+				.fa {
+					padding-left: 5px;
+					display: inline-block;
+					font: normal normal normal 14px/1 FontAwesome;
+					font-size: inherit;
+					text-rendering: auto;
+					-webkit-font-smoothing: antialiased;
+					&::before {
+						content: "\f078";
+						color: transparent;
+						font-size: 11px;
+					}
+				}
+				&.st-sort-descent {
+					.fa::before {
+						content: "\f078";
+						color: #eee;
+					}
+				}	
+				&.st-sort-ascent {
+					.fa::before {
+						content: "\f077";
+						color: #eee;
+					}
+				}	
+			}					
+		} 
+		> thead > tr:first-child > th {
+			border-bottom: 0;
+			cursor: pointer;
+			background: #444;
+			color: #fff;
+			font-weight: 400;			
+			border-right: #555 1px solid;
+			border-bottom: #555 1px solid;			
+		}				
+		> thead > tr > th input {
+			width: 25%;
+		}			
+		.hide-dropdown .tools {
+		  opacity: 0;
+			-webkit-transition: all ease-out .2s;
+		  transition: all ease-out .2s; 			  
+		}
+		.hide-dropdown .tools.open,
+		tr:hover > td .tools {
+		  opacity: 1;
+		}		
+		.code {
+			font-size: 90%;
+			color: #999;			
+		}	
+		td.name {
+			font-style: italic;
+		}
+	}
+	
 	.dropdown-menu>li>a:hover,
 	.dropdown-menu>li>a:focus {
 		color: #ffffff;
@@ -1172,6 +1289,10 @@
 	
 	.nav-tabs > li > a {
 		line-height: 40px;
+	}
+	
+	.ui-grid-invisible {
+		visibility: visible;
 	}
 	
 	
