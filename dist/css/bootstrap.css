@@ -4045,7 +4045,7 @@ input[type="button"].btn-block {
   background: #ddd;
 }
 .spotx .table > thead > tr > th {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ccc;
 }
 .spotx .table > thead > tr > th .fa {
   padding-left: 5px;
@@ -4095,6 +4095,52 @@ input[type="button"].btn-block {
 }
 .spotx .table td.name {
   font-style: italic;
+}
+.spotx .table td.status span {
+  padding: 2px 0px;
+  border-radius: 3px;
+  color: #fff;
+  width: 70px;
+  display: block;
+  text-align: center;
+  font-weight: 200;
+  font-size: 13px;
+}
+.spotx .table td.status.status-Paused span {
+  background: #999;
+}
+.spotx .table td.status.status-Running span {
+  background: #8ec641;
+}
+.spotx .table td.status.status-Pending span {
+  background: #f89406;
+}
+.spotx .table td.status.status-Archived span {
+  background: #b94a48;
+}
+.spotx .table tr.tier-collapse {
+  cursor: pointer;
+  background: #efefef;
+}
+.spotx .table tr.tier-collapse .fa {
+  padding: 0 3px 0 7px;
+  width: 22px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.spotx .table tr.tier-collapse .fa::before {
+  content: "\f054";
+  color: #333;
+  font-size: 11px;
+}
+.spotx .table tr.tier-collapse.open .fa {
+  padding: 0 5px;
+}
+.spotx .table tr.tier-collapse.open .fa::before {
+  content: "\f078";
 }
 .spotx .dropdown-menu > li > a:hover,
 .spotx .dropdown-menu > li > a:focus {

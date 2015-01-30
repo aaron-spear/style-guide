@@ -21,8 +21,8 @@
 				</tr>
 				</thead>
 				<tbody ng-controller="collapseCtrl">
-				<tr>
-					<td ng-click="isCollapsed = !isCollapsed">Tier 1 (4)</td>
+				<tr class="tier-collapse open" toggle ng-click="isCollapsed = !isCollapsed">
+					<td colspan="8"><i class="fa"></i>TIER 1 (4)</td>
 				</tr>
 				<tr ng-repeat="row in rowCollection" collapse="isCollapsed">
 					<td class="name"><a href="">{{row.name}}</a><br/><span class="code">{{row.code}}</span></td>
@@ -31,7 +31,7 @@
 					<td>{{row.rev}}</td>
 					<td>{{row.imp}}</td>
 					<td>{{row.cpm}}</td>
-					<td>{{row.status}}</td>
+					<td class="status status-{{row.status}}"><span>{{row.status}}</span></td>
 					<td class="hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
@@ -45,7 +45,32 @@
 	            </ul>
 	          </div>						
 					</td>
-				</tr>				
+				</tr>	
+				<tr class="tier-collapse open" toggle ng-click="isCollapsed2 = !isCollapsed2">
+					<td colspan="8"><i class="fa"></i>TIER 2 (4)</td>
+				</tr>
+				<tr ng-repeat="row in rowCollection" collapse="isCollapsed2">
+					<td class="name"><a href="">{{row.name}}</a><br/><span class="code">{{row.code}}</span></td>
+					<td>{{row.ends}}</td>
+					<td>{{row.floor}}</td>
+					<td>{{row.rev}}</td>
+					<td>{{row.imp}}</td>
+					<td>{{row.cpm}}</td>
+					<td class="status status-{{row.status}}"><span>{{row.status}}</span></td>
+					<td class="hide-dropdown">
+	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
+	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+	            	<i class="icon-gear"></i> 
+	            	<span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Edit Schedule</a></li>
+	              <li><a href="#">Delete Schedule</a></li>
+	              <li><a href="#">Download Report</a></li>
+	            </ul>
+	          </div>						
+					</td>
+				</tr>								
 				</tbody>
 			</table>		
 	
