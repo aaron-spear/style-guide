@@ -4304,6 +4304,9 @@ input[type="button"].btn-block {
 .spotx .ui-grid-invisible {
   visibility: visible;
 }
+.spotx .data .zero-clipboard {
+  margin-top: 20px;
+}
 /* Modal
 ============================================================================= */
 .modal-dialog {

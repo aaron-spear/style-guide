@@ -3,7 +3,7 @@
 	<section id="smart-table">
 		<h2>Filters, Grouping & Sorting</h2>
 		<p></p>
-		<div ng-controller="smartCtrl">
+		<div ng-controller="tableCtrl">
 			<table st-table="rowCollection" class="table table-striped">
 				<thead>
 				<tr>
@@ -73,21 +73,103 @@
 				</tr>								
 				</tbody>
 			</table>		
-	
 		</div>
 		<br>
 		<div class="zero-clipboard code-1">
 			<pre class="prettyprint" id="clipboard_text_1">
-	 			
+&lt;table st-table="rowCollection" class="table table-striped"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th st-sort="name"&gt;Name&lt;i class="fa"&gt;&lt;/i&gt;&lt;/th&gt;
+      &lt;th st-sort="ends"&gt;Ends&lt;i class="fa"&gt;&lt;/i&gt;&lt;/th&gt;
+      &lt;th st-sort="floor"&gt;Floor&lt;i class="fa"&gt;&lt;/i&gt;&lt;/th&gt;
+      &lt;th st-sort="rev"&gt;$ Rev&lt;i class="fa"&gt;&lt;/i&gt;&lt;/th&gt;
+      &lt;th st-sort="imp"&gt;# Imp&lt;i class="fa"&gt;&lt;/i&gt;&lt;/th&gt;
+      &lt;th st-sort="ecpm"&gt;eCPM&lt;i class="fa"&gt;&lt;/i&gt;&lt;/th&gt;
+      &lt;th st-sort="status"&gt;Status&lt;i class="fa"&gt;&lt;/i&gt;&lt;/th&gt;
+      &lt;th st-sort="tools"&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th colspan="8"&gt;&lt;input st-search="" class="form-control" placeholder="search ..." type="text"/&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody ng-controller="collapseCtrl"&gt;
+    &lt;tr class="tier-collapse open" toggle ng-click="isCollapsed = !isCollapsed"&gt;
+      &lt;td colspan="8"&gt;&lt;i class="fa"&gt;&lt;/i&gt;TIER 1 (4)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr ng-repeat="row in rowCollection" collapse="isCollapsed"&gt;
+      &lt;td class="name"&gt;&lt;a href=""&gt;&#123;row.name&#125;&lt;/a&gt;&lt;br/&gt;&lt;span class="code"&gt;&#123;row.code&#125;&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&#123;row.ends&#125;&lt;/td&gt;
+      &lt;td&gt;&#123;row.floor&#125;&lt;/td&gt;
+      &lt;td&gt;&#123;row.rev&#125;&lt;/td&gt;
+      &lt;td&gt;&#123;row.imp&#125;&lt;/td&gt;
+      &lt;td&gt;&#123;row.cpm&#125;&lt;/td&gt;
+      &lt;td class="status status-&#123;row.status&#125;"&gt;&lt;span&gt;&#123;row.status&#125;&lt;/span&gt;&lt;/td&gt;
+      &lt;td class="hide-dropdown"&gt;
+        &lt;div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving"&gt;
+          &lt;button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"&gt;
+            &lt;i class="icon-gear"&gt;&lt;/i&gt; 
+            &lt;span class="caret"&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Edit Schedule&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Delete Schedule&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Download Report&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;						
+      &lt;/td&gt;
+    &lt;/tr&gt;	
+    &lt;tr class="tier-collapse open" toggle ng-click="isCollapsed2 = !isCollapsed2"&gt;
+      &lt;td colspan="8"&gt;&lt;i class="fa"&gt;&lt;/i&gt;TIER 2 (4)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr ng-repeat="row in rowCollection" collapse="isCollapsed2"&gt;
+      &lt;td class="name"&gt;&lt;a href=""&gt;&#123;row.name&#125;&lt;/a&gt;&lt;br/&gt;&lt;span class="code"&gt;&#123;row.code&#125;&lt;/span&gt;&lt;/td&gt;
+      &lt;td&gt;&#123;row.ends&#125;&lt;/td&gt;
+      &lt;td&gt;&#123;row.floor&#125;&lt;/td&gt;
+      &lt;td&gt;&#123;row.rev&#125;&lt;/td&gt;
+      &lt;td&gt;&#123;row.imp&#125;&lt;/td&gt;
+      &lt;td&gt;&#123;row.cpm&#125;&lt;/td&gt;
+      &lt;td class="status status-&#123;row.status&#125;"&gt;&lt;span&gt;&#123;row.status&#125;&lt;/span&gt;&lt;/td&gt;
+      &lt;td class="hide-dropdown"&gt;
+        &lt;div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving"&gt;
+          &lt;button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"&gt;
+            &lt;i class="icon-gear"&gt;&lt;/i&gt; 
+            &lt;span class="caret"&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Edit Schedule&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Delete Schedule&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Download Report&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;						
+      &lt;/td&gt;
+    &lt;/tr&gt;								
+  &lt;/tbody&gt;
+&lt;/table&gt;			 			
 			</pre>				
 			<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_1">Copy</span>
+		</div>	
+		<div class="zero-clipboard code-2">
+			<pre class="prettyprint" id="clipboard_text_2">
+styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) {
+
+  scope.rowCollection = [
+    {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 10:10 PM (GMT -0700)', floor: '$10.00', rev: '$100.00', imp: '1,000', cpm: '$0.00', status: 'Paused'},
+    {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 11:11 PM (GMT -0700)', floor: '$11.00', rev: '$110.00', imp: '2,000', cpm: '$1.00', status: 'Running'},
+    {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 12:12 PM (GMT -0700)', floor: '$12.00', rev: '$120.00', imp: '3,000', cpm: '$2.00', status: 'Pending'},
+    {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 13:13 PM (GMT -0700)', floor: '$13.00', rev: '$130.00', imp: '4,000', cpm: '$3.00', status: 'Archived'}
+  ];			
+
+}]);		 			
+			</pre>				
+			<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_2">Copy</span>
 		</div>		
 	</section>	
 	
 	<section>
 		<h2>jQuery Sortable</h2>
 		<p>Library used for drag and drop table rows.</p>	
-		<table class="table table-hover sortable">
+		<table class="table table-hover sortable table-striped">
 	    <thead>
 	      <tr >
 		      <th class="col-tb-5"></th>
@@ -99,7 +181,7 @@
 	      </tr>
 	    </thead>
 	    <tbody class="schedule_tbody">
-	      <tr>
+	      <tr> 
 					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
 					    <i class="icon-reorder"></i>
@@ -286,7 +368,7 @@
 	  <br>
 		<div class="code-2">	  
 			<div class="zero-clipboard">
-				<pre class="prettyprint lang-html" id="clipboard_text_2">
+				<pre class="prettyprint lang-html" id="clipboard_text_3">
 &lt;table class="table table-hover sortable"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -329,10 +411,10 @@
   &lt;/tbody&gt;            
 &lt;/table&gt;			
 				</pre>
-				<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_2">Copy</span>
+				<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_3">Copy</span>
 			</div>
 			<div class="zero-clipboard">
-				<pre class="prettyprint" id="clipboard_text_3">
+				<pre class="prettyprint" id="clipboard_text_4">
 $('.sortable').sortable({
   containerSelector: 'table',
   itemPath: '> tbody',
@@ -374,7 +456,7 @@ $('.sortable').sortable({
   }
 })			 			
 				</pre>				
-				<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_3">Copy</span>
+				<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_4">Copy</span>
 			</div>	 
 		</div> 
 	</section>

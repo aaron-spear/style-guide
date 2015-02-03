@@ -137,6 +137,91 @@
 	    $scope.pageClass = 'page-graphs';
 		}); 		
 		
+		styleApp.controller('dataController', function ($scope) {
+			
+			var client = new ZeroClipboard($(".btn-clipboard-data"));	
+
+	    $scope.addPoints = function () {
+        var seriesArray = $scope.highchartsNG.series
+        var rndIdx = Math.floor(Math.random() * seriesArray.length);
+        seriesArray[rndIdx].data = seriesArray[rndIdx].data.concat([1, 10, 20])
+	    };
+	
+	    $scope.addSeries = function () {
+        var rnd = []
+        for (var i = 0; i < 10; i++) {
+          rnd.push(Math.floor(Math.random() * 20) + 1)
+        }
+        $scope.highchartsNG.series.push({
+          data: rnd
+        })
+	    }
+	
+	    $scope.removeRandomSeries = function () {
+        var seriesArray = $scope.highchartsNG.series
+        var rndIdx = Math.floor(Math.random() * seriesArray.length);
+        seriesArray.splice(rndIdx, 1)
+	    }
+	
+	    $scope.options = {
+        type: 'line'
+	    }
+	
+	    $scope.swapChartType = function () {
+        if (this.highchartsNG.options.chart.type === 'line') {
+          this.highchartsNG.options.chart.type = 'column'
+        } else {
+          this.highchartsNG.options.chart.type = 'line'
+        }
+	    }
+	
+	    $scope.highchartsNG = {
+        options: {
+          chart: {
+            type: 'line',
+            zoomType: 'x',
+            resetZoomButton: {
+              theme: {
+                fill: 'white',
+                stroke: 'silver',
+                r: 3,
+                states: {
+                  hover: {
+                    fill: '#1b9dd0',
+                    style: {
+                      color: 'white',
+                      cursor: 'pointer'
+                    }
+                  }
+                }
+              }
+            },         
+            panning: true,
+            panKey: 'shift',            
+	          style: {
+	            fontFamily: 'Open Sans'
+	          }             
+          },
+          colors: ['#1b9dd0', '#8ec641', '#1f4389', '#50771f', '#5fd2ff', '#bbfc61', '#333', '#aaa'],        
+        },
+        series: [{
+          data: [10, 15, 12, 8, 7]
+        }],
+        title: {
+          text: 'Graph Title'
+        },
+        loading: false,
+        credits: {
+	        enabled: false,
+	        style: {
+						cursor: 'default',
+						color: '#fff'				
+					}  
+				}  
+	    }
+		
+		});		
+		
 		
 		// Main                
 		
@@ -277,7 +362,7 @@
 		
 		// Smart Table
 		
-		styleApp.controller('smartCtrl', ['$scope', '$filter', function (scope, filter) {
+		styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) {
 			
 	    scope.rowCollection = [
         {name: 'Blood Bath Deal', code: '10cc0.6330c.3d61', ends: 'July 11, 2015 10:10 PM (GMT -0700)', floor: '$10.00', rev: '$100.00', imp: '1,000', cpm: '$0.00', status: 'Paused'},

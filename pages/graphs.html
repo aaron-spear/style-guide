@@ -1,2 +1,124 @@
 <h1 class="page-header">Graphs & Data</h1>
-<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+<p>Click and drag to zoom in. Hold down shift key to pan.</p>		        
+<div class="data">
+	<div ng-controller="dataController">
+		<highchart id="chart1" config="highchartsNG"></highchart>	
+		<form class="form-inline">
+		  <div class="form-group">
+		    <input class="form-control" ng-model="highchartsNG.title.text">
+		  </div>
+		  <button class="btn btn-default" ng-click="addSeries()">Add Series</button>
+		  <button class="btn btn-default" ng-click="addPoints()">Add Points to Random Series</button>
+		  <button class="btn btn-default" ng-click="removeRandomSeries()">Remove Random Series</button>
+		  <button class="btn btn-default" ng-click="swapChartType()">Line/Column</button>
+		</form>	
+	</div>
+	
+	<div class="zero-clipboard code-1">
+		<pre class="prettyprint" id="clipboard_text_1">
+&lt;div ng-controller="dataController"&gt;
+  &lt;highchart id="chart1" config="highchartsNG"&gt;&lt;/highchart&gt;	
+  &lt;form class="form-inline"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;input class="form-control" ng-model="highchartsNG.title.text"&gt;
+    &lt;/div&gt;
+    &lt;button class="btn btn-default" ng-click="addSeries()"&gt;Add Series&lt;/button&gt;
+    &lt;button class="btn btn-default" ng-click="addPoints()"&gt;Add Points to Random Series&lt;/button&gt;
+    &lt;button class="btn btn-default" ng-click="removeRandomSeries()"&gt;Remove Random Series&lt;/button&gt;
+    &lt;button class="btn btn-default" ng-click="swapChartType()"&gt;Line/Column&lt;/button&gt;
+  &lt;/form&gt;	
+&lt;/div&gt;			 			
+		</pre>				
+		<span class="btn-copy btn-clipboard-data" data-clipboard-target="clipboard_text_1">Copy</span>
+	</div>	
+	<div class="zero-clipboard code-2">
+		<pre class="prettyprint" id="clipboard_text_2">
+styleApp.controller('dataController', function ($scope) {
+
+  $scope.addPoints = function () {
+    var seriesArray = $scope.highchartsNG.series
+    var rndIdx = Math.floor(Math.random() * seriesArray.length);
+    seriesArray[rndIdx].data = seriesArray[rndIdx].data.concat([1, 10, 20])
+  };
+
+  $scope.addSeries = function () {
+    var rnd = []
+    for (var i = 0; i < 10; i++) {
+      rnd.push(Math.floor(Math.random() * 20) + 1)
+    }
+    $scope.highchartsNG.series.push({
+      data: rnd
+    })
+  }
+
+  $scope.removeRandomSeries = function () {
+    var seriesArray = $scope.highchartsNG.series
+    var rndIdx = Math.floor(Math.random() * seriesArray.length);
+    seriesArray.splice(rndIdx, 1)
+  }
+
+  $scope.options = {
+    type: 'line'
+  }
+
+  $scope.swapChartType = function () {
+    if (this.highchartsNG.options.chart.type === 'line') {
+      this.highchartsNG.options.chart.type = 'column'
+    } else {
+      this.highchartsNG.options.chart.type = 'line'
+    }
+  }
+
+  $scope.highchartsNG = {
+    options: {
+      chart: {
+        type: 'line',
+        zoomType: 'x',
+        resetZoomButton: {
+          theme: {
+            fill: 'white',
+            stroke: 'silver',
+            r: 3,
+            states: {
+              hover: {
+                fill: '#1b9dd0',
+                style: {
+                  color: 'white',
+                  cursor: 'pointer'
+                }
+              }
+            }
+          }
+        },         
+        panning: true,
+        panKey: 'shift',            
+        style: {
+          fontFamily: 'Open Sans'
+        }             
+      },
+      colors: ['#1b9dd0', '#8ec641', '#1f4389', '#50771f', '#5fd2ff', '#bbfc61', '#333', '#aaa'],        
+    },
+    series: [{
+      data: [10, 15, 12, 8, 7]
+    }],
+    title: {
+      text: 'Hello'
+    },
+    loading: false,
+    credits: {
+      enabled: false,
+      style: {
+        cursor: 'default',
+        color: '#fff'				
+      }  
+    }  
+  }
+
+});				 			
+		</pre>				
+		<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_2">Copy</span>
+	</div>	
+</div>
+<script src="dist/js/vendor/prettify.js"></script>
+<script src="dist/js/vendor/lang-css.js"></script>
+<script src="dist/js/vendor/zeroclipboard.js"></script>
