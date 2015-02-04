@@ -202,14 +202,23 @@
 	            fontFamily: 'Open Sans'
 	          }             
           },
-          colors: ['#1b9dd0', '#8ec641', '#1f4389', '#50771f', '#5fd2ff', '#bbfc61', '#333', '#aaa'],        
+          colors: ['#1b9dd0', '#8ec641', '#1f4389', '#50771f', '#5fd2ff', '#bbfc61'],   
+	        legend: {
+	          align: 'center',
+	          verticalAlign: 'top',
+	          layout: 'horizontal',
+	          x: 0,
+	          y: 20
+	        }             
         },
         series: [{
           data: [10, 15, 12, 8, 7]
         }],
         title: {
-          text: 'Graph Title'
-        },
+          text: 'Graph Title',
+          align: 'left',
+          x: 28         
+        },    
         loading: false,
         credits: {
 	        enabled: false,

@@ -8,7 +8,7 @@ body {
 }
 
 ::selection {
-  background: rgba(141,198,65,.5); 
+  background: rgba(82,168,236,.4); 
 }
 ::-moz-selection {
   background: rgba(141,198,65,.5); 

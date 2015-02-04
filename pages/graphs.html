@@ -1,8 +1,9 @@
 <h1 class="page-header">Graphs & Data</h1>
-<p>Click and drag to zoom in. Hold down shift key to pan.</p>		        
+<p>We use Highcharts JavaScript library for our interactive graphs and charts. Click and drag to zoom in, hold down shift key to pan.</p>		        
 <div class="data">
 	<div ng-controller="dataController">
 		<highchart id="chart1" config="highchartsNG"></highchart>	
+		<br/>		
 		<form class="form-inline">
 		  <div class="form-group">
 		    <input class="form-control" ng-model="highchartsNG.title.text">
@@ -96,13 +97,22 @@ styleApp.controller('dataController', function ($scope) {
           fontFamily: 'Open Sans'
         }             
       },
-      colors: ['#1b9dd0', '#8ec641', '#1f4389', '#50771f', '#5fd2ff', '#bbfc61', '#333', '#aaa'],        
+      colors: ['#1b9dd0', '#8ec641', '#1f4389', '#50771f', '#5fd2ff', '#bbfc61', '#333', '#aaa'], 
+      legend: {
+        align: 'center',
+        verticalAlign: 'top',
+        layout: 'horizontal',
+        x: 0,
+        y: 20
+      }              
     },
     series: [{
       data: [10, 15, 12, 8, 7]
     }],
     title: {
-      text: 'Hello'
+      text: 'Graph Title',
+      align: 'left',
+      x: 28         
     },
     loading: false,
     credits: {
@@ -116,7 +126,7 @@ styleApp.controller('dataController', function ($scope) {
 
 });				 			
 		</pre>				
-		<span class="btn-copy btn-clipboard-tables" data-clipboard-target="clipboard_text_2">Copy</span>
+		<span class="btn-copy btn-clipboard-data" data-clipboard-target="clipboard_text_2">Copy</span>
 	</div>	
 </div>
 <script src="dist/js/vendor/prettify.js"></script>

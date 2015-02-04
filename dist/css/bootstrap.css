@@ -4307,6 +4307,10 @@ input[type="button"].btn-block {
 .spotx .data .zero-clipboard {
   margin-top: 20px;
 }
+.spotx .data .zero-clipboard pre.prettyprint {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
 /* Modal
 ============================================================================= */
 .modal-dialog {
@@ -4625,6 +4629,71 @@ input[type="button"].btn-block {
   background-color: rgba(0, 0, 0, 0.05);
   border: 1px solid #ddd;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.glyphs.character-mapping {
+  margin: 0 0 20px 0;
+  padding: 20px 0 20px 30px;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #d8e0e5;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.glyphs.character-mapping li {
+  margin: 0 30px 20px 0;
+  display: inline-block;
+  width: 90px;
+}
+.glyphs.character-mapping .icon {
+  margin: 10px 0 10px 15px;
+  padding: 15px;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  color: #162a36 !important;
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 32px;
+}
+.glyphs.character-mapping .icon svg {
+  fill: #000;
+}
+.glyphs.character-mapping input {
+  width: 100%;
+  cursor: cell;
+}
+.glyphs.css-mapping {
+  margin: 0 0 60px 0;
+  padding: 30px 0 20px 30px;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #d8e0e5;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.glyphs.css-mapping li {
+  margin: 0 30px 20px 0;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
+}
+.glyphs.css-mapping .icon {
+  margin: 0;
+  margin-right: 10px;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  color: #162a36 !important;
+  overflow: hidden;
+  float: left;
+  font-size: 24px;
+}
+.glyphs.css-mapping input {
+  margin: 0;
+  margin-top: 5px;
+  display: block;
+  width: 150px;
+  float: right;
+  cursor: cell;
 }
 .fade {
   opacity: 0;
