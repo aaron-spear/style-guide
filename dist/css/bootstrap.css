@@ -4450,6 +4450,9 @@ input[type="button"].btn-block {
 .element-example.bg-green .table tr .type-info {
   color: rgba(255, 255, 255, 0.9);
 }
+.buttons section {
+  margin-bottom: 40px;
+}
 .layout .element-example.grid {
   border: none;
 }
