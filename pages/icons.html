@@ -568,6 +568,22 @@
 		    <input type="text" readonly="readonly" class="form-control" value="icon-check">
 		  </li>
 		</ul>
+		<script type="text/javascript">
+			(function() {
+			  var glyphs, _i, _len, _ref;
+			
+			  _ref = document.getElementsByClassName('glyphs');
+			  for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+			    glyphs = _ref[_i];
+			    glyphs.addEventListener('click', function(event) {
+			      if (event.target.tagName === 'INPUT') {
+			        return event.target.select();
+			      }
+			    });
+			  }
+			
+			}).call(this);
+		</script>		
   </tab>
   <tab heading="Character mapping">
   	<a href="fontastic.zip" style="margin-top: 15px;" class="btn btn-primary btn-sm right">Download</a>
@@ -1135,25 +1151,25 @@
 		    <input type="text" readonly="readonly" class="form-control" value="&amp;#xe08b;">
 		  </li>
 		</ul>
+		<script type="text/javascript">
+			(function() {
+			  var glyphs, _i, _len, _ref;
+			
+			  _ref = document.getElementsByClassName('glyphs');
+			  for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+			    glyphs = _ref[_i];
+			    glyphs.addEventListener('click', function(event) {
+			      if (event.target.tagName === 'INPUT') {
+			        return event.target.select();
+			      }
+			    });
+			  }
+			
+			}).call(this);
+		</script>				
   </tab>  
 </tabset>	
 			
 
 
 
-<script type="text/javascript">
-	(function() {
-	  var glyphs, _i, _len, _ref;
-	
-	  _ref = document.getElementsByClassName('glyphs');
-	  for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-	    glyphs = _ref[_i];
-	    glyphs.addEventListener('click', function(event) {
-	      if (event.target.tagName === 'INPUT') {
-	        return event.target.select();
-	      }
-	    });
-	  }
-	
-	}).call(this);
-</script>
