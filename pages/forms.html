@@ -3,7 +3,7 @@
 <div id="scrollArea" ng-controller="scrollCtrl" class="forms">
 	<div ng-controller="tooltipCtrl">
 		<section id="example">
-			<h2>Form Example</h2>
+			<h3>Form Example</h3>
 			<p>Submit the form below for an example of error handling. Errors styling is displayed when the <code>has-error</code> class is added to the containing <code>&lt;div&gt;</code>.</p>
 			<div class="element-example">
 				<form class="form-horizontal">
@@ -81,7 +81,7 @@
 									  <div class="col-md-3">
 								      <p class="input-group bootstrap-datepicker">
 								        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
-												<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+												<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="icon icon-calendar-1"></span></span>        
 								      </p>	    
 									  </div>	    
 								  </div>
@@ -89,7 +89,7 @@
 								  <div class="col-md-3">
 								    <div class="input-group input-append bootstrap-timepicker">
 								      <input type="text" class="form-control timepicker" name="start-time"/>
-											<span class="input-group-addon add-on btn btn-default"><span class="fa fa-clock-o"></span></span>  
+											<span class="input-group-addon add-on btn btn-default"><span class="icon icon-calendar-1"></span></span>  
 								    </div>     	   
 								  </div>	    
 								  <label class="sr-only" for="timezone">Time Zone:</label>
@@ -120,14 +120,14 @@
 									  <div class="col-md-3">
 								      <p class="input-group bootstrap-datepicker">
 								        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
-												<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+												<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="icon icon-calendar-1"></span></span>        
 								      </p>	    
 									  </div>	    
 								  </div>
 								  <div class="col-md-3">
 								    <div class="input-group input-append bootstrap-timepicker">
 								      <input type="text" class="form-control timepicker"/>
-											<span class="input-group-addon add-on btn btn-default"><span class="fa fa-clock-o"></span></span>  
+											<span class="input-group-addon add-on btn btn-default"><span class="icon icon-clock"></span></span>  
 								    </div>     	   
 								  </div>	    
 									<div class="col-md-4">									
@@ -162,7 +162,7 @@
 		</section>
 		
 		<section id="tooltips">
-			<h2>Tooltips</h2>
+			<h3>Tooltips</h3>
 			<p>Tooltips need to be applied to the inputs and <code>&lt;span&gt;</code> tags around the label. Use <code>tooltip-placement="right"</code> and <code>tooltip-trigger="mouseenter"</code> to determine placement and functionality.</p>
 			<div class="element-example">
 				<form class="form-horizontal" style="margin: 15px 0 5px;">
@@ -206,7 +206,7 @@
 		</section>
 
 		<section id="checkboxes">
-			<h2>Checkboxes and Radios</h2>
+			<h3>Checkboxes and Radios</h3>
 			<div class="element-example">
 			  <div class="checkbox checkbox-primary">
 			    <input type="checkbox" id="checkbox1">
@@ -267,7 +267,7 @@
 		</section>
 		
 		<section id="selects">
-			<h2>Selects</h2>
+			<h3>Selects</h3>
 			<p>Add the <code>multiple</code> attribute and the <code>.multiple</code> class to show multiple options at once.</p>
 			<div class="element-example">
 				<select class="form-control select2">
@@ -371,7 +371,7 @@
 		</section>
 		
 		<section id="sizes">
-			<h2>Sizes</h2>
+			<h3>Sizes</h3>
 			<p>Create taller or shorter form controls that match button sizes by using <code>.input-lg</code> or <code>.input-sm</code> classes.</p>
 			<div class="element-example element-example-sizing">
 				<input class="form-control input-lg" type="text" placeholder=".input-lg">
@@ -403,7 +403,7 @@
 		</section>
 		
 		<section id="date-time">
-			<h2>Date & Time Picker</h2>
+			<h3>Date & Time Picker</h3>
 			<p>Datepicker is using UI Bootstrap, Timepicker is using AngularStrap for now.</p>
 			<div class="element-example">
 			
@@ -413,7 +413,7 @@
 					    <label for="standard-input">Date Picker</label>
 				      <p class="input-group bootstrap-datepicker">
 				        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
-								<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="fa fa-calendar"></span></span>        
+								<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="icon icon-calendar-1"></span></span>        
 				      </p>	    
 					  </div>	    
 				  </div>
@@ -424,7 +424,7 @@
 				    <label for="standard-input">Time Picker</label>
 				    <div class="input-group input-append bootstrap-timepicker">
 				      <input type="text" class="form-control timepicker"/>
-							<span class="input-group-addon add-on btn btn-default"><span class="fa fa-clock-o"></span></span>  
+							<span class="input-group-addon add-on btn btn-default"><span class="icon icon-clock"></span></span>  
 				    </div>     	   
 				  </div>	    
 				</div>
@@ -438,7 +438,7 @@
       &lt;label for="standard-input"&gt;Date Picker&lt;/label&gt;
       &lt;p class="input-group bootstrap-datepicker"&gt;
         &lt;input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" ng-model="dt"/&gt;
-        &lt;span class="input-group-addon btn" ng-click="open($event)"&gt;&lt;span class="fa fa-calendar"&gt;&lt;/span&gt;&lt;/span&gt;        
+        &lt;span class="input-group-addon btn" ng-click="open($event)"&gt;&lt;span class="icon icon-calendar-1"&gt;&lt;/span&gt;&lt;/span&gt;        
       &lt;/p&gt;	    
     &lt;/div&gt;	    
   &lt;/div&gt;
@@ -459,7 +459,7 @@
 		</section>
 		
 		<section id="columns">
-			<h2>Column Sizing</h2>
+			<h3>Column Sizing</h3>
 			<p>Wrap inputs in grid columns to apply desired widths.</p>
 			<div class="element-example">
 				<div class="row">
@@ -493,7 +493,7 @@
 		</section>
 		
 		<section id="textarea">
-			<h2>Textarea</h2>
+			<h3>Textarea</h3>
 			<p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
 			<div class="element-example">
 				<textarea class="form-control" rows="3"></textarea>
@@ -507,7 +507,7 @@
 		</section>		
 		
 		<section id="textarea">
-			<h2>File Input</h2>
+			<h3>File Input</h3>
 			<p>File inputs are customized to look like regular buttons in all browsers.</p>
 			<div class="element-example">
 				<input type="file"/>

@@ -51,11 +51,6 @@
             templateUrl : 'pages/tables.html',
             controller  : 'tablesController'
         })
-        
-        .when('/modals', {
-            templateUrl : 'pages/modals.html',
-            controller  : 'modalsController'
-        })        
 
         .when('/css', {
             templateUrl : 'pages/css.html',

@@ -1,19 +1,19 @@
 <h1 class="page-header">Tables</h1>
 <div class="tables">
 	<section id="smart-table">
-		<h2>Filters, Grouping & Sorting</h2>
+		<h3>Filters, Grouping & Sorting</h3>
 		<p></p>
 		<div ng-controller="tableCtrl">
 			<table st-table="rowCollection" class="table table-striped">
 				<thead>
 				<tr>
-					<th st-sort="name">Name<i class="fa"></i></th>
-					<th st-sort="ends">Ends<i class="fa"></i></th>
-					<th st-sort="floor">Floor<i class="fa"></i></th>
-					<th st-sort="rev">$ Rev<i class="fa"></i></th>
-					<th st-sort="imp"># Imp<i class="fa"></i></th>
-					<th st-sort="ecpm">eCPM<i class="fa"></i></th>
-					<th st-sort="status">Status<i class="fa"></i></th>
+					<th st-sort="name">Name<i class="icon"></i></th>
+					<th st-sort="ends">Ends<i class="icon"></i></th>
+					<th st-sort="floor">Floor<i class="icon"></i></th>
+					<th st-sort="rev">$ Rev<i class="icon"></i></th>
+					<th st-sort="imp"># Imp<i class="icon"></i></th>
+					<th st-sort="ecpm">eCPM<i class="icon"></i></th>
+					<th st-sort="status">Status<i class="icon"></i></th>
 					<th st-sort="tools"></th>
 				</tr>
 				<tr>
@@ -22,7 +22,7 @@
 				</thead>
 				<tbody ng-controller="collapseCtrl">
 				<tr class="tier-collapse open" toggle ng-click="isCollapsed = !isCollapsed">
-					<td colspan="8"><i class="fa"></i>TIER 1 (4)</td>
+					<td colspan="8"><i class="icon"></i>TIER 1 (4)</td>
 				</tr>
 				<tr ng-repeat="row in rowCollection" collapse="isCollapsed">
 					<td class="name"><a href="">{{row.name}}</a><br/><span class="code">{{row.code}}</span></td>
@@ -35,7 +35,7 @@
 					<td class="hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -47,7 +47,7 @@
 					</td>
 				</tr>	
 				<tr class="tier-collapse open" toggle ng-click="isCollapsed2 = !isCollapsed2">
-					<td colspan="8"><i class="fa"></i>TIER 2 (4)</td>
+					<td colspan="8"><i class="icon"></i>TIER 2 (4)</td>
 				</tr>
 				<tr ng-repeat="row in rowCollection" collapse="isCollapsed2">
 					<td class="name"><a href="">{{row.name}}</a><br/><span class="code">{{row.code}}</span></td>
@@ -60,7 +60,7 @@
 					<td class="hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -108,7 +108,7 @@
       &lt;td class="hide-dropdown"&gt;
         &lt;div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving"&gt;
           &lt;button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"&gt;
-            &lt;i class="icon-gear"&gt;&lt;/i&gt; 
+            &lt;i class="icon icon-cog-gear"&gt;&lt;/i&gt; 
             &lt;span class="caret"&gt;&lt;/span&gt;
           &lt;/button&gt;
           &lt;ul class="dropdown-menu"&gt;
@@ -133,7 +133,7 @@
       &lt;td class="hide-dropdown"&gt;
         &lt;div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving"&gt;
           &lt;button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"&gt;
-            &lt;i class="icon-gear"&gt;&lt;/i&gt; 
+            &lt;i class="icon icon-cog-gear"&gt;&lt;/i&gt; 
             &lt;span class="caret"&gt;&lt;/span&gt;
           &lt;/button&gt;
           &lt;ul class="dropdown-menu"&gt;
@@ -167,7 +167,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	</section>	
 	
 	<section>
-		<h2>jQuery Sortable</h2>
+		<h3>jQuery Sortable</h3>
 		<p>Library used for drag and drop table rows.</p>	
 		<table class="table table-hover sortable table-striped">
 	    <thead>
@@ -184,7 +184,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	      <tr> 
 					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
-					    <i class="icon-reorder"></i>
+					    <i class="icon-three-bars"></i>
 						</span>
 					</td>			      
 	        <td class="col-tb-40 text-left">Name<br>
@@ -196,7 +196,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -210,7 +210,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	      <tr>
 					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
-					    <i class="icon-reorder"></i>
+					    <i class="icon-three-bars"></i>
 						</span>
 					</td>			      
 	        <td class="col-tb-40 text-left">Name<br>
@@ -222,7 +222,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -236,7 +236,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	      <tr>
 					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
-					    <i class="icon-reorder"></i>
+					    <i class="icon-three-bars"></i>
 						</span>
 					</td>			      
 	        <td class="col-tb-40 text-left">Name<br>
@@ -248,7 +248,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -262,7 +262,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	      <tr>
 					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
-					    <i class="icon-reorder"></i>
+					    <i class="icon-three-bars"></i>
 						</span>
 					</td>			      
 	        <td class="col-tb-40 text-left">Name<br>
@@ -274,7 +274,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -288,7 +288,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	      <tr>
 					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
-					    <i class="icon-reorder"></i>
+					    <i class="icon-three-bars"></i>
 						</span>
 					</td>			      
 	        <td class="col-tb-40 text-left">Name<br>
@@ -300,7 +300,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -314,7 +314,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	      <tr>
 					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
-					    <i class="icon-reorder"></i>
+					    <i class="icon-three-bars"></i>
 						</span>
 					</td>			      
 	        <td class="col-tb-40 text-left">Name<br>
@@ -326,7 +326,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -340,7 +340,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	      <tr>
 					<td class="col-tb-5 text-center drag">
 						<span class="draghandle">
-					    <i class="icon-reorder"></i>
+					    <i class="icon-three-bars"></i>
 						</span>
 					</td>			      
 	        <td class="col-tb-40 text-left">Name<br>
@@ -352,7 +352,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
 	        <td class="col-tb-5 text-right hide-dropdown">
 	          <div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving">
 	            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-	            	<i class="icon-gear"></i> 
+	            	<i class="icon icon-cog-gear"></i> 
 	            	<span class="caret"></span>
 	            </button>
 	            <ul class="dropdown-menu">
@@ -384,7 +384,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
     &lt;tr&gt;
       &lt;td class="col-tb-5 text-center drag"&gt;
         &lt;span class="draghandle"&gt;
-          &lt;i class="icon-reorder"&gt;&lt;/i&gt;
+          &lt;i class="icon-three-bars"&gt;&lt;/i&gt;
         &lt;/span&gt;
       &lt;/td&gt;			      
       &lt;td class="col-tb-40 text-left"&gt;Name&lt;br&gt;
@@ -396,7 +396,7 @@ styleApp.controller('tableCtrl', ['$scope', '$filter', function (scope, filter) 
       &lt;td class="col-tb-5 text-right hide-dropdown"&gt;
         &lt;div class="tools btn-group text-left pull-right" data-ng-hide="oSchedule.saving"&gt;
           &lt;button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"&gt;
-            &lt;i class="icon-gear"&gt;&lt;/i&gt; 
+            &lt;i class="icon icon-cog-gear"&gt;&lt;/i&gt; 
             &lt;span class="caret"&gt;&lt;/span&gt;
           &lt;/button&gt;
           &lt;ul class="dropdown-menu"&gt;
