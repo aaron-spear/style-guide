@@ -32,7 +32,7 @@ pre.prettyprint {
 */
 
 .pln {
-  color: #555;
+  color: darkolivegreen;
 }
 
 @media screen {

@@ -473,11 +473,13 @@ input.cmn-toggle-round:checked + label:after {
 	padding-bottom: 0px;	
 }
 
-
-
-
-
-
+.box {
+	width: 100px;
+	height: 100px;
+	border-radius: 3px;
+	float: left;
+	margin-right: 10px;
+}
 
 
 

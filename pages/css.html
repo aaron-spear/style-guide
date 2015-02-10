@@ -1,2 +1,73 @@
 <h1 class="page-header">CSS / LESS</h1>
-<p>Euclid, Cambrian explosion, galaxies ship of the imagination sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam trillion of brilliant syntheses! Astonishment sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam cosmic ocean Jean-François Champollion? Great turbulent clouds Apollonius of Perga sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam worldlets a still more glorious dawn awaits from which we spring Sea of Tranquility, descended from astronomers billions upon billions shores of the cosmic ocean the only home we've ever known culture? The ash of stellar alchemy with pretty stories for which there's little good evidence Cambrian explosion? Take root and flourish how far away venture, radio telescope white dwarf galaxies, courage of our questions globular star cluster, the ash of stellar alchemy tingling of the spine preserve and cherish that pale blue dot sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, a mote of dust suspended in a sunbeam! A billion trillion the sky calls to us not a sunrise but a galaxyrise. Bits of moving fluff galaxies adipisci velit?</p>		        
+<p>Our CSS is built on Less, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS.</p>		        
+
+<h3>Variables</h3>
+<p>Variables are used throughout the entire project as a way to centralize and share commonly used values like colors, spacing, or font stacks.</p>
+
+<section id="colors">
+	<h3>Colors</h3>
+	<p>Easily make use of of the SpotXchange colors by using these variables.</p>
+	<div class="element-example clearfix">
+		<div class="box spotx-green"></div>
+		<div class="box spotx-dk-green"></div>
+		<div class="box spotx-blue"></div>
+		<div class="box spotx-dk-blue"></div>
+		<div class="box spotx-grey"></div>
+		<div class="box spotx-dk-grey"></div>
+	</div>
+	<div class="zero-clipboard">
+	<pre class="prettyprint lang-css" id="clipboard_text">
+@spotx-green:        #8ec641;
+@spotx-dk-green:     #74a636;
+@spotx-blue:         #1b9dd0;
+@spotx-dk-blue:      #1f4389;
+@spotx-grey:         #bcbec0;
+@spotx-dk-grey:      #808285;
+	</pre>	
+	<span class="btn-copy btn-clipboard-less" data-clipboard-target="clipboard_text">Copy</span>
+	</div>
+</section>
+
+<section id="gradients">
+	<h3>Colors</h3>
+	<p>Our gradients use a mixin to simplify the css. Add the <code>gradient-green-horizontal</code> class to any element for the green horizontal gradient.</p>
+		<div class="element-example clearfix">
+	  <div class="gradient-green-horizontal box"></div>
+	  <div class="gradient-green-vertical box"></div>  
+	  <div class="gradient-blue-horizontal box"></div>
+	  <div class="gradient-blue-vertical box"></div>  
+	  <div class="gradient-grey-horizontal box"></div>
+	  <div class="gradient-grey-vertical box"></div>  
+	</div>
+	<div class="zero-clipboard">
+	<pre class="prettyprint lang-css" id="clipboard_text_1">
+.gradient-green-horizontal {  
+  #gradient > .horizontal(#9ac83c, #75a637);  
+}
+.gradient-green-vertical {  
+  #gradient > .vertical(#9ac83c, #75a637);  
+}
+.gradient-blue-horizontal {  
+  #gradient > .horizontal(#1b9dd0, #0080b5);  
+}
+.gradient-blue-vertical {  
+  #gradient > .vertical(#1b9dd0, #0080b5);  
+}
+.gradient-grey-horizontal {  
+  #gradient > .horizontal(#fff, #e0e0e0);  
+}
+.gradient-grey-vertical {  
+  #gradient > .vertical(#fff, #e0e0e0);  
+}
+	</pre>	
+	<span class="btn-copy btn-clipboard-less" data-clipboard-target="clipboard_text_1">Copy</span>
+	</div>
+</section>
+
+<script src="dist/js/vendor/prettify.js"></script>
+<script src="dist/js/vendor/lang-css.js"></script>
+<script src="dist/js/vendor/zeroclipboard.js"></script>
+
+<script>
+	var client = new ZeroClipboard($(".btn-clipboard-less"));
+</script>
