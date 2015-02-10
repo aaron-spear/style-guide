@@ -1,46 +1,46 @@
 <h1 class="page-header">CSS / LESS</h1>
 <p>Our CSS is built on Less, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS.</p>		        
-
-<h3>Variables</h3>
-<p>Variables are used throughout the entire project as a way to centralize and share commonly used values like colors, spacing, or font stacks.</p>
-
-<section id="colors">
-	<h3>Colors</h3>
-	<p>Easily make use of of the SpotXchange colors by using these variables.</p>
-	<div class="element-example clearfix">
-		<div class="box spotx-green"></div>
-		<div class="box spotx-dk-green"></div>
-		<div class="box spotx-blue"></div>
-		<div class="box spotx-dk-blue"></div>
-		<div class="box spotx-grey"></div>
-		<div class="box spotx-dk-grey"></div>
-	</div>
-	<div class="zero-clipboard">
-	<pre class="prettyprint lang-css" id="clipboard_text">
+<div class="less">
+	<h3>Variables</h3>
+	<p>Variables are used throughout the entire project as a way to centralize and share commonly used values like colors, spacing, or font stacks.</p>
+	
+	<section id="colors">
+		<h3>Colors</h3>
+		<p>Easily make use of of the SpotXchange colors by using these variables.</p>
+		<div class="element-example clearfix">
+			<div class="box spotx-green"></div>
+			<div class="box spotx-dk-green"></div>
+			<div class="box spotx-blue"></div>
+			<div class="box spotx-dk-blue"></div>
+			<div class="box spotx-grey"></div>
+			<div class="box spotx-dk-grey"></div>
+		</div>
+		<div class="zero-clipboard">
+		<pre class="prettyprint lang-css" id="clipboard_text">
 @spotx-green:        #8ec641;
 @spotx-dk-green:     #74a636;
 @spotx-blue:         #1b9dd0;
 @spotx-dk-blue:      #1f4389;
 @spotx-grey:         #bcbec0;
 @spotx-dk-grey:      #808285;
-	</pre>	
-	<span class="btn-copy btn-clipboard-less" data-clipboard-target="clipboard_text">Copy</span>
-	</div>
-</section>
-
-<section id="gradients">
-	<h3>Colors</h3>
-	<p>Our gradients use a mixin to simplify the css. Add the <code>gradient-green-horizontal</code> class to any element for the green horizontal gradient.</p>
-		<div class="element-example clearfix">
-	  <div class="gradient-green-horizontal box"></div>
-	  <div class="gradient-green-vertical box"></div>  
-	  <div class="gradient-blue-horizontal box"></div>
-	  <div class="gradient-blue-vertical box"></div>  
-	  <div class="gradient-grey-horizontal box"></div>
-	  <div class="gradient-grey-vertical box"></div>  
-	</div>
-	<div class="zero-clipboard">
-	<pre class="prettyprint lang-css" id="clipboard_text_1">
+		</pre>	
+		<span class="btn-copy btn-clipboard-less" data-clipboard-target="clipboard_text">Copy</span>
+		</div>
+	</section>
+	
+	<section id="gradients">
+		<h3>Gradients</h3>
+		<p>Our gradients use a mixin to simplify the css. Add the <code>gradient-green-horizontal</code> class to any element for the green horizontal gradient.</p>
+			<div class="element-example clearfix">
+		  <div class="gradient-green-horizontal box"></div>
+		  <div class="gradient-green-vertical box"></div>  
+		  <div class="gradient-blue-horizontal box"></div>
+		  <div class="gradient-blue-vertical box"></div>  
+		  <div class="gradient-grey-horizontal box"></div>
+		  <div class="gradient-grey-vertical box"></div>  
+		</div>
+		<div class="zero-clipboard">
+		<pre class="prettyprint lang-css" id="clipboard_text_1">
 .gradient-green-horizontal {  
   #gradient > .horizontal(#9ac83c, #75a637);  
 }
@@ -59,10 +59,34 @@
 .gradient-grey-vertical {  
   #gradient > .vertical(#fff, #e0e0e0);  
 }
-	</pre>	
-	<span class="btn-copy btn-clipboard-less" data-clipboard-target="clipboard_text_1">Copy</span>
-	</div>
-</section>
+		</pre>	
+		<span class="btn-copy btn-clipboard-less" data-clipboard-target="clipboard_text_1">Copy</span>
+		</div>
+	</section>
+
+	<section id="links">
+		<h3>Links</h3>
+		<p>Easily style your links with the right color with only one value.</p>
+		<div class="zero-clipboard">
+			<pre class="prettyprint lang-css" id="clipboard_text_2">
+@link-color: @brand-primary;
+@link-hover-color: darken(@link-color, 15%);
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+}
+			</pre>	
+		<span class="btn-copy btn-clipboard-less" data-clipboard-target="clipboard_text_2">Copy</span>
+		</div>
+	</section>
+</div>
+
 
 <script src="dist/js/vendor/prettify.js"></script>
 <script src="dist/js/vendor/lang-css.js"></script>

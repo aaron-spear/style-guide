@@ -4283,7 +4283,7 @@ input[type="button"].btn-block {
   background: #8ec641;
 }
 .colors .grey {
-  background: #808285;
+  background: #bcbec0;
 }
 .colors .blue-dark {
   background: #1f4389;
@@ -4291,38 +4291,29 @@ input[type="button"].btn-block {
 .colors .green-dark {
   background: #74a636;
 }
-.colors .grey-light {
-  background: #bcbec0;
+.colors .grey-dark {
+  background: #808285;
 }
 .colors .blue-gradient {
-  background: #1b9dd0;
-  background: -moz-linear-gradient(left, #1b9dd0 0%, #0080b5 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #1b9dd0), color-stop(100%, #0080b5));
-  background: -webkit-linear-gradient(left, #1b9dd0 0%, #0080b5 100%);
-  background: -o-linear-gradient(left, #1b9dd0 0%, #0080b5 100%);
-  background: -ms-linear-gradient(left, #1b9dd0 0%, #0080b5 100%);
-  background: linear-gradient(to right, #1b9dd0 0%, #0080b5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b9dd0', endColorstr='#0080b5', GradientType=1);
+  background-image: -webkit-linear-gradient(left, #1b9dd0 0%, #0080b5 100%);
+  background-image: -o-linear-gradient(left, #1b9dd0 0%, #0080b5 100%);
+  background-image: linear-gradient(to right, #1b9dd0 0%, #0080b5 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1b9dd0', endColorstr='#ff0080b5', GradientType=1);
 }
 .colors .green-gradient {
-  background: #9ac83c;
-  background: -moz-linear-gradient(left, #9ac83c 0%, #75a637 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #9ac83c), color-stop(100%, #75a637));
-  background: -webkit-linear-gradient(left, #9ac83c 0%, #75a637 100%);
-  background: -o-linear-gradient(left, #9ac83c 0%, #75a637 100%);
-  background: -ms-linear-gradient(left, #9ac83c 0%, #75a637 100%);
-  background: linear-gradient(to right, #9ac83c 0%, #75a637 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9ac83c', endColorstr='#75a637', GradientType=1);
+  background-image: -webkit-linear-gradient(left, #9ac83c 0%, #75a637 100%);
+  background-image: -o-linear-gradient(left, #9ac83c 0%, #75a637 100%);
+  background-image: linear-gradient(to right, #9ac83c 0%, #75a637 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9ac83c', endColorstr='#ff75a637', GradientType=1);
 }
 .colors .grey-gradient {
-  background: #ffffff;
-  background: -moz-linear-gradient(left, #ffffff 0%, #e0e0e0 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(100%, #e0e0e0));
-  background: -webkit-linear-gradient(left, #ffffff 0%, #e0e0e0 100%);
-  background: -o-linear-gradient(left, #ffffff 0%, #e0e0e0 100%);
-  background: -ms-linear-gradient(left, #ffffff 0%, #e0e0e0 100%);
-  background: linear-gradient(to right, #ffffff 0%, #e0e0e0 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e0e0e0', GradientType=1);
+  background-image: -webkit-linear-gradient(left, #ffffff 0%, #e0e0e0 100%);
+  background-image: -o-linear-gradient(left, #ffffff 0%, #e0e0e0 100%);
+  background-image: linear-gradient(to right, #ffffff 0%, #e0e0e0 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=1);
 }
 .colors .grey-gradient .info p {
   color: #555;
@@ -4574,23 +4565,29 @@ input[type="button"].btn-block {
   float: right;
   cursor: cell;
 }
-.box.spotx-green {
+.less .box.spotx-green {
   background: #8ec641;
 }
-.box.spotx-blue {
+.less .box.spotx-blue {
   background: #1b9dd0;
 }
-.box.spotx-grey {
+.less .box.spotx-grey {
   background: #bcbec0;
 }
-.box.spotx-dk-green {
+.less .box.spotx-dk-green {
   background: #74a636;
 }
-.box.spotx-dk-blue {
+.less .box.spotx-dk-blue {
   background: #1f4389;
 }
-.box.spotx-dk-grey {
+.less .box.spotx-dk-grey {
   background: #808285;
+}
+.less .zero-clipboard {
+  display: block !important;
+}
+.less section {
+  margin-bottom: 30px;
 }
 .fade {
   opacity: 0;
