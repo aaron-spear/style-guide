@@ -181,7 +181,8 @@
 .icon-down-dir:before {
   content: "\e017";
 }
-.icon-down-open-big:before {
+.icon-down-open-big:before,
+.icon-chevron-down:before {
   content: "\e019";
 }
 .icon-info-circled:before {
@@ -211,7 +212,8 @@
 .icon-up-dir:before {
   content: "\e035";
 }
-.icon-up-open-big:before {
+.icon-up-open-big:before,
+.icon-chevron-up:before {
   content: "\e037";
 }
 .icon-menu:before {
