@@ -1,0 +1,135 @@
+<h1 class="page-header">Graphs & Charts</h1>
+<p>We use Highcharts JavaScript library for our interactive graphs and charts. Click and drag to zoom in, hold down shift key to pan.</p>		        
+<div class="data">
+	<div ng-controller="dataController">
+		<highchart id="chart1" config="highchartsNG"></highchart>	
+		<br/>		
+		<form class="form-inline">
+		  <div class="form-group">
+		    <input class="form-control" ng-model="highchartsNG.title.text">
+		  </div>
+		  <button class="btn btn-default" ng-click="addSeries()">Add Series</button>
+		  <button class="btn btn-default" ng-click="addPoints()">Add Points to Random Series</button>
+		  <button class="btn btn-default" ng-click="removeRandomSeries()">Remove Random Series</button>
+		  <button class="btn btn-default" ng-click="swapChartType()">Line/Column</button>
+		</form>	
+	</div>
+	
+	<div class="zero-clipboard code-1">
+		<pre class="prettyprint" id="clipboard_text_1">
+&lt;div ng-controller="dataController"&gt;
+  &lt;highchart id="chart1" config="highchartsNG"&gt;&lt;/highchart&gt;	
+  &lt;form class="form-inline"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;input class="form-control" ng-model="highchartsNG.title.text"&gt;
+    &lt;/div&gt;
+    &lt;button class="btn btn-default" ng-click="addSeries()"&gt;Add Series&lt;/button&gt;
+    &lt;button class="btn btn-default" ng-click="addPoints()"&gt;Add Points to Random Series&lt;/button&gt;
+    &lt;button class="btn btn-default" ng-click="removeRandomSeries()"&gt;Remove Random Series&lt;/button&gt;
+    &lt;button class="btn btn-default" ng-click="swapChartType()"&gt;Line/Column&lt;/button&gt;
+  &lt;/form&gt;	
+&lt;/div&gt;			 			
+		</pre>				
+		<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_1">Copy</span>
+	</div>	
+	<div class="zero-clipboard code-2">
+		<pre class="prettyprint" id="clipboard_text_2">
+styleApp.controller('dataController', function ($scope) {
+
+  $scope.addPoints = function () {
+    var seriesArray = $scope.highchartsNG.series
+    var rndIdx = Math.floor(Math.random() * seriesArray.length);
+    seriesArray[rndIdx].data = seriesArray[rndIdx].data.concat([1, 10, 20])
+  };
+
+  $scope.addSeries = function () {
+    var rnd = []
+    for (var i = 0; i < 10; i++) {
+      rnd.push(Math.floor(Math.random() * 20) + 1)
+    }
+    $scope.highchartsNG.series.push({
+      data: rnd
+    })
+  }
+
+  $scope.removeRandomSeries = function () {
+    var seriesArray = $scope.highchartsNG.series
+    var rndIdx = Math.floor(Math.random() * seriesArray.length);
+    seriesArray.splice(rndIdx, 1)
+  }
+
+  $scope.options = {
+    type: 'line'
+  }
+
+  $scope.swapChartType = function () {
+    if (this.highchartsNG.options.chart.type === 'line') {
+      this.highchartsNG.options.chart.type = 'column'
+    } else {
+      this.highchartsNG.options.chart.type = 'line'
+    }
+  }
+
+  $scope.highchartsNG = {
+    options: {
+      chart: {
+        type: 'line',
+        zoomType: 'x',
+        resetZoomButton: {
+          theme: {
+            fill: 'white',
+            stroke: 'silver',
+            r: 3,
+            states: {
+              hover: {
+                fill: '#1b9dd0',
+                style: {
+                  color: 'white',
+                  cursor: 'pointer'
+                }
+              }
+            }
+          }
+        },         
+        panning: true,
+        panKey: 'shift',            
+        style: {
+          fontFamily: 'Open Sans'
+        }             
+      },
+      colors: ['#1b9dd0', '#8ec641', '#1f4389', '#50771f', '#5fd2ff', '#bbfc61', '#333', '#aaa'], 
+      legend: {
+        align: 'center',
+        verticalAlign: 'top',
+        layout: 'horizontal',
+        x: 0,
+        y: 20
+      }              
+    },
+    series: [{
+      data: [10, 15, 12, 8, 7]
+    }],
+    title: {
+      text: 'Graph Title',
+      align: 'left',
+      x: 28         
+    },
+    loading: false,
+    credits: {
+      enabled: false,
+      style: {
+        cursor: 'default',
+        color: '#fff'				
+      }  
+    }  
+  }
+
+});				 			
+		</pre>				
+		<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_2">Copy</span>
+	</div>	
+</div>
+
+<script src="dist/js/lib/prettify.js"></script>
+<script src="dist/js/lib/lang-css.js"></script>
+

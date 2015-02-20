@@ -1,0 +1,540 @@
+<h1 class="page-header">Forms</h1>
+
+<div id="scrollArea" ng-controller="scrollCtrl" class="forms">
+	<div ng-controller="tooltipCtrl">
+		<section id="example">
+			<h3>Form Example</h3>
+			<p>Submit the form below for an example of error handling. Errors styling is displayed when the <code>has-error</code> class is added to the containing <code>&lt;div&gt;</code>.</p>
+			<div class="element-example">
+				<form class="form-horizontal">
+					<div class="alert alert-danger">
+				    <button type="button" class="close">×</button>
+				    <h4>You need to correct the following errors before your can successfully create this campaign...</h4>
+				    <ul>
+				    	<li>The <strong>Name</strong> field must be filled in</li>
+				    	<li>The <strong>End Date</strong> cannot be before the <strong>Start Date</strong></li>
+				    </ul>
+			    </div>				
+					<fieldset>
+						<legend>Campaign Settings</legend>
+						<p class="required">Required fields shown in <strong>bold</strong> text. Hover labels for more information.</p>
+					  <div class="form-group required">
+					    <label for="name" class="col-sm-3 control-label"><span tooltip="This name will be used to identify the campaign in reports and the UI." tooltip-trigger="mouseenter">Name:</span></label>					    
+					    <div class="col-sm-5 error-container">
+						    <span class="help-block">Name is required</span>
+					      <input type="text" class="form-control" tooltip="Short name to identify this campaign" tooltip-trigger="mouseenter" id="name">				      
+					      <span class="info-block">Example block-level info text here.</span>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="impressions" class="col-sm-3 control-label"><span tooltip="Enter the number of impressions from the insertion order for this campaign to help you monitor delivery." tooltip-trigger="mouseenter">Impressions Ordered:</span></label>
+					    <div class="col-sm-5">
+					      <input type="text" class="form-control input-sm-2" tooltip="Total impressions for this campaign" tooltip-placement="right" tooltip-trigger="mouseenter" id="impressions">
+					    </div>
+					  </div>
+					  <div class="form-group required">
+					    <label for="reference" class="col-sm-3 control-label"><span tooltip="You may use this field to associate a given advertiser or buyer invoice, order number or insertion order identification number with this campaign." tooltip-trigger="mouseenter">IO Reference #:</span></label>
+					    <div class="col-sm-5">
+						    <span class="help-block error-container">IO Reference # is required</span>
+					      <input type="text" class="form-control" tooltip="Unique buyer number" tooltip-trigger="mouseenter" id="reference">				      
+					    </div>
+					  </div>				  
+					</fieldset>
+					<fieldset>
+						<legend>Ad Server Settings</legend>
+					  <div class="form-group">
+					    <label for="priority" class="col-sm-3 control-label"><span tooltip="Tiers are used to separate competition between campaigns. Campaigns in tier 1 will only compete with other campaigns in tier 1. Campaigns in tier 2 will only compete if no ads were available from tier 1. Similarly, campaigns in tier 3 will only compete if no ads were found in tier 2." tooltip-trigger="mouseenter">Priority:</span></label>
+					    <div class="col-sm-5">
+								<select class="form-control select2 input-sm-2" tooltip="Total impressions for this campaign" tooltip-trigger="mouseenter">
+								  <option>1</option>
+								  <option>2</option>
+								  <option>3</option>
+								  <option>4</option>
+								  <option>5</option>
+								  <option>6</option>
+								</select>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="timezone" class="col-sm-3 control-label"><span tooltip="Choose a timezone for reports." tooltip-trigger="mouseenter">Reporting Timezone:</span></label>
+					    <div class="col-sm-6">
+								<select class="form-control select2-search">
+								  <option>(GMT -08:00) Pacific Time</option>
+								  <option>(GMT -07:00) Mountain Time</option>
+								  <option>(GMT -05:00) Eastern Time</option>
+								  <option>(GMT -04:00) Atlantic Time</option>
+								  <option>(GMT +00:00) Dublin, London</option>
+								  <option>(GMT +10:00) Brisbane, Guam, Melbourne, Sydney</option>
+								  <option>(GMT +11:00) Magadan, Solomon Is., New Caledonia</option>
+								</select>
+					    </div>
+					  </div>			  
+					</fieldset>		
+					<fieldset class="start-end" ng-controller="collapseCtrl">
+						<legend>Flighting</legend>
+						<div class="form-group required">
+							<label for="start" class="col-sm-3 control-label inline-label"><span tooltip="When checked, this campaign will start immediately when saved. If you uncheck this option you will be able to set a specific future date and time for this campaign to start." tooltip-trigger="mouseenter">Start Date:</span></label>							
+							<div class="datetime-container">										
+								<div class="clearfix error-container" collapse="isCollapsed">
+									<span class="help-block">Start Date must be before End Date</span>	
+									<div ng-controller="datepickerCtrl">
+									  <div class="col-md-3">
+								      <p class="input-group bootstrap-datepicker">
+								        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
+												<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="icon icon-calendar-1"></span></span>        
+								      </p>	    
+									  </div>	    
+								  </div>
+								  <label class="sr-only" for="start-time">Start Time:</label>
+								  <div class="col-md-3">
+								    <div class="input-group input-append bootstrap-timepicker">
+								      <input type="text" class="form-control timepicker" name="start-time"/>
+											<span class="input-group-addon add-on btn btn-default"><span class="icon icon-clock"></span></span>  
+								    </div>     	   
+								  </div>	    
+								  <label class="sr-only" for="timezone">Time Zone:</label>
+									<div class="col-md-4">	
+										<select class="form-control select2-search" name="timezone">
+										  <option>(GMT -08:00) Pacific Time</option>
+										  <option>(GMT -07:00) Mountain Time</option>
+										  <option>(GMT -05:00) Eastern Time</option>
+										  <option>(GMT -04:00) Atlantic Time</option>
+										  <option>(GMT +00:00) Dublin, London</option>
+										  <option>(GMT +10:00) Brisbane, Sydney</option>
+										  <option>(GMT +11:00) Magadan, New Caledonia</option>
+										</select>								
+									</div>				
+								</div>																
+								<div class="checkbox checkbox-primary">
+							    <input type="checkbox" id="immediate" value="" ng-click="isCollapsed = !isCollapsed"  tooltip-html-unsafe="{{immediateTooltip}}" tooltip-trigger="mouseenter">
+							    <label for="immediate">Starts Immediately</label>
+								</div>														
+							</div>	
+						</div><br>
+						<div class="form-group required">
+							<label for="start" class="col-sm-3 control-label inline-label"><span tooltip="When checked, this campaign will run indefinitely or when it meets pacing goals. If you uncheck the option you will be able to set a future date and time for this campaign to end." tooltip-trigger="mouseenter">End Date:</span></label>							
+							<div class="datetime-container">							
+								<div class="clearfix error-container" collapse="isCollapsed1">	
+									<span class="help-block">End Date must be after Start Date</span>					
+									<div ng-controller="datepickerCtrl">
+									  <div class="col-md-3">
+								      <p class="input-group bootstrap-datepicker">
+								        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
+												<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="icon icon-calendar-1"></span></span>        
+								      </p>	    
+									  </div>	    
+								  </div>
+								  <div class="col-md-3">
+								    <div class="input-group input-append bootstrap-timepicker">
+								      <input type="text" class="form-control timepicker"/>
+											<span class="input-group-addon add-on btn btn-default"><span class="icon icon-clock"></span></span>  
+								    </div>     	   
+								  </div>	    
+									<div class="col-md-4">									
+										<select class="form-control select2-search">
+										  <option>(GMT -08:00) Pacific Time</option>
+										  <option>(GMT -07:00) Mountain Time</option>
+										  <option>(GMT -05:00) Eastern Time</option>
+										  <option>(GMT -04:00) Atlantic Time</option>
+										  <option>(GMT +00:00) Dublin, London</option>
+										  <option>(GMT +10:00) Brisbane, Sydney</option>
+										  <option>(GMT +11:00) Magadan, New Caledonia</option>
+										</select>									
+									</div>														
+								</div>
+								<div class="checkbox checkbox-primary">
+								  <input type="checkbox" id="indefinite" value="" ng-click="isCollapsed1 = !isCollapsed1" tooltip-html-unsafe="{{indefiniteTooltip}}" tooltip-trigger="mouseenter">
+								  <label for="indefinite">Starts Immediately</label>
+								</div>							
+							</div>															
+						</div>
+					</fieldset>					
+					<fieldset>
+					  <div class="form-group">
+					    <div class="col-sm-offset-2 col-sm-10 btns-group">
+						    <button type="submit" class="btn btn-link cancel">Cancel</button>
+					      <button type="submit" class="btn btn-primary create">Create Campaign</button>
+					    </div>
+					  </div>					
+					</fieldset>
+				</form>	
+			</div>
+		</section>
+		
+		<section id="tooltips">
+			<h3>Tooltips</h3>
+			<p>Tooltips need to be applied to the inputs and <code>&lt;span&gt;</code> tags around the label. Use <code>tooltip-placement="right"</code> and <code>tooltip-trigger="mouseenter"</code> to determine placement and functionality.</p>
+			<div class="element-example">
+				<form class="form-horizontal" style="margin: 15px 0 5px;">
+				  <div class="form-group required">
+				    <label for="name" class="col-sm-3 control-label"><span tooltip="This name will be used to identify the campaign in reports and the UI." tooltip-trigger="mouseenter">Name:</span></label>
+				    <div class="col-sm-5 error-container">
+					    <span class="help-block">Name is required</span>
+				      <input type="text" class="form-control" tooltip="Short name to identify this campaign" tooltip-trigger="mouseenter" id="name">				      
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="impressions" class="col-sm-3 control-label"><span tooltip="Enter the number of impressions from the insertion order for this campaign to help you monitor delivery." tooltip-trigger="mouseenter">Impressions Ordered:</span></label>
+				    <div class="col-sm-5">
+				      <input type="text" class="form-control input-sm-2" tooltip="Total impressions for this campaign" tooltip-placement="right" tooltip-trigger="mouseenter" id="impressions">
+				    </div>
+				  </div>	
+			  </form>		  
+			</div>			
+			<div class="zero-clipboard">
+			<pre class="prettyprint lang-html" id="clipboard_text_3_1">
+&lt;div class="form-group required"&gt;
+  &lt;label for="name" class="col-sm-3 control-label"&gt;
+    &lt;span tooltip="This name will be used to identify the campaign in reports and the UI." tooltip-trigger="mouseenter"&gt;Name:&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;div class="col-sm-5 error-container"&gt;
+    &lt;span class="help-block"&gt;Name is required&lt;/span&gt;
+    &lt;input type="text" class="form-control" tooltip="Short name to identify this campaign" tooltip-trigger="mouseenter" id="name"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label for="impressions" class="col-sm-3 control-label"&gt;
+    &lt;span tooltip="Enter the number of impressions from the insertion order for this campaign to help you monitor delivery." tooltip-trigger="mouseenter"&gt;Impressions Ordered:&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;div class="col-sm-5"&gt;
+    &lt;input type="text" class="form-control input-sm-2" tooltip="Total impressions for this campaign" tooltip-placement="right" tooltip-trigger="mouseenter" id="impressions"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+			</pre>	
+			<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_3_1">Copy</span>
+			</div>
+		</section>
+
+		<section id="checkboxes">
+			<h3>Checkboxes and Radios</h3>
+			<div class="element-example">
+			  <div class="checkbox checkbox-primary">
+			    <input type="checkbox" id="checkbox1">
+			    <label for="checkbox1">Checkbox 1</label>
+			  </div>	
+			  <div class="checkbox checkbox-primary">
+			    <input type="checkbox" id="checkbox2">
+			    <label for="checkbox2">Checkbox 2</label>
+			  </div>				  	
+			  <div class="checkbox checkbox-disabled">
+			    <input type="checkbox" id="checkbox3" disabled>
+			    <label for="checkbox3">Option Disabled</label>
+			  </div>		
+				<br>
+			  <div class="radio radio-primary">
+		      <input type="radio" name="radio" id="radio1" value="option1">
+		      <label for="radio1">Radio 1</label>
+			  </div>
+			  <div class="radio radio-primary">
+		      <input type="radio" name="radio" id="radio2" value="option2">
+		      <label for="radio2">Radio 2</label>
+			  </div>			  
+			  <div class="radio radio-disabled">
+		      <input type="radio" name="radio" id="radio4" value="option4" disabled>
+		      <label for="radio4">Radio Disabled</label>
+			  </div>			  			  
+			</div>
+			<div class="zero-clipboard">
+			<pre class="prettyprint lang-html" id="clipboard_text_3">
+&lt;div class="checkbox checkbox-primary"&gt;
+  &lt;input type="checkbox" id="checkbox1"&gt;
+  &lt;label for="checkbox1"&gt;Checkbox 1&lt;/label&gt;
+&lt;/div&gt;	
+&lt;div class="checkbox checkbox-primary"&gt;
+  &lt;input type="checkbox" id="checkbox2"&gt;
+  &lt;label for="checkbox2"&gt;Checkbox 2&lt;/label&gt;
+&lt;/div&gt;				  	
+&lt;div class="checkbox checkbox-disabled"&gt;
+  &lt;input type="checkbox" id="checkbox3" disabled&gt;
+  &lt;label for="checkbox3"&gt;Option Disabled&lt;/label&gt;
+&lt;/div&gt;		
+&lt;br&gt;
+&lt;div class="radio radio-primary"&gt;
+  &lt;input type="radio" name="radio" id="radio1" value="option1"&gt;
+  &lt;label for="radio1"&gt;Radio 1&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio radio-primary"&gt;
+  &lt;input type="radio" name="radio" id="radio2" value="option2"&gt;
+  &lt;label for="radio2"&gt;Radio 2&lt;/label&gt;
+&lt;/div&gt;			  
+&lt;div class="radio radio-disabled"&gt;
+  &lt;input type="radio" name="radio" id="radio3" value="option3" disabled&gt;
+  &lt;label for="radio3"&gt;Radio Disabled&lt;/label&gt;
+&lt;/div&gt;
+			</pre>	
+			<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_3">Copy</span>
+			</div>
+		</section>
+		
+		<section id="selects">
+			<h3>Selects</h3>
+			<p>Add the <code>multiple</code> attribute and the <code>.multiple</code> class to show multiple options at once.</p>
+			<div class="element-example">
+				<select class="form-control select2">
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+				</select>
+				<br>
+				<select multiple class="form-control multiple">
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+				</select>	
+				<br>
+				<select multiple="" name="multiple" class="form-control select2" placeholder="Select a state">
+					<option value="AK">Alaska</option>
+					<option value="HI">Hawaii</option>
+					<option value="CA">California</option>
+					<option value="NV">Nevada</option>
+					<option value="OR">Oregon</option>
+					<option value="WA">Washington</option>
+					<option value="AZ">Arizona</option>
+					<option value="CO">Colorado</option>
+					<option value="ID">Idaho</option>
+					<option value="MT">Montana</option>
+					<option value="NE">Nebraska</option>
+					<option value="NM">New Mexico</option>
+					<option value="ND">North Dakota</option>
+					<option value="UT">Utah</option>
+					<option value="WY">Wyoming</option>
+					<option value="AL">Alabama</option>
+					<option value="AR">Arkansas</option>
+					<option value="IL">Illinois</option>
+					<option value="IA">Iowa</option>
+					<option value="KS">Kansas</option>
+					<option value="KY">Kentucky</option>
+					<option value="LA">Louisiana</option>
+					<option value="MN">Minnesota</option>
+					<option value="MS">Mississippi</option>
+					<option value="MO">Missouri</option>
+					<option value="OK">Oklahoma</option>
+					<option value="SD">South Dakota</option>
+					<option value="TX">Texas</option>
+					<option value="TN">Tennessee</option>
+					<option value="WI">Wisconsin</option>
+					<option value="CT">Connecticut</option>
+					<option value="DE">Delaware</option>
+					<option value="FL">Florida</option>
+					<option value="GA">Georgia</option>
+					<option value="IN">Indiana</option>
+					<option value="ME">Maine</option>
+					<option value="MD">Maryland</option>
+					<option value="MA">Massachusetts</option>
+					<option value="MI">Michigan</option>
+					<option value="NH">New Hampshire</option>
+					<option value="NJ">New Jersey</option>
+					<option value="NY">New York</option>
+					<option value="NC">North Carolina</option>
+					<option value="OH">Ohio</option>
+					<option value="PA">Pennsylvania</option>
+					<option value="RI">Rhode Island</option>
+					<option value="SC">South Carolina</option>
+					<option value="VT">Vermont</option>
+					<option value="VA">Virginia</option>
+					<option value="WV">West Virginia</option>
+				</select>								
+			</div>
+			<div class="zero-clipboard">
+			<pre class="prettyprint lang-html" id="clipboard_text_4">
+&lt;select class="form-control"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+&lt;br&gt;
+&lt;select multiple class="form-control multiple"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+&lt;select multiple="" name="multiple" class="form-control select2" placeholder="Select a state"&gt;
+  &lt;optgroup label="Alaskan/Hawaiian Time Zone"&gt;
+    &lt;option value="AK"&gt;Alaska&lt;/option&gt;
+    &lt;option value="HI"&gt;Hawaii&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Pacific Time Zone"&gt;
+  ...
+  &lt;/optgroup&gt;
+&lt;/select&gt;				
+			</pre>	
+			<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_4">Copy</span>
+			</div>
+		</section>
+		
+		<section id="sizes">
+			<h3>Sizes</h3>
+			<p>Create taller or shorter form controls that match button sizes by using <code>.input-lg</code> or <code>.input-sm</code> classes.</p>
+			<div class="element-example element-example-sizing">
+				<input class="form-control input-lg" type="text" placeholder=".input-lg">
+				<input class="form-control" type="text" placeholder="Default input">
+				<input class="form-control input-sm" type="text" placeholder=".input-sm">
+				
+				<select class="form-control input-lg select2">
+					<option>.select-lg</option>
+				</select>
+				<select class="form-control select2">
+					<option>default</option>
+				</select>
+				<select class="form-control input-sm select2">
+					<option>.input-sm</option>
+				</select>
+			</div>
+			<div class="zero-clipboard">
+			<pre class="prettyprint lang-html" id="clipboard_text_5">
+&lt;input class="form-control input-lg" type="text" placeholder=".input-lg"&gt;
+&lt;input class="form-control" type="text" placeholder="Default input"&gt;
+&lt;input class="form-control input-sm" type="text" placeholder=".input-sm"&gt;
+
+&lt;select class="form-control input-lg"&gt;...&lt;/select&gt;
+&lt;select class="form-control"&gt;...&lt;/select&gt;
+&lt;select class="form-control input-sm"&gt;...&lt;/select&gt;
+			</pre>	
+			<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_5">Copy</span>
+			</div>
+		</section>
+		
+		<section id="date-time">
+			<h3>Date & Time Picker</h3>
+			<p>Datepicker is using UI Bootstrap, Timepicker is using AngularStrap for now.</p>
+			<div class="element-example">
+			
+				<div ng-controller="datepickerCtrl">
+				  <div class="row">
+					  <div class="form-group col-md-6">
+					    <label for="standard-input">Date Picker</label>
+				      <p class="input-group bootstrap-datepicker">
+				        <input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true"/>
+								<span class="input-group-addon btn btn-default" ng-click="open($event)"><span class="icon icon-calendar-1"></span></span>        
+				      </p>	    
+					  </div>	    
+				  </div>
+				</div>
+				
+				<div class="row">
+				  <div class="form-group col-md-6">
+				    <label for="standard-input">Time Picker</label>
+				    <div class="input-group input-append bootstrap-timepicker">
+				      <input type="text" class="form-control timepicker"/>
+							<span class="input-group-addon add-on btn btn-default"><span class="icon icon-clock"></span></span>  
+				    </div>     	   
+				  </div>	    
+				</div>
+				
+			</div>
+			<div class="zero-clipboard">
+			<pre class="prettyprint lang-html" id="clipboard_text_6">
+&lt;div ng-controller="datepickerCtrl"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="form-group col-md-6"&gt;
+      &lt;label for="standard-input"&gt;Date Picker&lt;/label&gt;
+      &lt;p class="input-group bootstrap-datepicker"&gt;
+        &lt;input type="text" class="form-control" show-button-bar="false" close-on-date-selection="false" ng-model="dt"/&gt;
+        &lt;span class="input-group-addon btn" ng-click="open($event)"&gt;&lt;span class="icon icon-calendar-1"&gt;&lt;/span&gt;&lt;/span&gt;        
+      &lt;/p&gt;	    
+    &lt;/div&gt;	    
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="form-group col-md-6"&gt;
+    &lt;label for="standard-input"&gt;Time Picker&lt;/label&gt;
+    &lt;div class="input-group input-append bootstrap-timepicker"&gt;
+      &lt;input type="text" class="form-control timepicker"/&gt;
+      &lt;span class="input-group-addon add-on btn"&gt;&lt;span class="fa fa-clock-o"&gt;&lt;/span&gt;&lt;/span&gt;  
+    &lt;/div&gt;     	   
+  &lt;/div&gt;	    
+&lt;/div&gt;
+			</pre>	
+			<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_6">Copy</span>
+			</div>
+		</section>
+		
+		<section id="columns">
+			<h3>Column Sizing</h3>
+			<p>Wrap inputs in grid columns to apply desired widths.</p>
+			<div class="element-example">
+				<div class="row">
+				  <div class="col-xs-2">
+				    <input type="text" class="form-control" placeholder=".col-xs-2">
+				  </div>
+				  <div class="col-xs-3">
+				    <input type="text" class="form-control" placeholder=".col-xs-3">
+				  </div>
+				  <div class="col-xs-4">
+				    <input type="text" class="form-control" placeholder=".col-xs-4">
+				  </div>
+				</div>
+			</div>
+			<div class="zero-clipboard">
+			<pre class="prettyprint lang-html" id="clipboard_text_7">
+&lt;div class="row"&gt;
+  &lt;div class="col-xs-2"&gt;
+    &lt;input type="text" class="form-control" placeholder=".col-xs-2"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-3"&gt;
+    &lt;input type="text" class="form-control" placeholder=".col-xs-3"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-4"&gt;
+    &lt;input type="text" class="form-control" placeholder=".col-xs-4"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+			</pre>	
+			<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_7">Copy</span>
+			</div>
+		</section>
+		
+		<section id="textarea">
+			<h3>Textarea</h3>
+			<p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+			<div class="element-example">
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
+			<div class="zero-clipboard">
+			<pre class="prettyprint lang-html" id="clipboard_text_8">
+&lt;textarea class="form-control" rows="3"&gt;&lt;/textarea&gt;
+			</pre>	
+			<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_8">Copy</span>
+			</div>
+		</section>		
+		
+		<section id="textarea">
+			<h3>File Input</h3>
+			<p>File inputs are customized to look like regular buttons in all browsers.</p>
+			<div class="element-example">
+				<input type="file"/>
+			</div>
+			<div class="zero-clipboard">
+			<pre class="prettyprint lang-html lang-js" id="clipboard_text_9">
+&lt;input type="file" title="Choose File"&gt;
+
+&lt;script&gt;
+  $('input[type=file]').bootstrapFileInput();	
+&lt;/script&gt;
+			</pre>	
+			<span class="btn-copy btn-clipboard" data-clipboard-target="clipboard_text_9">Copy</span>
+			</div>
+		</section>			
+
+	</div>		
+</div>
+
+<script src="dist/js/lib/prettify.js"></script>
+<script src="dist/js/lib/lang-css.js"></script>
+
+
+
+
+
+
+
+
+
